@@ -1,0 +1,5 @@
+#+title:      my prot learning note
+#+date:       [2026-06-25 Thu 07:52]
+#+filetags:   :learning:test:
+#+identifier: 20260625T075258
+* some trial content.

@@ -1,0 +1,8 @@
+#+title:      Top knowledge base
+#+date:       [2026-06-24 Wed 22:11]
+#+filetags:   :emacs:
+#+identifier: 20260624T221126
+* [[denote:20260624T224315][lets try a backlink]]
+* [[denote:20260624T230321][All windows first install]]
+* [[denote:20260625T075258][my prot learning note]]
+* 

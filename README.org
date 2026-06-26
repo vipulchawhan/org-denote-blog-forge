@@ -1,0 +1,7 @@
+* This is a trial to see if we can use
+** org mode
+** denote
+** github pages
+** to generate a knowledge base.
+* lets go!
+

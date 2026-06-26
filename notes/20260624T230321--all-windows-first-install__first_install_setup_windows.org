@@ -1,0 +1,13 @@
+#+title:      All windows first install
+#+date:       [2026-06-24 Wed 23:03]
+#+filetags:   :first:install:setup:windows:
+#+identifier: 20260624T230321
+* scoop
+* apps to install list
+* env variables
+* emacs config
+* mpv config
+* sumatra config
+* freetube json list
+* git setup
+* denote setup
