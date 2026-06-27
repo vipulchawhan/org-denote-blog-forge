@@ -12,31 +12,31 @@
 (setq org-html-postamble nil)
 (setq make-backup-files nil)
 
-(defun vipul/denote-title-from-file (filename)
-  (with-temp-buffer
-    (insert-file-contents filename)
-    (goto-char (point-min))
-    (if (re-search-forward "^#\\+title:[ \t]*\\(.+\\)$" nil t)
-        (string-trim (match-string 1))
-      (let* ((base (file-name-base filename))
-             (parts (split-string base "--"))
-             (title+keywords (if (> (length parts) 1) (cadr parts) base))
-             (title-part (car (split-string title+keywords "__"))))
-        (mapconcat #'capitalize
-                   (split-string title-part "-" t)
-                   " ")))))
+(defun vipul/denote-title-from-entry (entry project)
+  (let ((file (org-publish--expand-file-name entry project)))
+    (with-temp-buffer
+      (insert-file-contents file)
+      (goto-char (point-min))
+      (if (re-search-forward "^#\\+title:[ \t]*\\(.+\\)$" nil t)
+          (string-trim (match-string 1))
+        (let* ((base (file-name-base file))
+               (parts (split-string base "--"))
+               (title+keywords (if (> (length parts) 1) (cadr parts) base))
+               (title-part (car (split-string title+keywords "__"))))
+          (mapconcat #'capitalize
+                     (split-string title-part "-" t)
+                     " "))))))
 
 (defun vipul/org-publish-sitemap-entry (entry style project)
   (cond
    ((directory-name-p entry)
-    entry)
+    (if (eq style 'tree)
+        (file-name-nondirectory (directory-file-name entry))
+      entry))
    (t
     (format "[[file:%s][%s]]"
             entry
-            (vipul/denote-title-from-file
-             (expand-file-name entry
-                               (plist-get (cdr (assoc project org-publish-project-alist))
-                                          :base-directory)))))))
+            (vipul/denote-title-from-entry entry project)))))
 
 (setq org-publish-project-alist
       '(("notes"
