@@ -42,7 +42,7 @@
               entry
               (vipul/denote-title-from-file file)))))
 
-(defun vipul/denote-link-export (path desc backend _com)
+(defun vipul/denote-link-export (path desc backend _protocol)
   (cond
    ((eq backend 'html)
     (let* ((files (directory-files-recursively

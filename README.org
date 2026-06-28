@@ -4,4 +4,4 @@
 ** github pages
 ** to generate a knowledge base.
 * lets go!
-
+https://vipulchawhan.github.io/org-denote-blog-forge/
