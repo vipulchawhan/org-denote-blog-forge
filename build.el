@@ -42,17 +42,24 @@
               entry
               (vipul/denote-title-from-file file)))))
 
-(defun vipul/denote-file-link-to-html (text backend info)
-  (when (org-export-derived-backend-p backend 'html)
-    (save-match-data
-      (when (string-match "\\`denote:\\([0-9A-Za-z]+\\)\\'" text)
-        (let* ((id (match-string 1 text))
-               (files (directory-files-recursively "notes"
-                                                   (concat "^" (regexp-quote id) "--.*\\.org$"))))
-          (when files
-            (concat (file-name-base (car files)) ".html")))))))
+(defun vipul/denote-link-export (path desc backend _com)
+  (cond
+   ((eq backend 'html)
+    (let* ((files (directory-files-recursively
+                   "notes"
+                   (concat "^" (regexp-quote path) "--.*\\.org$")))
+           (target (when files
+                     (concat (file-name-base (car files)) ".html")))
+           (label (or desc path)))
+      (if target
+          (format "<a href=\"%s\">%s</a>" target label)
+        (format "<span class=\"broken-denote-link\">%s</span>" label))))
+   (t
+    (or desc path))))
 
-(setq org-export-filter-link-functions '(vipul/denote-file-link-to-html))
+(org-link-set-parameters
+ "denote"
+ :export #'vipul/denote-link-export)
 
 (setq org-publish-project-alist
       '(("notes"
