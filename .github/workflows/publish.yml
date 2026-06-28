@@ -21,6 +21,14 @@ jobs:
         with:
           version: 29.1
 
+      - name: Install Denote
+        run: emacs --batch --eval "(progn
+          (require 'package)
+          (add-to-list 'package-archives '(\"gnu\" . \"https://elpa.gnu.org/packages/\"))
+          (package-initialize)
+          (package-refresh-contents)
+          (package-install 'denote))"
+
       - name: Build site
         run: emacs --batch -l build.el -f org-publish-all
 

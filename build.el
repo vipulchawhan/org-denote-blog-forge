@@ -1,5 +1,6 @@
 (require 'ox-publish)
 (require 'subr-x)
+(require 'denote)
 
 (setq org-publish-use-timestamps-flag nil)
 (setq org-html-html5-fancy t)
@@ -12,31 +13,37 @@
 (setq org-html-postamble nil)
 (setq make-backup-files nil)
 
-(defun vipul/denote-title-from-entry (entry project)
-  (let ((file (org-publish--expand-file-name entry project)))
-    (with-temp-buffer
-      (insert-file-contents file)
-      (goto-char (point-min))
-      (if (re-search-forward "^#\\+title:[ \t]*\\(.+\\)$" nil t)
-          (string-trim (match-string 1))
-        (let* ((base (file-name-base file))
-               (parts (split-string base "--"))
-               (title+keywords (if (> (length parts) 1) (cadr parts) base))
-               (title-part (car (split-string title+keywords "__"))))
-          (mapconcat #'capitalize
-                     (split-string title-part "-" t)
-                     " "))))))
+(defun vipul/denote-title-from-file (file)
+  (with-temp-buffer
+    (insert-file-contents file)
+    (goto-char (point-min))
+    (if (re-search-forward "^#\\+title:[ \t]*\\(.+\\)$" nil t)
+        (string-trim (match-string 1))
+      (let* ((base (file-name-base file))
+             (parts (split-string base "--"))
+             (title+keywords (if (> (length parts) 1) (cadr parts) base))
+             (title-part (car (split-string title+keywords "__"))))
+        (mapconcat #'capitalize (split-string title-part "-" t) " ")))))
 
 (defun vipul/org-publish-sitemap-entry (entry style project)
-  (cond
-   ((directory-name-p entry)
-    (if (eq style 'tree)
-        (file-name-nondirectory (directory-file-name entry))
-      entry))
-   (t
-    (format "[[file:%s][%s]]"
-            entry
-            (vipul/denote-title-from-entry entry project)))))
+  (let ((file (org-publish--expand-file-name entry project)))
+    (if (directory-name-p entry)
+        entry
+      (format "[[file:%s][%s]]"
+              entry
+              (vipul/denote-title-from-file file)))))
+
+(defun vipul/denote-file-link-to-html (text backend info)
+  (when (org-export-derived-backend-p backend 'html)
+    (save-match-data
+      (when (string-match "\\`denote:\\([0-9A-Za-z]+\\)\\'" text)
+        (let* ((id (match-string 1 text))
+               (files (directory-files-recursively "notes"
+                                                   (concat "^" (regexp-quote id) "--.*\\.org$"))))
+          (when files
+            (concat (file-name-base (car files)) ".html")))))))
+
+(setq org-export-filter-link-functions '(vipul/denote-file-link-to-html))
 
 (setq org-publish-project-alist
       '(("notes"
