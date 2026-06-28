@@ -1,3 +1,12 @@
+(require 'package)
+
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
+(package-initialize)
+
+(unless (package-installed-p 'denote)
+  (package-refresh-contents)
+  (package-install 'denote))
+
 (require 'ox-publish)
 (require 'subr-x)
 (require 'denote)
