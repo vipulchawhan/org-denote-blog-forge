@@ -11,6 +11,15 @@
 (require 'subr-x)
 (require 'denote)
 
+(defvar vipul/site-root
+  (file-name-directory (or load-file-name buffer-file-name)))
+
+(defvar vipul/notes-dir
+  (expand-file-name "notes" vipul/site-root))
+
+(defvar vipul/public-dir
+  (expand-file-name "public" vipul/site-root))
+
 (setq org-publish-use-timestamps-flag nil)
 (setq org-html-html5-fancy t)
 (setq org-html-doctype "html5")
@@ -34,7 +43,7 @@
              (title-part (car (split-string title+keywords "__"))))
         (mapconcat #'capitalize (split-string title-part "-" t) " ")))))
 
-(defun vipul/org-publish-sitemap-entry (entry style project)
+(defun vipul/org-publish-sitemap-entry (entry _style project)
   (let ((file (org-publish--expand-file-name entry project)))
     (if (directory-name-p entry)
         entry
@@ -46,7 +55,7 @@
   (cond
    ((eq backend 'html)
     (let* ((files (directory-files-recursively
-                   "notes"
+                   vipul/notes-dir
                    (concat "^" (regexp-quote path) "--.*\\.org$")))
            (target (when files
                      (concat (file-name-base (car files)) ".html")))
@@ -62,10 +71,10 @@
  :export #'vipul/denote-link-export)
 
 (setq org-publish-project-alist
-      '(("notes"
-         :base-directory "notes"
+      `(("notes"
+         :base-directory ,vipul/notes-dir
          :base-extension "org"
-         :publishing-directory "public"
+         :publishing-directory ,vipul/public-dir
          :recursive nil
          :publishing-function org-html-publish-to-html
          :headline-levels 4
@@ -84,9 +93,9 @@
          :html-postamble nil)
 
         ("attachments"
-         :base-directory "notes"
+         :base-directory ,vipul/notes-dir
          :base-extension "png\\|jpg\\|jpeg\\|gif\\|svg\\|webp\\|pdf\\|css\\|js"
-         :publishing-directory "public"
+         :publishing-directory ,vipul/public-dir
          :recursive t
          :publishing-function org-publish-attachment)
 
