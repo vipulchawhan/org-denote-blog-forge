@@ -3,11 +3,15 @@
 #+filetags:   :first:install:setup:windows:
 #+identifier: 20260624T230321
 * scoop
+** scoop help
+** scoop to install list later
 * apps to install list
 * env variables
 * emacs config
+** 
 * mpv config
 * sumatra config
 * freetube json list
 * git setup
 * denote setup
+* 
