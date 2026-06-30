@@ -1,0 +1,84 @@
+#+title:      exim learnings
+#+date:       [2026-06-30 Tue 21:51]
+#+filetags:   :exim:learning:
+#+identifier: 20260630T215114
+* EXIM overview and trade flow.
+- exim :: export import
+** Every document has a job. The proforma invoice starts the deal, the commercial invoice becomes the final bill, the packing list describes how the goods are packed, and the shipping bill is the customs document that lets goods leave India. The bill of lading or airway bill proves that the carrier received the cargo, and the certificate of origin tells which country the goods came from. These documents are the paper trail of the shipment.
+
+* DGFT, IEC, HS code, and import/export policy basics.
+
+** DGFT = the Indian foreign trade authority.
+
+IEC = Importer-Exporter Code, the trade ID of the firm.
+
+HS code = product classification number.
+
+Policy decides whether a product is free, restricted, canalized, or prohibited.
+
+Wrong code or missing registration can cause problems later.
+
+9) Tiny real-life story
+A company wants to export a ceramic item. First it needs an IEC, then the product must be classified correctly with an HS code, and then the business must follow the right policy path for that product. Once this base is correct, the rest of the export process becomes much smoother.
+
+10) Common mistake to avoid
+Do not think DGFT is the customs office, and do not think IEC is the same as HS code. DGFT is the authority, IEC is the business number, and HS code is the product number. Keeping these three separate in your mind will make the rest of EXIM much easier
+
+* Export documents and what each one means.
+Proforma invoice = first quote.
+
+Commercial invoice = final bill.
+
+Packing list = packing details.
+
+Shipping bill = customs export clearance document.
+
+Bill of lading = sea transport document.
+
+Airway bill = air transport document.
+
+Certificate of origin = origin proof.
+
+LC and bill of exchange are payment documents.
+
+
+* Customs, shipping, CHA, and clearance flow.
+Customs checks legal compliance and matching documents.
+
+CHA helps file and manage customs clearance.
+
+Shipping bill starts the customs export filing.
+
+Assessment and examination may happen before approval.
+
+LEO means the export is allowed.
+
+Stuffing means container loading and sealing.
+
+Freight forwarder moves the cargo; CHA clears it.
+
+* Packaging, labeling, and dispatch basics.
+Packaging protects the goods and is especially important for fragile ceramics.
+
+Double boxing and strong cushioning are common safe methods.
+
+Labels should show handling instructions, origin, and destination.
+
+Customs may inspect cargo, so packaging should allow safe reopening and resealing.
+
+Fumigation is usually about wood/pest compliance, not changing the ceramic itself.
+
+
+* Trade finance, payment methods, and risk.
+Trade finance solves the gap between shipment and payment.
+
+LC is the safest common bank-backed method for exporters.
+
+Documentary collection is cheaper but gives less protection than LC.
+
+Open account is buyer-friendly but risky for the exporter.
+
+Advance payment is best for exporter safety.
+
+
+* Certificate of origin, rules of origin, FTAs/PTAs, and how they matter.
