@@ -5,6 +5,21 @@
 * scoop
 ** scoop help
 ** scoop to install list later
+install scoop first
+
+#+begin_src powershell
+  iwr -useb get.scoop.sh | iex
+#+end_src
+
+add extras bucket first
+
+#+begin_src powershell
+  scoop bucket add extras nerd
+#+end_src
+
+#+begin_src powershell
+  scoop install mpv dopamine grep findutils xargs freetube ytdlp-interface deno ffmpeg yt-dlp VictorMono-NF album-art-downloader powertoys
+#+end_src
 * apps to install list
 * env variables
 * emacs config
@@ -14,4 +29,26 @@
 * freetube json list
 * git setup
 * denote setup
-* 
+* disable start button for windows
+Yes — in **Windows directly**, the usual built-in way is through the **Registry** or **Group Policy**, not PowerToys. For a permanent system-level disable, the simplest common method is setting `NoWinKeys=1` or using the `Scancode Map` registry entry, then restarting. [winbuzzer](https://winbuzzer.com/2024/02/09/how-to-disable-the-windows-key-in-windows-11-windows-10-xcxwbt/)
+
+## Option 1: Registry
+1. Press `Win + R`, type `regedit`, and open Registry Editor.
+2. Go to `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`.
+3. If `Explorer` does not exist, create it.
+4. Create a new **DWORD (32-bit)** value named `NoWinKeys`.
+5. Set its value to `1`.
+6. Restart your PC. [techrepublic](https://www.techrepublic.com/article/how-to-disable-the-windows-key-on-your-keyboard/)
+
+## Option 2: Group Policy
+If you have Pro/Enterprise, open `gpedit.msc`, then go to `User Configuration > Administrative Templates > Windows Components > File Explorer`, and enable **Turn off Windows Key hotkeys**. Then restart. [learn.microsoft](https://learn.microsoft.com/en-us/answers/questions/3243961/disable-windows-10-keyboard-shortcuts)
+
+## Option 3: Scancode map
+A deeper system-level method is editing `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout` and adding a `Scancode Map` binary value to block the Windows keys, then rebooting. [youtube](https://www.youtube.com/watch?v=XR_RmXtjrRI)
+
+## To undo it
+- Delete `NoWinKeys`, or set it back to `0`.
+- Or disable the Group Policy setting.
+- Or delete `Scancode Map` and reboot. [youtube](https://www.youtube.com/watch?v=XR_RmXtjrRI)
+
+If you want, I can give you the exact registry steps for **Windows 11 Home** or **Windows 11 Pro**.
