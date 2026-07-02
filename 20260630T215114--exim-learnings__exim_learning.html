@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-07-01 Wed 03:33 -->
+<!-- 2026-07-02 Thu 17:10 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>exim learnings</title>
@@ -199,66 +199,66 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org35b8be0">EXIM overview and trade flow.</a>
+<li><a href="#org3037b80">EXIM overview and trade flow.</a>
 <ul>
-<li><a href="#org6813b62">Every document has a job. The proforma invoice starts the deal, the commercial invoice becomes the final bill, the packing list describes how the goods are packed, and the shipping bill is the customs document that lets goods leave India. The bill of lading or airway bill proves that the carrier received the cargo, and the certificate of origin tells which country the goods came from. These documents are the paper trail of the shipment.</a></li>
+<li><a href="#orgecd7fdb">Every document has a job. The proforma invoice starts the deal, the commercial invoice becomes the final bill, the packing list describes how the goods are packed, and the shipping bill is the customs document that lets goods leave India. The bill of lading or airway bill proves that the carrier received the cargo, and the certificate of origin tells which country the goods came from. These documents are the paper trail of the shipment.</a></li>
 </ul>
 </li>
-<li><a href="#org1c1a712">DGFT, IEC, HS code, and import/export policy basics.</a>
+<li><a href="#orgf8657b6">DGFT, IEC, HS code, and import/export policy basics.</a>
 <ul>
-<li><a href="#orgd722108">DGFT = the Indian foreign trade authority.</a></li>
+<li><a href="#orgf176330">DGFT = the Indian foreign trade authority.</a></li>
 </ul>
 </li>
-<li><a href="#org7183fed">Export documents and what each one means.</a></li>
-<li><a href="#orgc8c204d">Customs, shipping, CHA, and clearance flow.</a></li>
-<li><a href="#org98180f6">Packaging, labeling, and dispatch basics.</a></li>
-<li><a href="#orgcc97c00">Trade finance, payment methods, and risk.</a></li>
-<li><a href="#org339b96a">Certificate of origin, rules of origin, FTAs/PTAs, and how they matter.</a></li>
-<li><a href="#org7522673">products</a>
+<li><a href="#org2f70f74">Export documents and what each one means.</a></li>
+<li><a href="#org2e5df55">Customs, shipping, CHA, and clearance flow.</a></li>
+<li><a href="#org054c462">Packaging, labeling, and dispatch basics.</a></li>
+<li><a href="#org2097c34">Trade finance, payment methods, and risk.</a></li>
+<li><a href="#org09abc48">Certificate of origin, rules of origin, FTAs/PTAs, and how they matter.</a></li>
+<li><a href="#org8a6ebb4">products</a>
 <ul>
-<li><a href="#org017e31b">You can describe Zirconox like this:</a></li>
-<li><a href="#orgcd1503b">Key points to remember</a></li>
+<li><a href="#org3dc5627">You can describe Zirconox like this:</a></li>
+<li><a href="#org69505e1">Key points to remember</a></li>
 </ul>
 </li>
-<li><a href="#orgdee447b">How to explain it simply</a></li>
-<li><a href="#orge7a5a20">Product 3: Duralox 92 to 99.7</a></li>
-<li><a href="#org6570365">Product 4: Jyaluzir</a></li>
-<li><a href="#orgd7f7030">## Product 5: Steatite</a></li>
-<li><a href="#orgbd88d5a">## Product 6: Duralox 92W</a></li>
-<li><a href="#orgb249208">## Product 7: Alu-Cera Polymer</a></li>
-<li><a href="#org8e741af">## Product 8: Adment</a></li>
-<li><a href="#orgaf376fb">## Product 9: Zircoat</a></li>
-<li><a href="#orgb7e6d04">## Product 10: Aluma-Coat</a></li>
-<li><a href="#orge99d162">## Product 11: Jyodent</a></li>
-<li><a href="#org2cdbb47">## Product 12: Jyalox 95P</a></li>
-<li><a href="#org4465b20">## Product 13: Ceramic Igniting Electrode and Flame Sensor</a></li>
-<li><a href="#org379e6b9">## Product 14: Ceramic Spacers for Shunt Reactors</a></li>
-<li><a href="#orga7f17ef">## Product 15: H.R.C. Fuse Body</a></li>
-<li><a href="#org26cc804">## Product 16: Customised Ceramic Parts</a></li>
-<li><a href="#orgc4d8c02">## Product 17: Ceramic Heater Parts</a></li>
-<li><a href="#org0d0a7f7">## Product 18: Pump Parts</a></li>
+<li><a href="#org046d13d">How to explain it simply</a></li>
+<li><a href="#orgbe1dc0b">Product 3: Duralox 92 to 99.7</a></li>
+<li><a href="#orgf50042d">Product 4: Jyaluzir</a></li>
+<li><a href="#org0aa8f34">## Product 5: Steatite</a></li>
+<li><a href="#org4a941b0">## Product 6: Duralox 92W</a></li>
+<li><a href="#orgb064dfc">## Product 7: Alu-Cera Polymer</a></li>
+<li><a href="#org428a617">## Product 8: Adment</a></li>
+<li><a href="#org6fe6d6c">## Product 9: Zircoat</a></li>
+<li><a href="#orgb6c7e7a">## Product 10: Aluma-Coat</a></li>
+<li><a href="#orgf744852">## Product 11: Jyodent</a></li>
+<li><a href="#org732dfdb">## Product 12: Jyalox 95P</a></li>
+<li><a href="#org126ea8f">## Product 13: Ceramic Igniting Electrode and Flame Sensor</a></li>
+<li><a href="#orgf723875">## Product 14: Ceramic Spacers for Shunt Reactors</a></li>
+<li><a href="#orgd2fdd68">## Product 15: H.R.C. Fuse Body</a></li>
+<li><a href="#org34b2666">## Product 16: Customised Ceramic Parts</a></li>
+<li><a href="#orgf9f3994">## Product 17: Ceramic Heater Parts</a></li>
+<li><a href="#org9834390">## Product 18: Pump Parts</a></li>
 </ul>
 </div>
 </nav>
-<div id="outline-container-org35b8be0" class="outline-2">
-<h2 id="org35b8be0">EXIM overview and trade flow.</h2>
-<div class="outline-text-2" id="text-org35b8be0">
+<div id="outline-container-org3037b80" class="outline-2">
+<h2 id="org3037b80">EXIM overview and trade flow.</h2>
+<div class="outline-text-2" id="text-org3037b80">
 <dl class="org-dl">
 <dt>exim</dt><dd>export import</dd>
 </dl>
 </div>
-<div id="outline-container-org6813b62" class="outline-3">
-<h3 id="org6813b62">Every document has a job. The proforma invoice starts the deal, the commercial invoice becomes the final bill, the packing list describes how the goods are packed, and the shipping bill is the customs document that lets goods leave India. The bill of lading or airway bill proves that the carrier received the cargo, and the certificate of origin tells which country the goods came from. These documents are the paper trail of the shipment.</h3>
+<div id="outline-container-orgecd7fdb" class="outline-3">
+<h3 id="orgecd7fdb">Every document has a job. The proforma invoice starts the deal, the commercial invoice becomes the final bill, the packing list describes how the goods are packed, and the shipping bill is the customs document that lets goods leave India. The bill of lading or airway bill proves that the carrier received the cargo, and the certificate of origin tells which country the goods came from. These documents are the paper trail of the shipment.</h3>
 </div>
 </div>
 
-<div id="outline-container-org1c1a712" class="outline-2">
-<h2 id="org1c1a712">DGFT, IEC, HS code, and import/export policy basics.</h2>
-<div class="outline-text-2" id="text-org1c1a712">
+<div id="outline-container-orgf8657b6" class="outline-2">
+<h2 id="orgf8657b6">DGFT, IEC, HS code, and import/export policy basics.</h2>
+<div class="outline-text-2" id="text-orgf8657b6">
 </div>
-<div id="outline-container-orgd722108" class="outline-3">
-<h3 id="orgd722108">DGFT = the Indian foreign trade authority.</h3>
-<div class="outline-text-3" id="text-orgd722108">
+<div id="outline-container-orgf176330" class="outline-3">
+<h3 id="orgf176330">DGFT = the Indian foreign trade authority.</h3>
+<div class="outline-text-3" id="text-orgf176330">
 <p>
 IEC = Importer-Exporter Code, the trade ID of the firm.
 </p>
@@ -292,9 +292,9 @@ Do not think DGFT is the customs office, and do not think IEC is the same as HS 
 </div>
 </div>
 
-<div id="outline-container-org7183fed" class="outline-2">
-<h2 id="org7183fed">Export documents and what each one means.</h2>
-<div class="outline-text-2" id="text-org7183fed">
+<div id="outline-container-org2f70f74" class="outline-2">
+<h2 id="org2f70f74">Export documents and what each one means.</h2>
+<div class="outline-text-2" id="text-org2f70f74">
 <p>
 Proforma invoice = first quote.
 </p>
@@ -330,9 +330,9 @@ LC and bill of exchange are payment documents.
 </div>
 
 
-<div id="outline-container-orgc8c204d" class="outline-2">
-<h2 id="orgc8c204d">Customs, shipping, CHA, and clearance flow.</h2>
-<div class="outline-text-2" id="text-orgc8c204d">
+<div id="outline-container-org2e5df55" class="outline-2">
+<h2 id="org2e5df55">Customs, shipping, CHA, and clearance flow.</h2>
+<div class="outline-text-2" id="text-org2e5df55">
 <p>
 Customs checks legal compliance and matching documents.
 </p>
@@ -363,9 +363,9 @@ Freight forwarder moves the cargo; CHA clears it.
 </div>
 </div>
 
-<div id="outline-container-org98180f6" class="outline-2">
-<h2 id="org98180f6">Packaging, labeling, and dispatch basics.</h2>
-<div class="outline-text-2" id="text-org98180f6">
+<div id="outline-container-org054c462" class="outline-2">
+<h2 id="org054c462">Packaging, labeling, and dispatch basics.</h2>
+<div class="outline-text-2" id="text-org054c462">
 <p>
 Packaging protects the goods and is especially important for fragile ceramics.
 </p>
@@ -389,9 +389,9 @@ Fumigation is usually about wood/pest compliance, not changing the ceramic itsel
 </div>
 
 
-<div id="outline-container-orgcc97c00" class="outline-2">
-<h2 id="orgcc97c00">Trade finance, payment methods, and risk.</h2>
-<div class="outline-text-2" id="text-orgcc97c00">
+<div id="outline-container-org2097c34" class="outline-2">
+<h2 id="org2097c34">Trade finance, payment methods, and risk.</h2>
+<div class="outline-text-2" id="text-org2097c34">
 <p>
 Trade finance solves the gap between shipment and payment.
 </p>
@@ -415,17 +415,17 @@ Advance payment is best for exporter safety.
 </div>
 
 
-<div id="outline-container-org339b96a" class="outline-2">
-<h2 id="org339b96a">Certificate of origin, rules of origin, FTAs/PTAs, and how they matter.</h2>
+<div id="outline-container-org09abc48" class="outline-2">
+<h2 id="org09abc48">Certificate of origin, rules of origin, FTAs/PTAs, and how they matter.</h2>
 </div>
 
-<div id="outline-container-org7522673" class="outline-2">
-<h2 id="org7522673">products</h2>
-<div class="outline-text-2" id="text-org7522673">
+<div id="outline-container-org8a6ebb4" class="outline-2">
+<h2 id="org8a6ebb4">products</h2>
+<div class="outline-text-2" id="text-org8a6ebb4">
 </div>
-<div id="outline-container-org017e31b" class="outline-3">
-<h3 id="org017e31b">You can describe Zirconox like this:</h3>
-<div class="outline-text-3" id="text-org017e31b">
+<div id="outline-container-org3dc5627" class="outline-3">
+<h3 id="org3dc5627">You can describe Zirconox like this:</h3>
+<div class="outline-text-3" id="text-org3dc5627">
 <p>
 It is a high-performance grinding bead.
 </p>
@@ -477,9 +477,9 @@ Do they need micro-fine dispersion or general milling ?
 </div>
 </div>
 
-<div id="outline-container-orgcd1503b" class="outline-3">
-<h3 id="orgcd1503b">Key points to remember</h3>
-<div class="outline-text-3" id="text-orgcd1503b">
+<div id="outline-container-org69505e1" class="outline-3">
+<h3 id="org69505e1">Key points to remember</h3>
+<div class="outline-text-3" id="text-org69505e1">
 <p>
 Form: small round ceramic beads.
 </p>
@@ -503,9 +503,9 @@ Selling tip: focus on particle size, viscosity, mill type, and target applicatio
 </div>
 </div>
 
-<div id="outline-container-orgdee447b" class="outline-2">
-<h2 id="orgdee447b">How to explain it simply</h2>
-<div class="outline-text-2" id="text-orgdee447b">
+<div id="outline-container-org046d13d" class="outline-2">
+<h2 id="org046d13d">How to explain it simply</h2>
+<div class="outline-text-2" id="text-org046d13d">
 <p>
 You can explain Zircosil like this:
 </p>
@@ -592,9 +592,9 @@ Selling tip: match the bead to the mill load and viscosity.
 </div>
 </div>
 
-<div id="outline-container-orge7a5a20" class="outline-2">
-<h2 id="orge7a5a20">Product 3: Duralox 92 to 99.7</h2>
-<div class="outline-text-2" id="text-orge7a5a20">
+<div id="outline-container-orgbe1dc0b" class="outline-2">
+<h2 id="orgbe1dc0b">Product 3: Duralox 92 to 99.7</h2>
+<div class="outline-text-2" id="text-orgbe1dc0b">
 <p>
 Duralox is Jyoti Ceramic’s high-alumina technical ceramic family, used for wear parts, lining bricks, grinding media, and other industrial components. In simple terms, it is a strong ceramic material made to survive wear, heat, and heavy industrial use.
 </p>
@@ -706,9 +706,9 @@ Selling tip: always ask the application before quoting a grade.
 </div>
 </div>
 
-<div id="outline-container-org6570365" class="outline-2">
-<h2 id="org6570365">Product 4: Jyaluzir</h2>
-<div class="outline-text-2" id="text-org6570365">
+<div id="outline-container-orgf50042d" class="outline-2">
+<h2 id="orgf50042d">Product 4: Jyaluzir</h2>
+<div class="outline-text-2" id="text-orgf50042d">
 <p>
 Jyaluzir is an alumina-toughened zirconia (ATZ) composite micro bead. In simple words, it is a premium grinding bead designed for tough milling jobs where the material is abrasive, high purity, or hard to process.
 </p>
@@ -820,9 +820,9 @@ Selling tip: position it as a premium bead for difficult applications.
 </div>
 </div>
 
-<div id="outline-container-orgd7f7030" class="outline-2">
-<h2 id="orgd7f7030">## Product 5: Steatite</h2>
-<div class="outline-text-2" id="text-orgd7f7030">
+<div id="outline-container-org0aa8f34" class="outline-2">
+<h2 id="org0aa8f34">## Product 5: Steatite</h2>
+<div class="outline-text-2" id="text-org0aa8f34">
 <p>
 Steatite is a <b><b>magnesium silicate ceramic</b></b> that is mainly used for electrical insulation and general technical ceramic parts. In simple words, it is a low-cost but very useful insulating ceramic that performs well in heat, electricity, and everyday industrial use. [ipsceramics](<a href="https://ipsceramics.com/ceramic-materials/steatite-ceramic/">https://ipsceramics.com/ceramic-materials/steatite-ceramic/</a>)
 ## What it looks like
@@ -872,9 +872,9 @@ A manufacturer of electrical heaters needs a ceramic part that will not conduct 
 </div>
 </div>
 
-<div id="outline-container-orgbd88d5a" class="outline-2">
-<h2 id="orgbd88d5a">## Product 6: Duralox 92W</h2>
-<div class="outline-text-2" id="text-orgbd88d5a">
+<div id="outline-container-org4a941b0" class="outline-2">
+<h2 id="org4a941b0">## Product 6: Duralox 92W</h2>
+<div class="outline-text-2" id="text-org4a941b0">
 <p>
 Duralox 92W is a <b><b>high-alumina ceramic used for ball mill lining bricks and grinding media</b></b>. In simple words, it is a hard industrial ceramic that protects mills and helps grind material efficiently. [jyoticeramic](<a href="https://www.jyoticeramic.com/duralox.php/duralox92W.php">https://www.jyoticeramic.com/duralox.php/duralox92W.php</a>)
 </p>
@@ -948,9 +948,9 @@ A mineral processor uses a ball mill and loses time because the grinding media b
 </div>
 
 
-<div id="outline-container-orgb249208" class="outline-2">
-<h2 id="orgb249208">## Product 7: Alu-Cera Polymer</h2>
-<div class="outline-text-2" id="text-orgb249208">
+<div id="outline-container-orgb064dfc" class="outline-2">
+<h2 id="orgb064dfc">## Product 7: Alu-Cera Polymer</h2>
+<div class="outline-text-2" id="text-orgb064dfc">
 <p>
 Alu-Cera is a <b><b>ceramic composite panel</b></b> made from hard alumina ceramic tiles or cylinders vulcanized into a resilient rubber base. In simple words, it is a protective lining panel that combines ceramic hardness with rubber shock absorption. [jyoticeramic](<a href="https://www.jyoticeramic.com/Alucera_Polymer.php">https://www.jyoticeramic.com/Alucera_Polymer.php</a>)
 </p>
@@ -1022,9 +1022,9 @@ A cement plant has a transfer chute where material keeps damaging the steel lini
 
 
 
-<div id="outline-container-org8e741af" class="outline-2">
-<h2 id="org8e741af">## Product 8: Adment</h2>
-<div class="outline-text-2" id="text-org8e741af">
+<div id="outline-container-org428a617" class="outline-2">
+<h2 id="org428a617">## Product 8: Adment</h2>
+<div class="outline-text-2" id="text-org428a617">
 <p>
 Adment is Jyoti Ceramic’s <b><b>inorganic ceramic adhesive cement</b></b>. In simple words, it is a high-temperature bonding material used to join, seal, coat, or pot ceramic and other components. [jyoticeramic](<a href="https://www.jyoticeramic.com/adment.php/pdf/adment.pdf">https://www.jyoticeramic.com/adment.php/pdf/adment.pdf</a>)
 </p>
@@ -1096,9 +1096,9 @@ A plant operator needs to fix a ceramic heater component in place. A normal glue
 
 
 
-<div id="outline-container-orgaf376fb" class="outline-2">
-<h2 id="orgaf376fb">## Product 9: Zircoat</h2>
-<div class="outline-text-2" id="text-orgaf376fb">
+<div id="outline-container-org6fe6d6c" class="outline-2">
+<h2 id="org6fe6d6c">## Product 9: Zircoat</h2>
+<div class="outline-text-2" id="text-org6fe6d6c">
 <p>
 Zircoat is a <b><b>zirconia-rich refractory coating compound</b></b> used to protect high-temperature surfaces. In simple words, it is a protective ceramic coating that helps furnaces, kilns, shells, and refractory linings last longer. [jyoticeramic](<a href="https://www.jyoticeramic.com/zircoat.php">https://www.jyoticeramic.com/zircoat.php</a>)
 </p>
@@ -1169,9 +1169,9 @@ A steel plant has a refractory-lined chamber that keeps cracking and losing heat
 </div>
 
 
-<div id="outline-container-orgb7e6d04" class="outline-2">
-<h2 id="orgb7e6d04">## Product 10: Aluma-Coat</h2>
-<div class="outline-text-2" id="text-orgb7e6d04">
+<div id="outline-container-orgb6c7e7a" class="outline-2">
+<h2 id="orgb6c7e7a">## Product 10: Aluma-Coat</h2>
+<div class="outline-text-2" id="text-orgb6c7e7a">
 <p>
 Aluma-Coat is a <b><b>ceramic protective coating</b></b> made with epoxy resin and fine sintered ceramic powder. In simple words, it is a brushable or sprayable coating that protects metal and concrete surfaces from corrosion, abrasion, and chemical attack. [jyoticeramic](<a href="https://www.jyoticeramic.com/aluma-coat.php">https://www.jyoticeramic.com/aluma-coat.php</a>)
 </p>
@@ -1244,9 +1244,9 @@ A cement plant has a steel fan propeller that is wearing out due to dust and abr
 
 
 
-<div id="outline-container-orge99d162" class="outline-2">
-<h2 id="orge99d162">## Product 11: Jyodent</h2>
-<div class="outline-text-2" id="text-orge99d162">
+<div id="outline-container-orgf744852" class="outline-2">
+<h2 id="orgf744852">## Product 11: Jyodent</h2>
+<div class="outline-text-2" id="text-orgf744852">
 <p>
 Jyodent is Jyoti Ceramic’s <b><b>zirconia dental restorative material</b></b> used for crowns, bridges, abutments, and implants. In simple words, it is a high-strength dental ceramic blank that dentists and labs mill into tooth restorations. [jyodent](<a href="http://www.jyodent.com">http://www.jyodent.com</a>)
 </p>
@@ -1317,9 +1317,9 @@ A dental clinic needs strong, natural-looking crowns for a patient. The lab take
 </div>
 
 
-<div id="outline-container-org2cdbb47" class="outline-2">
-<h2 id="org2cdbb47">## Product 12: Jyalox 95P</h2>
-<div class="outline-text-2" id="text-org2cdbb47">
+<div id="outline-container-org732dfdb" class="outline-2">
+<h2 id="org732dfdb">## Product 12: Jyalox 95P</h2>
+<div class="outline-text-2" id="text-org732dfdb">
 <p>
 Jyalox 95P is a <b><b>95% alumina ceramic</b></b> used mainly as a stress-relieving interlocking insulator in pad heaters and related heating mats. In simple words, it is a ceramic bead/insulator that supports heating elements while keeping them electrically insulated from the surface being heated. [jyoticeramic](<a href="https://www.jyoticeramic.com/jyalox-95p.php">https://www.jyoticeramic.com/jyalox-95p.php</a>)
 </p>
@@ -1390,9 +1390,9 @@ A welding contractor needs to heat a vessel seam before or after welding to redu
 </div>
 
 
-<div id="outline-container-org4465b20" class="outline-2">
-<h2 id="org4465b20">## Product 13: Ceramic Igniting Electrode and Flame Sensor</h2>
-<div class="outline-text-2" id="text-org4465b20">
+<div id="outline-container-org126ea8f" class="outline-2">
+<h2 id="org126ea8f">## Product 13: Ceramic Igniting Electrode and Flame Sensor</h2>
+<div class="outline-text-2" id="text-org126ea8f">
 <p>
 This product is a <b><b>ceramic-insulated igniter or flame sensor assembly</b></b> used in burners and heating systems. In simple words, it is a part that helps start ignition or detect flame safely inside gas and fuel systems. [jyoticeramic](<a href="https://www.jyoticeramic.com/jyalox.php">https://www.jyoticeramic.com/jyalox.php</a>)
 </p>
@@ -1463,9 +1463,9 @@ A gas boiler in a plant needs reliable ignition every time it starts. The cerami
 </div>
 
 
-<div id="outline-container-org379e6b9" class="outline-2">
-<h2 id="org379e6b9">## Product 14: Ceramic Spacers for Shunt Reactors</h2>
-<div class="outline-text-2" id="text-org379e6b9">
+<div id="outline-container-orgf723875" class="outline-2">
+<h2 id="orgf723875">## Product 14: Ceramic Spacers for Shunt Reactors</h2>
+<div class="outline-text-2" id="text-orgf723875">
 <p>
 These are <b><b>precisely ground steatite ceramic spacers</b></b> used in shunt reactors. In simple words, they are high-precision insulating spacers that help keep the reactor core aligned, rigid, and low-noise. [jyoticeramic](<a href="https://www.jyoticeramic.com/Steatitecerami.php">https://www.jyoticeramic.com/Steatitecerami.php</a>)
 </p>
@@ -1536,9 +1536,9 @@ A power equipment manufacturer is building a shunt reactor and needs precise cor
 </div>
 
 
-<div id="outline-container-orga7f17ef" class="outline-2">
-<h2 id="orga7f17ef">## Product 15: H.R.C. Fuse Body</h2>
-<div class="outline-text-2" id="text-orga7f17ef">
+<div id="outline-container-orgd2fdd68" class="outline-2">
+<h2 id="orgd2fdd68">## Product 15: H.R.C. Fuse Body</h2>
+<div class="outline-text-2" id="text-orgd2fdd68">
 <p>
 The H.R.C. fuse body is a <b><b>ceramic outer body for a high rupturing capacity fuse</b></b>. In simple words, it is the strong insulating shell that holds the fuse element and helps the fuse safely interrupt a fault. [pcesystems](<a href="https://www.pcesystems.in/Pdf%20file/H.T.%20HRC%20Fuse.pdf">https://www.pcesystems.in/Pdf%20file/H.T.%20HRC%20Fuse.pdf</a>)
 </p>
@@ -1610,9 +1610,9 @@ A panel builder is assembling protection for a transformer feeder. The H.R.C. fu
 </div>
 
 
-<div id="outline-container-org26cc804" class="outline-2">
-<h2 id="org26cc804">## Product 16: Customised Ceramic Parts</h2>
-<div class="outline-text-2" id="text-org26cc804">
+<div id="outline-container-org34b2666" class="outline-2">
+<h2 id="org34b2666">## Product 16: Customised Ceramic Parts</h2>
+<div class="outline-text-2" id="text-org34b2666">
 <p>
 Customised ceramic parts are <b><b>made-to-order technical ceramic components</b></b> produced according to the customer’s drawing, dimensions, and application. In simple words, this is the “we make it exactly the way you need it” category. [goodfellow](<a href="https://www.goodfellow.com/global/services/custom-ceramic-components">https://www.goodfellow.com/global/services/custom-ceramic-components</a>)
 </p>
@@ -1685,9 +1685,9 @@ A semiconductor machine needs a ceramic holder with a special shape and extremel
 
 
 
-<div id="outline-container-orgc4d8c02" class="outline-2">
-<h2 id="orgc4d8c02">## Product 17: Ceramic Heater Parts</h2>
-<div class="outline-text-2" id="text-orgc4d8c02">
+<div id="outline-container-orgf9f3994" class="outline-2">
+<h2 id="orgf9f3994">## Product 17: Ceramic Heater Parts</h2>
+<div class="outline-text-2" id="text-orgf9f3994">
 <p>
 Ceramic heater parts are <b><b>insulating ceramic components used in band heaters and tubular heaters</b></b>. In simple words, they help the heater work safely by keeping electrical parts separated and stable in high heat. [20505-in.all](<a href="https://20505-in.all.biz/goods">https://20505-in.all.biz/goods</a>)
 </p>
@@ -1759,9 +1759,9 @@ A manufacturer of band heaters needs ceramic pieces to separate and support the 
 
 
 
-<div id="outline-container-org0d0a7f7" class="outline-2">
-<h2 id="org0d0a7f7">## Product 18: Pump Parts</h2>
-<div class="outline-text-2" id="text-org0d0a7f7">
+<div id="outline-container-org9834390" class="outline-2">
+<h2 id="org9834390">## Product 18: Pump Parts</h2>
+<div class="outline-text-2" id="text-org9834390">
 <p>
 Pump parts are <b><b>ceramic components used inside pumps for wear, sealing, and fluid-handling performance</b></b>. In simple words, they are the hard, precise ceramic pieces that help pumps survive abrasion, chemicals, and heat in industrial use. [worldofpumps](<a href="https://www.worldofpumps.com/splist.html">https://www.worldofpumps.com/splist.html</a>)
 </p>
