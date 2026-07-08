@@ -1,0 +1,9 @@
+#+title:      all the learnings
+#+date:       [2026-07-08 Wed 08:33]
+#+filetags:   :knowledge:learning:youtube:
+#+identifier: 20260708T083322
+* youtube
+** anurag bansal
+- https://youtu.be/LJ-Gy_ooTsI swiggy and toing.
+** think school
+- https://youtu.be/WcckBmkauBQ ai lie?
