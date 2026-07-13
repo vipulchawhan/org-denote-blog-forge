@@ -100,6 +100,9 @@ with
 *** ~/.emacs.d-vipul/config.org
 [[denote:20260707T230955][emacs config chemac2]]
 *** all contents
+** the config is part of my notes linked as follows
+[[denote:20260707T230955][emacs config chemac2]]
+
 * mpv config
 ** mpv.conf
 # General playback
@@ -161,3 +164,20 @@ A deeper system-level method is editing `HKEY_LOCAL_MACHINE\SYSTEM\CurrentContro
 - Or delete `Scancode Map` and reboot. [youtube](https://www.youtube.com/watch?v=XR_RmXtjrRI)
 
 If you want, I can give you the exact registry steps for **Windows 11 Home** or **Windows 11 Pro**.
+* chrome hacks
+** redirect youtube to invidious
+*** open all youtube links to invidious instance.
+*** invidious instances
+https://docs.invidious.io/instances/
+*** the working that i have decided to use here.
+https://inv.nadeko.net/
+*** the hack is basically to redirect all links to youtube to be opened in invidious instead.
+*** extension used for this is -
+https://chromewebstore.google.com/detail/redirector/lioaeidejmlpffbndjhaameocfldlhin
+*** open extension rules and add the following
+- from :: ^https://www.youtube.com/(.*)
+- to  :: https://inv.nadeko.net/$1
+
+  how did come up to this?
+  refer their faq and examples. some regex knowledge.
+  https://store.rxliuli.com/extensions/redirector/

@@ -4,6 +4,24 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
+(defvar efs/default-font-size 110)
+    (defvar efs/default-variable-font-size 110)
+    (set-face-attribute 'default nil :font "Victor Mono" :height efs/default-font-size)
+
+    ;; Set the fixed pitch face
+    (set-face-attribute 'fixed-pitch nil :font "Victor Mono" :height efs/default-font-size)
+
+  ;; (set-face-attribute 'default nil :font "Iosevka NF" :height efs/default-font-size)
+
+  ;; ;; Set the fixed pitch face
+  ;; (set-face-attribute 'fixed-pitch nil :font "Iosevka NF" :height efs/default-font-size)
+
+    
+    ;; Set the variable pitch face
+    (set-face-attribute 'variable-pitch nil :font "NotoSerif NF Black" :height efs/default-variable-font-size :weight 'regular)
+
+(set-fontset-font t 'unicode (font-spec :family "Iosevka NF") nil 'append)
+
 (use-package modus-themes
   :config
   ;; Your customizations before loading theme
@@ -122,16 +140,6 @@
 
 (set 'moody-mode-line-height 20)
 
-(defvar efs/default-font-size 110)
-(defvar efs/default-variable-font-size 110)
-(set-face-attribute 'default nil :font "Victor Mono" :height efs/default-font-size)
-
-;; Set the fixed pitch face
-(set-face-attribute 'fixed-pitch nil :font "Victor Mono" :height efs/default-font-size)
-
-;; Set the variable pitch face
-(set-face-attribute 'variable-pitch nil :font "Noto Serif" :height efs/default-variable-font-size :weight 'regular)
-
 (use-package beacon)
 (beacon-mode 1)
 
@@ -212,6 +220,46 @@
   ;; (define-key map (kbd "C-c n i") #'denote-link) ; "insert" mnemonic
   (define-key map (kbd "C-c n r") #'denote-rename-file)
   (define-key map (kbd "C-c n R") #'denote-rename-file-using-front-matter))
+
+(use-package denote-explore
+  ;; :custom
+  ;; Where to store network data and in which format
+  ;; (denote-explore-network-directory "<your preferred folder>")
+  ;; (denote-explore-network-filename "denote-network")
+  ;; (denote-explore-network-keywords-ignore "<keywords list>")
+  ;; (denote-explore-network-regex-ignore "<regex>")
+  ;; (denote-explore-network-format 'd3.js)
+  ;; (denote-explore-network-d3-colours 'SchemeObservable10)
+  ;; (denote-explore-network-d3-js "https://d3js.org/d3.v7.min.js")
+  ;; (denote-explore-network-d3-template "<file path>")
+  ;; (denote-explore-network-graphviz-header "<header strings>")
+  ;; (denote-explore-network-graphviz-filetype 'svg)
+  :bind
+  (;; Statistics
+   ("C-c e s n" . denote-explore-count-notes)
+   ("C-c e s k" . denote-explore-count-keywords)
+   ("C-c e s e" . denote-explore-barchart-filetypes)
+   ("C-c e s w" . denote-explore-barchart-keywords)
+   ("C-c e s t" . denote-explore-barchart-timeline)
+   ;; Random walks
+   ("C-c e w n" . denote-explore-random-note)
+   ("C-c e w r" . denote-explore-random-regex)
+   ("C-c e w l" . denote-explore-random-link)
+   ("C-c e w k" . denote-explore-random-keyword)
+   ;; Denote Janitor
+   ("C-c e j d" . denote-explore-duplicate-notes)
+   ("C-c e j D" . denote-explore-duplicate-notes-dired)
+   ("C-c e j l" . denote-explore-missing-links)
+   ("C-c e j z" . denote-explore-zero-keywords)
+   ("C-c e j s" . denote-explore-single-keywords)
+   ("C-c e j r" . denote-explore-rename-keywords)
+   ("C-c e j y" . denote-explore-sync-metadata)
+   ("C-c e j i" . denote-explore-isolated-files)
+   ;; Visualise denote
+   ("C-c e n" . denote-explore-network)
+   ("C-c e r" . denote-explore-network-regenerate)
+   ("C-c e d" . denote-explore-barchart-degree)
+   ("C-c e b" . denote-explore-barchart-backlinks)))
 
 ;; Key bindings specifically for Dired.
 ;; (let ((map dired-mode-map))
@@ -402,7 +450,7 @@
 (use-package org-modern)
 ;; Option 2: Globally
 (with-eval-after-load 'org (global-org-modern-mode))
-(setq org-modern-star 'replace)
+;; (setq org-modern-star 'replace)
 
 (use-package ox-pandoc)
 (electric-pair-mode 1)

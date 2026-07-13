@@ -1,0 +1,25 @@
+#+title:      trekking
+#+date:       [2026-07-12 Sun 08:39]
+#+filetags:   :data:trekking:
+#+identifier: 20260712T083907
+* valley of flowers.
+** members
+*** Rahul kashelani - 9923456000                                   :family:
+*** Himanshu kashelani - 7875387528                                         :family:
+*** Jamuna [mathruboothum s] 8097945964                            :family:
+*** Smita Arlekar - 8007742237                                     :family:
+*** Sanjivi Naik - 9112392769                                      :family:
+*** Gaurav Desai - 9960912276                                      :family:
+*** Gitesh Joshi 8275582525/9420067860                             :family:
+*** Pratima Phad - 7887593333                                      :family:
+*** Poonam Patil - 07350271433                                     :family:
+*** Nakul Gaikwad - 9673411311                                     :family:
+*** Sanket Lonare - 9422514016                                     :family:
+*** Jayashree Jagtap - 9765550032                                  :family:
+*** Swapnil Gawali - 8308848800                                    :family:
+*** Vijay Chawhan - 8805357807/8421608346                          :family:
+*** Nidhi Chawhan - 9225914176                                     :family:
+*** Sarala Savkar - 8888825793                                     :family:
+*** Harshal Vanara - 99223 22199/8329515011                        :family:
+*** Sulbha ahire - 9226801675                                      :family:
+*** Kunal Chavanke - 7588300100                                    :family:

@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "directed": true,
+    "type": "Neighbourhood",
+    "parameters": [
+      "20260624T221126",
+      2
+    ]
+  },
+  "nodes": [
+    {
+      "id": "20260624T221126",
+      "signature": null,
+      "name": "Top knowledge base",
+      "keywords": [
+        "emacs"
+      ],
+      "type": "org",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260624T221126--top-knowledge-base__emacs.org",
+      "degree": 6,
+      "backlinks": 0
+    },
+    {
+      "id": "20260624T224315",
+      "signature": null,
+      "name": "lets try a backlink",
+      "keywords": [
+        "emacs"
+      ],
+      "type": "org",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260624T224315--lets-try-a-backlink__emacs.org",
+      "degree": 1,
+      "backlinks": 1
+    },
+    {
+      "id": "20260624T230321",
+      "signature": null,
+      "name": "All windows first install",
+      "keywords": [
+        "first",
+        "install",
+        "setup",
+        "windows"
+      ],
+      "type": "org",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260624T230321--all-windows-first-install__first_install_setup_windows.org",
+      "degree": 2,
+      "backlinks": 1
+    },
+    {
+      "id": "20260625T075258",
+      "signature": null,
+      "name": "my prot learning note",
+      "keywords": [
+        "learning",
+        "test"
+      ],
+      "type": "org",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260625T075258--my-prot-learning-note__learning_test.org",
+      "degree": 1,
+      "backlinks": 1
+    },
+    {
+      "id": "20260630T084756",
+      "signature": null,
+      "name": "stuff at work",
+      "keywords": [
+        "learning",
+        "stuff",
+        "work"
+      ],
+      "type": "org",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260630T084756--stuff-at-work__learning_stuff_work.org",
+      "degree": 1,
+      "backlinks": 1
+    },
+    {
+      "id": "20260630T215114",
+      "signature": null,
+      "name": "exim learnings",
+      "keywords": [
+        "exim",
+        "learning"
+      ],
+      "type": "org",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260630T215114--exim-learnings__exim_learning.org",
+      "degree": 1,
+      "backlinks": 1
+    },
+    {
+      "id": "20260707T230955",
+      "signature": null,
+      "name": "emacs-config-chemac2",
+      "keywords": [
+        "chemac2",
+        "config",
+        "emacs",
+        "org"
+      ],
+      "type": "el",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260707T230955--emacs-config-chemac2__chemac2_config_emacs_org.el",
+      "degree": 1,
+      "backlinks": 1
+    },
+    {
+      "id": "20260707T230955",
+      "signature": null,
+      "name": "emacs config chemac2",
+      "keywords": [
+        "chemac2",
+        "config",
+        "emacs",
+        "org"
+      ],
+      "type": "org",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260707T230955--emacs-config-chemac2__chemac2_config_emacs_org.org",
+      "degree": 1,
+      "backlinks": 1
+    },
+    {
+      "id": "20260708T083322",
+      "signature": null,
+      "name": "all the learnings",
+      "keywords": [
+        "knowledge",
+        "learning",
+        "youtube"
+      ],
+      "type": "org",
+      "filename": "c:/Users/LENOVO/Vip-emacs/Projects/github/org-denote-blog-forge/notes/20260708T083322--all-the-learnings__knowledge_learning_youtube.org",
+      "degree": 1,
+      "backlinks": 1
+    }
+  ],
+  "edges": [
+    {
+      "source": "20260624T230321",
+      "target": "20260707T230955",
+      "weight": 1
+    },
+    {
+      "source": "20260624T221126",
+      "target": "20260624T224315",
+      "weight": 1
+    },
+    {
+      "source": "20260624T221126",
+      "target": "20260624T230321",
+      "weight": 1
+    },
+    {
+      "source": "20260624T221126",
+      "target": "20260625T075258",
+      "weight": 1
+    },
+    {
+      "source": "20260624T221126",
+      "target": "20260630T084756",
+      "weight": 1
+    },
+    {
+      "source": "20260624T221126",
+      "target": "20260630T215114",
+      "weight": 1
+    },
+    {
+      "source": "20260624T221126",
+      "target": "20260708T083322",
+      "weight": 1
+    }
+  ]
+}
