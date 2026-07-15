@@ -5,20 +5,14 @@
 (menu-bar-mode -1)
 
 (defvar efs/default-font-size 110)
-    (defvar efs/default-variable-font-size 110)
-    (set-face-attribute 'default nil :font "Victor Mono" :height efs/default-font-size)
+(defvar efs/default-variable-font-size 110)
+(set-face-attribute 'default nil :font "Victor Mono" :height efs/default-font-size)
 
-    ;; Set the fixed pitch face
-    (set-face-attribute 'fixed-pitch nil :font "Victor Mono" :height efs/default-font-size)
+;; Set the fixed pitch face
+(set-face-attribute 'fixed-pitch nil :font "Victor Mono" :height efs/default-font-size)
 
-  ;; (set-face-attribute 'default nil :font "Iosevka NF" :height efs/default-font-size)
-
-  ;; ;; Set the fixed pitch face
-  ;; (set-face-attribute 'fixed-pitch nil :font "Iosevka NF" :height efs/default-font-size)
-
-    
-    ;; Set the variable pitch face
-    (set-face-attribute 'variable-pitch nil :font "NotoSerif NF Black" :height efs/default-variable-font-size :weight 'regular)
+;; Set the variable pitch face
+(set-face-attribute 'variable-pitch nil :font "NotoSerif NF Black" :height efs/default-variable-font-size :weight 'regular)
 
 (set-fontset-font t 'unicode (font-spec :family "Iosevka NF") nil 'append)
 
@@ -547,4 +541,6 @@
 ;;   (setq org-element-use-cache t)
 ;;   :hook (org-mode . org-link-beautify-mode))
 
-(use-package listen)
+(use-package listen
+  :init
+  (setq listen-directory "/Users/Lenovo/Vipul/music"))

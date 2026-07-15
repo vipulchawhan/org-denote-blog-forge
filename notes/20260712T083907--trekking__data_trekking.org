@@ -23,3 +23,51 @@
 *** Harshal Vanara - 99223 22199/8329515011                        :family:
 *** Sulbha ahire - 9226801675                                      :family:
 *** Kunal Chavanke - 7588300100                                    :family:
+* trekking medicines list
+**   Medicine Name                  Primary Usage                                                      Expiry     
+*** Paracetamol 500mg
+**** Fever reduction, mild pain
+**** July 2028
+*** Omebiz 20
+**** Acidity, heartburn, GERD, ulcers (PPI antacid)
+**** Aug 2027
+*** Ondansetron orally tablet 4mg
+**** Nausea, vomiting prevention
+**** Aug 2027
+*** Levocetirizine tablet 5mg
+**** Allergies, hives, itching, sneezing, runny nose
+**** April 2027
+*** Cheston Cold
+**** Cold symptoms (cough, congestion, runny nose)
+**** July 2027
+*** Fexobi 120
+**** Allergies, hay fever (non-drowsy antihistamine)
+**** Dec 2026
+*** TODO Fan Pudina                                             :expired:
+**** Gas, indigestion, bloating (mint-based relief)
+**** June 2026
+*** Ibubiz Plus
+**** Pain relief (headache, muscle/joint pain, inflammation, fever)
+**** Feb 2027
+*** Sofros
+**** Antibiotic ointment for cuts, wounds, burns
+**** Feb 2027
+*** Lomopen 2mg
+**** Anti-diarrheal (loperamide class, reduces stool frequency)
+**** May 2027
+*** Okacet
+**** Allergy tablet (cetirizine for sneezing, runny nose, hives)
+**** March 2028
+*** Diclowal MR
+**** Pain + muscle relaxant (for spasms, back/neck pain)
+**** June 2026
+*** Cipropen Eye Drops
+**** Bacterial eye/ear infections (conjunctivitis, redness, discharge)
+**** oct 2026
+*** antiseptic liquid
+**** antiseptic liquid
+**** oct 2027
+*** neomycin sofros
+**** burns etc
+**** march 2027
+*** bandage

@@ -691,5 +691,8 @@ skipped
 
 * listen\
 #+begin_src emacs-lisp
-  (use-package listen)
+      (use-package listen
+        :init
+        (setq listen-directory "/Users/Lenovo/Vipul/music"))
 #+end_src
+ 
