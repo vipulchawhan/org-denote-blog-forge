@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2026-07-22 Wed 13:31 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>all trekking related stuff</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<header>
+<h1 class="title">all trekking related stuff</h1>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb0b3db7">valley of flowers.</a>
+<ul>
+<li><a href="#org0939ed9">checklist to buy</a>
+<ul>
+<li><a href="#org3a5be23">waterproof jacket</a></li>
+<li><a href="#orgd599d14">waterprood pant</a></li>
+<li><a href="#org2ff16d7">bag waterproof</a></li>
+<li><a href="#orgc29b0a6">waterproof cap</a></li>
+<li><a href="#org4da1c98">quick dry pant</a></li>
+<li><a href="#org5c031c9">quick dry shirts</a></li>
+<li><a href="#orgf8b3c15">heat jackets</a></li>
+<li><a href="#org0e268d8">carribiner</a></li>
+<li><a href="#org5f3c056">swiss army knife</a></li>
+<li><a href="#org8954114">20,000 mah power bank</a></li>
+<li><a href="#orgb853dba">travel extension</a></li>
+<li><a href="#org8abe767">vacuum bag</a></li>
+<li><a href="#org4c7f9f5">ask sunil sir for boxers.</a></li>
+<li><a href="#org2eb9dac">uw</a></li>
+<li><a href="#orgeaeca81">banyan quick dry.</a></li>
+<li><a href="#org850ca68">toothpaste - toothbrush</a></li>
+<li><a href="#org12fb0b2">mouthwash</a></li>
+<li><a href="#orgd9c19f8">lifebuoy</a></li>
+<li><a href="#orge467910">quick dry socks</a></li>
+<li><a href="#orgff65525">full length socks.</a></li>
+<li><a href="#org6b47228">phone</a></li>
+<li><a href="#org4438dcb">charger</a></li>
+<li><a href="#orgb67745f">powerbank</a></li>
+<li><a href="#org707fb9e">shoes</a></li>
+<li><a href="#org267bd5b">crocks</a></li>
+<li><a href="#org8380cd2">sunscreen</a></li>
+<li><a href="#orgdc85b6c">1 book</a></li>
+<li><a href="#orgdae53f6">handkerchief</a></li>
+<li><a href="#org82ab4a9">nycil</a></li>
+<li><a href="#orgaba8cdf">supplements</a></li>
+<li><a href="#org3112b36">chocolates</a></li>
+<li><a href="#org682cd9c">protein bars</a></li>
+<li><a href="#org730f4a7">wallet</a></li>
+<li><a href="#org2f10dc3">aadahr</a></li>
+<li><a href="#org0e2e69b">id</a></li>
+<li><a href="#org6b66216">money cash</a></li>
+<li><a href="#org13dcc40">cheap watch waterproof</a></li>
+</ul>
+</li>
+<li><a href="#org72b3a3c">members</a>
+<ul>
+<li><a href="#orge8e4c59">Rahul kashelani - 9923456000&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org802a4a5">Himanshu kashelani - 7875387528&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org6093031">Jamuna [mathruboothum s] 8097945964&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#orgdc473db">Smita Arlekar - 8007742237&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org01b8a61">Sanjivi Naik - 9112392769&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#orgcea077c">Gaurav Desai - 9960912276&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#orgde605b3">Gitesh Joshi 8275582525/9420067860&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#orgdb48df6">Pratima Phad - 7887593333&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org9d95eab">Poonam Patil - 07350271433&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org86666a3">Nakul Gaikwad - 9673411311&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org3555bb6">Sanket Lonare - 9422514016&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org50c2e55">Jayashree Jagtap - 9765550032&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#orgd5221dd">Swapnil Gawali - 8308848800&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org06e01b0">Vijay Chawhan - 8805357807/8421608346&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org6e35965">Nidhi Chawhan - 9225914176&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#orgc27b4ff">Sarala Savkar - 8888825793&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org03c406b">Harshal Vanara - 99223 22199/8329515011&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org8357de8">Sulbha ahire - 9226801675&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+<li><a href="#org47fd885">Kunal Chavanke - 7588300100&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3287b3c">trekking medicines list</a>
+<ul>
+<li><a href="#org438aa0e">Medicine Name                  Primary Usage                                                      Expiry</a>
+<ul>
+<li><a href="#org0a21de0">Paracetamol 500mg</a>
+<ul>
+<li><a href="#orgc0878b7">Fever reduction, mild pain</a></li>
+<li><a href="#orgf31fc1d">July 2028</a></li>
+</ul>
+</li>
+<li><a href="#org586a46f">Omebiz 20</a>
+<ul>
+<li><a href="#org1f1468d">Acidity, heartburn, GERD, ulcers (PPI antacid)</a></li>
+<li><a href="#org355aec0">Aug 2027</a></li>
+</ul>
+</li>
+<li><a href="#org504e6e8">Ondansetron orally tablet 4mg</a>
+<ul>
+<li><a href="#org6688a1d">Nausea, vomiting prevention</a></li>
+<li><a href="#orgd17c1fc">Aug 2027</a></li>
+</ul>
+</li>
+<li><a href="#org4c8e13a">Levocetirizine tablet 5mg</a>
+<ul>
+<li><a href="#org2970f1e">Allergies, hives, itching, sneezing, runny nose</a></li>
+<li><a href="#org0416f68">April 2027</a></li>
+</ul>
+</li>
+<li><a href="#orgc54f424">Cheston Cold</a>
+<ul>
+<li><a href="#orgdd3d851">Cold symptoms (cough, congestion, runny nose)</a></li>
+<li><a href="#org46ce6e0">July 2027</a></li>
+</ul>
+</li>
+<li><a href="#org9f088a0">Fexobi 120</a>
+<ul>
+<li><a href="#orgedc9a9d">Allergies, hay fever (non-drowsy antihistamine)</a></li>
+<li><a href="#org48972d5">Dec 2026</a></li>
+</ul>
+</li>
+<li><a href="#orgebc5b23"><span class="todo TODO">TODO</span> Fan Pudina&#xa0;&#xa0;&#xa0;<span class="tag"><span class="expired">expired</span></span></a>
+<ul>
+<li><a href="#org0ba0c6d">Gas, indigestion, bloating (mint-based relief)</a></li>
+<li><a href="#org7bf2f10">June 2026</a></li>
+</ul>
+</li>
+<li><a href="#orga9bf489">Ibubiz Plus</a>
+<ul>
+<li><a href="#orge2be168">Pain relief (headache, muscle/joint pain, inflammation, fever)</a></li>
+<li><a href="#org1805e12">Feb 2027</a></li>
+</ul>
+</li>
+<li><a href="#org4e3e6de">Sofros</a>
+<ul>
+<li><a href="#orge964916">Antibiotic ointment for cuts, wounds, burns</a></li>
+<li><a href="#orgc68393a">Feb 2027</a></li>
+</ul>
+</li>
+<li><a href="#org5279c58">Lomopen 2mg</a>
+<ul>
+<li><a href="#org25f5129">Anti-diarrheal (loperamide class, reduces stool frequency)</a></li>
+<li><a href="#org1849cad">May 2027</a></li>
+</ul>
+</li>
+<li><a href="#orgb9cef2d">Okacet</a>
+<ul>
+<li><a href="#orgc7a99c6">Allergy tablet (cetirizine for sneezing, runny nose, hives)</a></li>
+<li><a href="#orgee4ec58">March 2028</a></li>
+</ul>
+</li>
+<li><a href="#org9efdbae">Diclowal MR</a>
+<ul>
+<li><a href="#org4efc980">Pain + muscle relaxant (for spasms, back/neck pain)</a></li>
+<li><a href="#org6d4be36">June 2026</a></li>
+</ul>
+</li>
+<li><a href="#org9ffce7a">Cipropen Eye Drops</a>
+<ul>
+<li><a href="#org3f0e98b">Bacterial eye/ear infections (conjunctivitis, redness, discharge)</a></li>
+<li><a href="#org0f5b231">oct 2026</a></li>
+</ul>
+</li>
+<li><a href="#org30dd90c">antiseptic liquid</a>
+<ul>
+<li><a href="#orgb5f4642">antiseptic liquid</a></li>
+<li><a href="#org41ae232">oct 2027</a></li>
+</ul>
+</li>
+<li><a href="#orgdc5cb26">neomycin sofros</a>
+<ul>
+<li><a href="#org2f6f360">burns etc</a></li>
+<li><a href="#orgbe76d5f">march 2027</a></li>
+</ul>
+</li>
+<li><a href="#orga4140ca">bandage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orgb0b3db7" class="outline-2">
+<h2 id="orgb0b3db7">valley of flowers.</h2>
+<div class="outline-text-2" id="text-orgb0b3db7">
+</div>
+<div id="outline-container-org0939ed9" class="outline-3">
+<h3 id="org0939ed9">checklist to buy</h3>
+<div class="outline-text-3" id="text-org0939ed9">
+</div>
+<div id="outline-container-org3a5be23" class="outline-4">
+<h4 id="org3a5be23">waterproof jacket</h4>
+</div>
+<div id="outline-container-orgd599d14" class="outline-4">
+<h4 id="orgd599d14">waterprood pant</h4>
+</div>
+<div id="outline-container-org2ff16d7" class="outline-4">
+<h4 id="org2ff16d7">bag waterproof</h4>
+</div>
+<div id="outline-container-orgc29b0a6" class="outline-4">
+<h4 id="orgc29b0a6">waterproof cap</h4>
+</div>
+<div id="outline-container-org4da1c98" class="outline-4">
+<h4 id="org4da1c98">quick dry pant</h4>
+</div>
+<div id="outline-container-org5c031c9" class="outline-4">
+<h4 id="org5c031c9">quick dry shirts</h4>
+</div>
+<div id="outline-container-orgf8b3c15" class="outline-4">
+<h4 id="orgf8b3c15">heat jackets</h4>
+</div>
+<div id="outline-container-org0e268d8" class="outline-4">
+<h4 id="org0e268d8">carribiner</h4>
+</div>
+<div id="outline-container-org5f3c056" class="outline-4">
+<h4 id="org5f3c056">swiss army knife</h4>
+</div>
+<div id="outline-container-org8954114" class="outline-4">
+<h4 id="org8954114">20,000 mah power bank</h4>
+</div>
+<div id="outline-container-orgb853dba" class="outline-4">
+<h4 id="orgb853dba">travel extension</h4>
+</div>
+<div id="outline-container-org8abe767" class="outline-4">
+<h4 id="org8abe767">vacuum bag</h4>
+</div>
+<div id="outline-container-org4c7f9f5" class="outline-4">
+<h4 id="org4c7f9f5">ask sunil sir for boxers.</h4>
+</div>
+<div id="outline-container-org2eb9dac" class="outline-4">
+<h4 id="org2eb9dac">uw</h4>
+</div>
+<div id="outline-container-orgeaeca81" class="outline-4">
+<h4 id="orgeaeca81">banyan quick dry.</h4>
+</div>
+<div id="outline-container-org850ca68" class="outline-4">
+<h4 id="org850ca68">toothpaste - toothbrush</h4>
+</div>
+<div id="outline-container-org12fb0b2" class="outline-4">
+<h4 id="org12fb0b2">mouthwash</h4>
+</div>
+<div id="outline-container-orgd9c19f8" class="outline-4">
+<h4 id="orgd9c19f8">lifebuoy</h4>
+</div>
+<div id="outline-container-orge467910" class="outline-4">
+<h4 id="orge467910">quick dry socks</h4>
+</div>
+<div id="outline-container-orgff65525" class="outline-4">
+<h4 id="orgff65525">full length socks.</h4>
+</div>
+<div id="outline-container-org6b47228" class="outline-4">
+<h4 id="org6b47228">phone</h4>
+</div>
+<div id="outline-container-org4438dcb" class="outline-4">
+<h4 id="org4438dcb">charger</h4>
+</div>
+<div id="outline-container-orgb67745f" class="outline-4">
+<h4 id="orgb67745f">powerbank</h4>
+</div>
+<div id="outline-container-org707fb9e" class="outline-4">
+<h4 id="org707fb9e">shoes</h4>
+</div>
+<div id="outline-container-org267bd5b" class="outline-4">
+<h4 id="org267bd5b">crocks</h4>
+</div>
+<div id="outline-container-org8380cd2" class="outline-4">
+<h4 id="org8380cd2">sunscreen</h4>
+</div>
+<div id="outline-container-orgdc85b6c" class="outline-4">
+<h4 id="orgdc85b6c">1 book</h4>
+</div>
+<div id="outline-container-orgdae53f6" class="outline-4">
+<h4 id="orgdae53f6">handkerchief</h4>
+</div>
+<div id="outline-container-org82ab4a9" class="outline-4">
+<h4 id="org82ab4a9">nycil</h4>
+</div>
+<div id="outline-container-orgaba8cdf" class="outline-4">
+<h4 id="orgaba8cdf">supplements</h4>
+</div>
+<div id="outline-container-org3112b36" class="outline-4">
+<h4 id="org3112b36">chocolates</h4>
+</div>
+<div id="outline-container-org682cd9c" class="outline-4">
+<h4 id="org682cd9c">protein bars</h4>
+</div>
+<div id="outline-container-org730f4a7" class="outline-4">
+<h4 id="org730f4a7">wallet</h4>
+</div>
+<div id="outline-container-org2f10dc3" class="outline-4">
+<h4 id="org2f10dc3">aadahr</h4>
+</div>
+<div id="outline-container-org0e2e69b" class="outline-4">
+<h4 id="org0e2e69b">id</h4>
+</div>
+<div id="outline-container-org6b66216" class="outline-4">
+<h4 id="org6b66216">money cash</h4>
+</div>
+<div id="outline-container-org13dcc40" class="outline-4">
+<h4 id="org13dcc40">cheap watch waterproof</h4>
+</div>
+</div>
+<div id="outline-container-org72b3a3c" class="outline-3">
+<h3 id="org72b3a3c">members</h3>
+<div class="outline-text-3" id="text-org72b3a3c">
+</div>
+<div id="outline-container-orge8e4c59" class="outline-4">
+<h4 id="orge8e4c59">Rahul kashelani - 9923456000&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org802a4a5" class="outline-4">
+<h4 id="org802a4a5">Himanshu kashelani - 7875387528&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org6093031" class="outline-4">
+<h4 id="org6093031">Jamuna [mathruboothum s] 8097945964&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-orgdc473db" class="outline-4">
+<h4 id="orgdc473db">Smita Arlekar - 8007742237&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org01b8a61" class="outline-4">
+<h4 id="org01b8a61">Sanjivi Naik - 9112392769&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-orgcea077c" class="outline-4">
+<h4 id="orgcea077c">Gaurav Desai - 9960912276&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-orgde605b3" class="outline-4">
+<h4 id="orgde605b3">Gitesh Joshi 8275582525/9420067860&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-orgdb48df6" class="outline-4">
+<h4 id="orgdb48df6">Pratima Phad - 7887593333&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org9d95eab" class="outline-4">
+<h4 id="org9d95eab">Poonam Patil - 07350271433&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org86666a3" class="outline-4">
+<h4 id="org86666a3">Nakul Gaikwad - 9673411311&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org3555bb6" class="outline-4">
+<h4 id="org3555bb6">Sanket Lonare - 9422514016&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org50c2e55" class="outline-4">
+<h4 id="org50c2e55">Jayashree Jagtap - 9765550032&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-orgd5221dd" class="outline-4">
+<h4 id="orgd5221dd">Swapnil Gawali - 8308848800&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org06e01b0" class="outline-4">
+<h4 id="org06e01b0">Vijay Chawhan - 8805357807/8421608346&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org6e35965" class="outline-4">
+<h4 id="org6e35965">Nidhi Chawhan - 9225914176&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-orgc27b4ff" class="outline-4">
+<h4 id="orgc27b4ff">Sarala Savkar - 8888825793&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org03c406b" class="outline-4">
+<h4 id="org03c406b">Harshal Vanara - 99223 22199/8329515011&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org8357de8" class="outline-4">
+<h4 id="org8357de8">Sulbha ahire - 9226801675&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+<div id="outline-container-org47fd885" class="outline-4">
+<h4 id="org47fd885">Kunal Chavanke - 7588300100&#xa0;&#xa0;&#xa0;<span class="tag"><span class="family">family</span></span></h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org3287b3c" class="outline-2">
+<h2 id="org3287b3c">trekking medicines list</h2>
+<div class="outline-text-2" id="text-org3287b3c">
+</div>
+<div id="outline-container-org438aa0e" class="outline-3">
+<h3 id="org438aa0e">Medicine Name                  Primary Usage                                                      Expiry</h3>
+<div class="outline-text-3" id="text-org438aa0e">
+</div>
+<div id="outline-container-org0a21de0" class="outline-4">
+<h4 id="org0a21de0">Paracetamol 500mg</h4>
+<div class="outline-text-4" id="text-org0a21de0">
+</div>
+<div id="outline-container-orgc0878b7" class="outline-5">
+<h5 id="orgc0878b7">Fever reduction, mild pain</h5>
+</div>
+<div id="outline-container-orgf31fc1d" class="outline-5">
+<h5 id="orgf31fc1d">July 2028</h5>
+</div>
+</div>
+<div id="outline-container-org586a46f" class="outline-4">
+<h4 id="org586a46f">Omebiz 20</h4>
+<div class="outline-text-4" id="text-org586a46f">
+</div>
+<div id="outline-container-org1f1468d" class="outline-5">
+<h5 id="org1f1468d">Acidity, heartburn, GERD, ulcers (PPI antacid)</h5>
+</div>
+<div id="outline-container-org355aec0" class="outline-5">
+<h5 id="org355aec0">Aug 2027</h5>
+</div>
+</div>
+<div id="outline-container-org504e6e8" class="outline-4">
+<h4 id="org504e6e8">Ondansetron orally tablet 4mg</h4>
+<div class="outline-text-4" id="text-org504e6e8">
+</div>
+<div id="outline-container-org6688a1d" class="outline-5">
+<h5 id="org6688a1d">Nausea, vomiting prevention</h5>
+</div>
+<div id="outline-container-orgd17c1fc" class="outline-5">
+<h5 id="orgd17c1fc">Aug 2027</h5>
+</div>
+</div>
+<div id="outline-container-org4c8e13a" class="outline-4">
+<h4 id="org4c8e13a">Levocetirizine tablet 5mg</h4>
+<div class="outline-text-4" id="text-org4c8e13a">
+</div>
+<div id="outline-container-org2970f1e" class="outline-5">
+<h5 id="org2970f1e">Allergies, hives, itching, sneezing, runny nose</h5>
+</div>
+<div id="outline-container-org0416f68" class="outline-5">
+<h5 id="org0416f68">April 2027</h5>
+</div>
+</div>
+<div id="outline-container-orgc54f424" class="outline-4">
+<h4 id="orgc54f424">Cheston Cold</h4>
+<div class="outline-text-4" id="text-orgc54f424">
+</div>
+<div id="outline-container-orgdd3d851" class="outline-5">
+<h5 id="orgdd3d851">Cold symptoms (cough, congestion, runny nose)</h5>
+</div>
+<div id="outline-container-org46ce6e0" class="outline-5">
+<h5 id="org46ce6e0">July 2027</h5>
+</div>
+</div>
+<div id="outline-container-org9f088a0" class="outline-4">
+<h4 id="org9f088a0">Fexobi 120</h4>
+<div class="outline-text-4" id="text-org9f088a0">
+</div>
+<div id="outline-container-orgedc9a9d" class="outline-5">
+<h5 id="orgedc9a9d">Allergies, hay fever (non-drowsy antihistamine)</h5>
+</div>
+<div id="outline-container-org48972d5" class="outline-5">
+<h5 id="org48972d5">Dec 2026</h5>
+</div>
+</div>
+<div id="outline-container-orgebc5b23" class="outline-4">
+<h4 id="orgebc5b23"><span class="todo TODO">TODO</span> Fan Pudina&#xa0;&#xa0;&#xa0;<span class="tag"><span class="expired">expired</span></span></h4>
+<div class="outline-text-4" id="text-orgebc5b23">
+</div>
+<div id="outline-container-org0ba0c6d" class="outline-5">
+<h5 id="org0ba0c6d">Gas, indigestion, bloating (mint-based relief)</h5>
+</div>
+<div id="outline-container-org7bf2f10" class="outline-5">
+<h5 id="org7bf2f10">June 2026</h5>
+</div>
+</div>
+<div id="outline-container-orga9bf489" class="outline-4">
+<h4 id="orga9bf489">Ibubiz Plus</h4>
+<div class="outline-text-4" id="text-orga9bf489">
+</div>
+<div id="outline-container-orge2be168" class="outline-5">
+<h5 id="orge2be168">Pain relief (headache, muscle/joint pain, inflammation, fever)</h5>
+</div>
+<div id="outline-container-org1805e12" class="outline-5">
+<h5 id="org1805e12">Feb 2027</h5>
+</div>
+</div>
+<div id="outline-container-org4e3e6de" class="outline-4">
+<h4 id="org4e3e6de">Sofros</h4>
+<div class="outline-text-4" id="text-org4e3e6de">
+</div>
+<div id="outline-container-orge964916" class="outline-5">
+<h5 id="orge964916">Antibiotic ointment for cuts, wounds, burns</h5>
+</div>
+<div id="outline-container-orgc68393a" class="outline-5">
+<h5 id="orgc68393a">Feb 2027</h5>
+</div>
+</div>
+<div id="outline-container-org5279c58" class="outline-4">
+<h4 id="org5279c58">Lomopen 2mg</h4>
+<div class="outline-text-4" id="text-org5279c58">
+</div>
+<div id="outline-container-org25f5129" class="outline-5">
+<h5 id="org25f5129">Anti-diarrheal (loperamide class, reduces stool frequency)</h5>
+</div>
+<div id="outline-container-org1849cad" class="outline-5">
+<h5 id="org1849cad">May 2027</h5>
+</div>
+</div>
+<div id="outline-container-orgb9cef2d" class="outline-4">
+<h4 id="orgb9cef2d">Okacet</h4>
+<div class="outline-text-4" id="text-orgb9cef2d">
+</div>
+<div id="outline-container-orgc7a99c6" class="outline-5">
+<h5 id="orgc7a99c6">Allergy tablet (cetirizine for sneezing, runny nose, hives)</h5>
+</div>
+<div id="outline-container-orgee4ec58" class="outline-5">
+<h5 id="orgee4ec58">March 2028</h5>
+</div>
+</div>
+<div id="outline-container-org9efdbae" class="outline-4">
+<h4 id="org9efdbae">Diclowal MR</h4>
+<div class="outline-text-4" id="text-org9efdbae">
+</div>
+<div id="outline-container-org4efc980" class="outline-5">
+<h5 id="org4efc980">Pain + muscle relaxant (for spasms, back/neck pain)</h5>
+</div>
+<div id="outline-container-org6d4be36" class="outline-5">
+<h5 id="org6d4be36">June 2026</h5>
+</div>
+</div>
+<div id="outline-container-org9ffce7a" class="outline-4">
+<h4 id="org9ffce7a">Cipropen Eye Drops</h4>
+<div class="outline-text-4" id="text-org9ffce7a">
+</div>
+<div id="outline-container-org3f0e98b" class="outline-5">
+<h5 id="org3f0e98b">Bacterial eye/ear infections (conjunctivitis, redness, discharge)</h5>
+</div>
+<div id="outline-container-org0f5b231" class="outline-5">
+<h5 id="org0f5b231">oct 2026</h5>
+</div>
+</div>
+<div id="outline-container-org30dd90c" class="outline-4">
+<h4 id="org30dd90c">antiseptic liquid</h4>
+<div class="outline-text-4" id="text-org30dd90c">
+</div>
+<div id="outline-container-orgb5f4642" class="outline-5">
+<h5 id="orgb5f4642">antiseptic liquid</h5>
+</div>
+<div id="outline-container-org41ae232" class="outline-5">
+<h5 id="org41ae232">oct 2027</h5>
+</div>
+</div>
+<div id="outline-container-orgdc5cb26" class="outline-4">
+<h4 id="orgdc5cb26">neomycin sofros</h4>
+<div class="outline-text-4" id="text-orgdc5cb26">
+</div>
+<div id="outline-container-org2f6f360" class="outline-5">
+<h5 id="org2f6f360">burns etc</h5>
+</div>
+<div id="outline-container-orgbe76d5f" class="outline-5">
+<h5 id="orgbe76d5f">march 2027</h5>
+</div>
+</div>
+<div id="outline-container-orga4140ca" class="outline-4">
+<h4 id="orga4140ca">bandage</h4>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
