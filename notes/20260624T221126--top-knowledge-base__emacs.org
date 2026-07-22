@@ -4,10 +4,9 @@
 #+identifier: 20260624T221126
 * [[denote:20260624T224315][lets try a backlink]]
 * [[denote:20260624T230321][All windows first install]]
-** test
-*** test ⯆ 
 * [[denote:20260625T075258][my prot learning note]]
 * [[denote:20260630T084756][stuff at work]]
 * [[denote:20260630T215114][exim learnings]]
 * [[denote:20260708T083322][all the learnings]]
-* [[denote:20260712T083907][trekking]]
+** 
+* [[denote:20260712T083907][all trekking related stuff]]
