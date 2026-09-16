@@ -18,7 +18,7 @@ add extras bucket first
 #+end_src
 
 #+begin_src powershell
-  scoop install git curl  mpv musicplayer2 grep findutils xargs freetube ytdlp-interface deno ffmpeg yt-dlp VictorMono-NF album-art-downloader powertoys nomacs googlechrome-canary oh-myposh glazewm zebar emacs
+  scoop install git curl  mpv musicplayer2 grep findutils xargs freetube ytdlp-interface deno ffmpeg yt-dlp VictorMono-NF album-art-downloader powertoys nomacs googlechrome-canary oh-myposh glazewm zebar emacs yazi
 #+end_src
 
 install and enable aria2 for faster downloades

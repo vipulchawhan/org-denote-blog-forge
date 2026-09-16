@@ -363,62 +363,63 @@
                           (?D . "Optional")))
 
 (use-package elfeed
-  :config
-  ;; It is recommended that you make a global binding for elfeed.
-  (global-set-key (kbd "C-x w") 'elfeed)
-  (global-set-key (kbd "C-x y") 'elfeed-update)
-
-  (setq elfeed-feeds
-        '("http://nullprogram.com/feed/"
-          "https://blume.vc/funds/feed.xml"
-          "https://blume.vc/news/feed.xml"
-          "https://blume.vc/newsletters/feed.xml"
-          "https://blume.vc/offers/feed.xml"
-          "https://high-capacity.substack.com/feed"
-          "https://blume.vc/reports/feed.xml"
-          "Collab Fund — https://feeds.feedburner.com/collabfund"
-          "https://finshots.in/archive/rss/"
-	  "https://moz.com/posts/rss/blog"
-	  "http://feeds.feedburner.com/BusinessAnalystTimes-BusinessAnalysisHome"
-	  "https://www.bridging-the-gap.com/feed/"
-	  "https://businessanalyst.techcanvass.com/feed"
-	  "https://adrianreed.co.uk/page/7/feed"
-	  "https://mechanicalbooster.com/feed"
-	  "https://blogmech.com/feed"
-	  "https://fractory.com/feed"
-	  "https://mechanicaljungle.com/feed"
-	  "https://www.theengineerspost.com/feed"
-	  "https://www.datasciencecentral.com/feed/format"
-	  "https://dataaspirant.com/feed/"
-	  "https://rweekly.org/rss"
-	  "https://www.sqlservercentral.com/blogs/feed"
-	  "https://www.mmsonline.com/rss/all"
-	  "https://www.practicalmachinist.com/feed/"
-	  "https://webengage.com/blog/feed/"
-	  "https://www.practicalecommerce.com/feed"
-	  "https://rhodus.substack.com/feed"
-          "https://indiadatahub.substack.com/feed"
-          "https://shantanugoel.com/index.xml"))
-
-  (setq elfeed-show-mode-hook
-        (lambda ()
-          (set-face-attribute 'variable-pitch (selected-frame) :font (font-spec :family "Victor Mono Oblique" :size 14))
-          (setq fill-column 120)
-          (setq elfeed-show-entry-switch #'my-show-elfeed)))
-(defun my-show-elfeed (buffer)
-  (with-current-buffer buffer
-    (setq buffer-read-only nil)
-    (goto-char (point-min))
-    (re-search-forward "\n\n")
-    (fill-individual-paragraphs (point) (point-max))
-    (setq buffer-read-only t))
-  (switch-to-buffer buffer))
-  
-  (defun my-elfeed-show-hook ()
-    "Enable visual line mode in elfeed show mode."
-    (visual-line-mode 1))
-
-  (add-hook 'elfeed-show-mode-hook 'my-elfeed-show-hook))
+     :config
+     ;; It is recommended that you make a global binding for elfeed.
+     (global-set-key (kbd "C-x w") 'elfeed)
+     (global-set-key (kbd "C-x y") 'elfeed-update)
+     
+     (setq elfeed-feeds
+           '("http://nullprogram.com/feed/"
+             "https://blume.vc/funds/feed.xml"
+             "https://blume.vc/news/feed.xml"
+             "https://blume.vc/newsletters/feed.xml"
+             "https://blume.vc/offers/feed.xml"
+             "https://high-capacity.substack.com/feed"
+             "https://blume.vc/reports/feed.xml"
+             "Collab Fund — https://feeds.feedburner.com/collabfund"
+             "https://finshots.in/archive/rss/"
+   	     "https://moz.com/posts/rss/blog"
+   	  "http://feeds.feedburner.com/BusinessAnalystTimes-BusinessAnalysisHome"
+   	  "https://www.bridging-the-gap.com/feed/"
+   	  "https://businessanalyst.techcanvass.com/feed"
+   	  "https://adrianreed.co.uk/page/7/feed"
+   	  "https://mechanicalbooster.com/feed"
+   	  "https://blogmech.com/feed"
+   	  "https://fractory.com/feed"
+   	  "https://mechanicaljungle.com/feed"
+   	  "https://www.theengineerspost.com/feed"
+   	  "https://www.datasciencecentral.com/feed/format"
+   	  "https://dataaspirant.com/feed/"
+   	  "https://rweekly.org/rss"
+   	  "https://www.sqlservercentral.com/blogs/feed"
+   	  "https://www.mmsonline.com/rss/all"
+   	  "https://www.practicalmachinist.com/feed/"
+   	  "https://webengage.com/blog/feed/"
+   	  "https://www.practicalecommerce.com/feed"
+   	  "https://rhodus.substack.com/feed"
+	  "https://indiadatahub.substack.com/feed"
+       "https://shantanugoel.com/index.xml"))
+     
+     (setq elfeed-show-mode-hook
+           (lambda ()
+             (set-face-attribute 'variable-pitch (selected-frame) :font (font-spec :family "Victor Mono Oblique" :size 14))
+             (setq fill-column 120)
+ 	     ))
+     (defun my-show-elfeed (buffer)
+       (with-current-buffer buffer
+	 (setq buffer-read-only nil)
+	 (goto-char (point-min))
+	 (re-search-forward "\n\n")
+	 (fill-individual-paragraphs (point) (point-max))
+	 (setq buffer-read-only t))
+       (switch-to-buffer buffer))
+     
+     (defun my-elfeed-show-hook ()
+       ;; "Enable visual line mode in elfeed show mode."
+       (visual-line-mode 1)) 
+     
+ )
+ ;; (add-hook 'elfeed-show-mode-hook 'my-elfeed-show-hook))
 
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
