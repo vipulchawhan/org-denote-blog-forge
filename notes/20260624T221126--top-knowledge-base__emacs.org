@@ -2,6 +2,7 @@
 #+date:       [2026-06-24 Wed 22:11]
 #+filetags:   :emacs:
 #+identifier: 20260624T221126
+#+SETUPFILE: ./bigblow_inline.theme
 * [[denote:20260624T224315][lets try a backlink]]
 * [[denote:20260624T230321][All windows first install]]
 * [[denote:20260625T075258][my prot learning note]]
@@ -29,4 +30,19 @@ covered in 20k milestone. insurance bill utility ill fuel scapia coin but can hi
 *** student. 
 *** not for you if not even 20k.
 *** chasing 
-* 
+* todos
+** scapia billing cycle
+** cheque 36k
+** table
+** read
+** move capital
+** apply
+** apply
+** diet doc file file update
+** unfoolable
+** schedule
+** charger adapter buy
+*** charge stuff
+** doms iq kit
+** phone battery rids
+** 

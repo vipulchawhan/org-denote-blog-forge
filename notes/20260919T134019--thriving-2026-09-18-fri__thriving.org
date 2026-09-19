@@ -3,6 +3,7 @@
 #+filetags:   :thriving:
 #+identifier: 20260919T134019
 #+Author: Vipul
+#+SETUPFILE: ./bigblow_inline.themeg
 
 * how to be prepared for the worst and expect the best. 
 * The basic fundamentals should be clear.
