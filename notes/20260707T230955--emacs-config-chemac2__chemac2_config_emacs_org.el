@@ -362,6 +362,9 @@
                           (?C . "Low")
                           (?D . "Optional")))
 
+(setq org-latex-pdf-process 
+    '("tectonic %f"))
+
 (use-package elfeed
      :config
      ;; It is recommended that you make a global binding for elfeed.

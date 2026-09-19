@@ -1,80 +1,74 @@
-#+title:      emacs config chemac2
-#+date:       [2026-07-07 Tue 23:09]
-#+filetags:   :chemac2:config:emacs:org:
-#+identifier: 20260707T230955
+% Created 2026-09-19 Sat 13:30
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\textit{{[}2026-07-07 Tue 23:09]}}
+\title{emacs config chemac2}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={emacs config chemac2},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.2 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
 
-* lets try to see if its works.
-** now package is all set in the init.el so no need to load them here again
+\maketitle
+\tableofcontents
+
+\section{lets try to see if its works.}
+\label{sec:org595e3bd}
+\subsection{now package is all set in the init.el so no need to load them here again}
+\label{sec:org830dcd5}
 skipped
-#+begin_comment
-;;; package --- Summary
-;; USE-PACKAGE
-(require 'package)
-
-;;; Commentary:
-;;; Code:
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                        ("org" . "https://orgmode.org/elpa/")
-                        ("elpa" . "https://elpa.gnu.org/packages/")))
-(package-initialize)
-(unless package-archive-contents
-(package-refresh-contents))
-
-;; Initialize use-package on non-Linux platforms
-(unless (package-installed-p 'use-package)
-(package-install 'use-package))
-
-;; STRAIGHT
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
-      (bootstrap-version 6))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
-#+end_comment
-
-** Make sure to download packages if not present
-#+begin_src emacs-lisp
+\subsection{Make sure to download packages if not present}
+\label{sec:orgc8c68ee}
+\begin{verbatim}
 (require 'use-package)
 (setq package-native-compile t)
 (setq use-package-always-ensure t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-#+end_src
-
-* to be checked later.
+\end{verbatim}
+\section{to be checked later.}
+\label{sec:orgb12dc84}
 (setq package-enable-at-startup nil)
 
 ;; (load-theme 'dichromacy t)
+\section{Fonts}
+\label{sec:orgfb22af5}
+\begin{verbatim}
 
-* Fonts
-#+begin_src emacs-lisp
+(defvar efs/default-font-size 110)
+(defvar efs/default-variable-font-size 110)
+(set-face-attribute 'default nil :font "Victor Mono" :height efs/default-font-size)
 
-  (defvar efs/default-font-size 110)
-  (defvar efs/default-variable-font-size 110)
-  (set-face-attribute 'default nil :font "Victor Mono" :height efs/default-font-size)
+;; Set the fixed pitch face
+(set-face-attribute 'fixed-pitch nil :font "Victor Mono" :height efs/default-font-size)
 
-  ;; Set the fixed pitch face
-  (set-face-attribute 'fixed-pitch nil :font "Victor Mono" :height efs/default-font-size)
+;; Set the variable pitch face
+(set-face-attribute 'variable-pitch nil :font "NotoSerif NF Black" :height efs/default-variable-font-size :weight 'regular)
 
-  ;; Set the variable pitch face
-  (set-face-attribute 'variable-pitch nil :font "NotoSerif NF Black" :height efs/default-variable-font-size :weight 'regular)
+(set-fontset-font t 'unicode (font-spec :family "Iosevka NF") nil 'append)
 
-  (set-fontset-font t 'unicode (font-spec :family "Iosevka NF") nil 'append)
-  
-#+end_src
-
-** test
-*** 
-
-* themes
-#+begin_src emacs-lisp
+\end{verbatim}
+\subsection{test}
+\label{sec:org68e4120}
+\subsubsection{}
+\label{sec:org23db4de}
+\section{themes}
+\label{sec:org0f86ba6}
+\begin{verbatim}
 (use-package modus-themes
   :config
   ;; Your customizations before loading theme
@@ -102,61 +96,61 @@ skipped
           (bg-tab-current bg-magenta-subtle)
           (bg-tab-other bg-sage)
           (fringe bg-blue-nuanced)))
-  
+
   ;; Load the theme safely
   (load-theme 'modus-operandi :no-confirm)
 
   ;; Optional: keybinding for toggling themes
   (define-key global-map (kbd "<f5>") #'modus-themes-toggle))
-#+end_src
-
-* RECENTF
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{RECENTF}
+\label{sec:org35f48dd}
+\begin{verbatim}
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
 (setq recentf-max-saved-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 (run-at-time nil (* 5 60) 'recentf-save-list)
-#+end_src
-
-* WHICH KEY shows next possible keys
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{WHICH KEY shows next possible keys}
+\label{sec:orgc97cec6}
+\begin{verbatim}
 (use-package which-key
   :defer 10
   :diminish which-key-mode
   :config
   (which-key-mode)
   (setq which-key-idle-delay 1
-	which-key-max-display-columns 5))
-#+end_src
-
-* org todos
-#+begin_src emacs-lisp
+        which-key-max-display-columns 5))
+\end{verbatim}
+\section{org todos}
+\label{sec:org7424749}
+\begin{verbatim}
 (setq org-todo-keywords
 
       '((sequence "TODO" "|" "DONE" )))
-#+end_src
+\end{verbatim}
+\section{vertico and marginmarginalia — how minibuffer completions look}
+\label{sec:org92c891b}
+\begin{verbatim}
+(use-package vertico
+  ;; make extentions work (by some magic)
+  :straight (:files (:defaults "extensions/*"))
+  :init
+  (vertico-mode)
+  ;; Have the prompt at the bottom, where your eyes can find it immediatelly
+  ;; (vertico-reverse-mode)
+  ;; Grow and shrink the Vertico minibuffer
+  (setq vertico-resize t)
 
-* vertico and marginmarginalia — how minibuffer completions look
-#+begin_src emacs-lisp
-  (use-package vertico
-    ;; make extentions work (by some magic)
-    :straight (:files (:defaults "extensions/*"))
-    :init
-    (vertico-mode)
-    ;; Have the prompt at the bottom, where your eyes can find it immediatelly
-    ;; (vertico-reverse-mode)
-    ;; Grow and shrink the Vertico minibuffer
-    (setq vertico-resize t)
 
-
-    ;; Enable cycling for `vertico-next' and `vertico-previous'.
-    (setq vertico-cycle t)
-    )
-#+end_src
-
-* yasnippets
-#+begin_src emacs-lisp
+  ;; Enable cycling for `vertico-next' and `vertico-previous'.
+  (setq vertico-cycle t)
+  )
+\end{verbatim}
+\section{yasnippets}
+\label{sec:org0c543bc}
+\begin{verbatim}
 (use-package yasnippet
   :init
   (yas-global-mode 1)
@@ -182,10 +176,10 @@ skipped
   ; This also lets me use some of the cool orgmode-completion collections
   ; for yasnippets that are out there.
 )
-#+end_src
-
-* startbuffer and upcase downcase
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{startbuffer and upcase downcase}
+\label{sec:org14d08a7}
+\begin{verbatim}
 (setq inhibit-splash-screen t)
 (setq initial-major-mode 'org-mode)
 (setq initial-scratch-message nil)
@@ -199,40 +193,40 @@ skipped
 ;; Once this is enabled, you can make the text in a region lowercase with C-x C-l or uppercase with C-x C-u.
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-#+end_src
-
-* all the icons
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{all the icons}
+\label{sec:orgcec8179}
+\begin{verbatim}
 (use-package all-the-icons)
-#+end_src
+\end{verbatim}
+\section{moody modeline}
+\label{sec:org1604708}
+\begin{verbatim}
+(use-package moody
+   :config
+   (setq x-underline-at-descent-line t)
+   (moody-replace-mode-line-buffer-identification)
+   (moody-replace-vc-mode)
+   (moody-replace-eldoc-minibuffer-message-function))
 
-* moody modeline
-#+begin_src emacs-lisp
-  (use-package moody
-     :config
-     (setq x-underline-at-descent-line t)
-     (moody-replace-mode-line-buffer-identification)
-     (moody-replace-vc-mode)
-     (moody-replace-eldoc-minibuffer-message-function))
-
-  (set 'moody-mode-line-height 20)
-#+end_src
-
-* Beacon
-#+begin_src emacs-lisp
+(set 'moody-mode-line-height 20)
+\end{verbatim}
+\section{Beacon}
+\label{sec:org50be406}
+\begin{verbatim}
 (use-package beacon)
 (beacon-mode 1)
-#+end_src
-
-* company
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{company}
+\label{sec:org0fa2a8c}
+\begin{verbatim}
 
 (use-package company)
 (add-hook 'after-init-hook 'global-company-mode)
-#+end_src
-
-* denote
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{denote}
+\label{sec:orgfbdb00e}
+\begin{verbatim}
 (use-package denote
   :hook
   (;; If you use plain text files (.txt), then you want to make the
@@ -307,62 +301,62 @@ skipped
   ;; (define-key map (kbd "C-c n i") #'denote-link) ; "insert" mnemonic
   (define-key map (kbd "C-c n r") #'denote-rename-file)
   (define-key map (kbd "C-c n R") #'denote-rename-file-using-front-matter))
-#+end_src
-
-** denote explore package
-#+begin_src emacs-lisp
-  (use-package denote-explore
-    ;; :custom
-    ;; Where to store network data and in which format
-    ;; (denote-explore-network-directory "<your preferred folder>")
-    ;; (denote-explore-network-filename "denote-network")
-    ;; (denote-explore-network-keywords-ignore "<keywords list>")
-    ;; (denote-explore-network-regex-ignore "<regex>")
-    ;; (denote-explore-network-format 'd3.js)
-    ;; (denote-explore-network-d3-colours 'SchemeObservable10)
-    ;; (denote-explore-network-d3-js "https://d3js.org/d3.v7.min.js")
-    ;; (denote-explore-network-d3-template "<file path>")
-    ;; (denote-explore-network-graphviz-header "<header strings>")
-    ;; (denote-explore-network-graphviz-filetype 'svg)
-    :bind
-    (;; Statistics
-     ("C-c e s n" . denote-explore-count-notes)
-     ("C-c e s k" . denote-explore-count-keywords)
-     ("C-c e s e" . denote-explore-barchart-filetypes)
-     ("C-c e s w" . denote-explore-barchart-keywords)
-     ("C-c e s t" . denote-explore-barchart-timeline)
-     ;; Random walks
-     ("C-c e w n" . denote-explore-random-note)
-     ("C-c e w r" . denote-explore-random-regex)
-     ("C-c e w l" . denote-explore-random-link)
-     ("C-c e w k" . denote-explore-random-keyword)
-     ;; Denote Janitor
-     ("C-c e j d" . denote-explore-duplicate-notes)
-     ("C-c e j D" . denote-explore-duplicate-notes-dired)
-     ("C-c e j l" . denote-explore-missing-links)
-     ("C-c e j z" . denote-explore-zero-keywords)
-     ("C-c e j s" . denote-explore-single-keywords)
-     ("C-c e j r" . denote-explore-rename-keywords)
-     ("C-c e j y" . denote-explore-sync-metadata)
-     ("C-c e j i" . denote-explore-isolated-files)
-     ;; Visualise denote
-     ("C-c e n" . denote-explore-network)
-     ("C-c e r" . denote-explore-network-regenerate)
-     ("C-c e d" . denote-explore-barchart-degree)
-     ("C-c e b" . denote-explore-barchart-backlinks)))
-#+end_src
-
-* dired specific keybinds
-#+begin_src emacs-lisp
+\end{verbatim}
+\subsection{denote explore package}
+\label{sec:orgc933c22}
+\begin{verbatim}
+(use-package denote-explore
+  ;; :custom
+  ;; Where to store network data and in which format
+  ;; (denote-explore-network-directory "<your preferred folder>")
+  ;; (denote-explore-network-filename "denote-network")
+  ;; (denote-explore-network-keywords-ignore "<keywords list>")
+  ;; (denote-explore-network-regex-ignore "<regex>")
+  ;; (denote-explore-network-format 'd3.js)
+  ;; (denote-explore-network-d3-colours 'SchemeObservable10)
+  ;; (denote-explore-network-d3-js "https://d3js.org/d3.v7.min.js")
+  ;; (denote-explore-network-d3-template "<file path>")
+  ;; (denote-explore-network-graphviz-header "<header strings>")
+  ;; (denote-explore-network-graphviz-filetype 'svg)
+  :bind
+  (;; Statistics
+   ("C-c e s n" . denote-explore-count-notes)
+   ("C-c e s k" . denote-explore-count-keywords)
+   ("C-c e s e" . denote-explore-barchart-filetypes)
+   ("C-c e s w" . denote-explore-barchart-keywords)
+   ("C-c e s t" . denote-explore-barchart-timeline)
+   ;; Random walks
+   ("C-c e w n" . denote-explore-random-note)
+   ("C-c e w r" . denote-explore-random-regex)
+   ("C-c e w l" . denote-explore-random-link)
+   ("C-c e w k" . denote-explore-random-keyword)
+   ;; Denote Janitor
+   ("C-c e j d" . denote-explore-duplicate-notes)
+   ("C-c e j D" . denote-explore-duplicate-notes-dired)
+   ("C-c e j l" . denote-explore-missing-links)
+   ("C-c e j z" . denote-explore-zero-keywords)
+   ("C-c e j s" . denote-explore-single-keywords)
+   ("C-c e j r" . denote-explore-rename-keywords)
+   ("C-c e j y" . denote-explore-sync-metadata)
+   ("C-c e j i" . denote-explore-isolated-files)
+   ;; Visualise denote
+   ("C-c e n" . denote-explore-network)
+   ("C-c e r" . denote-explore-network-regenerate)
+   ("C-c e d" . denote-explore-barchart-degree)
+   ("C-c e b" . denote-explore-barchart-backlinks)))
+\end{verbatim}
+\section{dired specific keybinds}
+\label{sec:org2da994a}
+\begin{verbatim}
 ;; Key bindings specifically for Dired.
 ;; (let ((map dired-mode-map))
 ;;   (define-key map (kbd "C-c C-d C-i") #'denote-link-dired-marked-notes)
 ;;   (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-marked-files)
 ;;   (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-using-front-matter))
-#+end_src
-
-* Better Completions
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{Better Completions}
+\label{sec:org05f46fe}
+\begin{verbatim}
 (use-package ivy
   :defer t
   :diminish
@@ -437,12 +431,12 @@ skipped
 ;;           (right-fringe . 8)))
 
 ;;   (ivy-posframe-mode +1))
-#+end_src
-
-* org 
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{org}
+\label{sec:org2baffd8}
+\begin{verbatim}
 (add-hook 'org-mode-hook 'org-indent-mode)
- 
+
 (setq org-display-inline-images t)
 (setq org-redisplay-inline-images t)
 (setq org-startup-with-inline-images t)
@@ -466,101 +460,101 @@ skipped
                           (?B . "Medium")
                           (?C . "Low")
                           (?D . "Optional")))
-#+end_src
+\end{verbatim}
+\subsection{org latex output engine to tectonic}
+\label{sec:org369ab6d}
+\begin{verbatim}
+(setq org-latex-pdf-process 
+    '("tectonic -X compile --outdir=%o -Z shell-escape -Z continue-on-errors %f"))
+\end{verbatim}
+\section{elfeed}
+\label{sec:org32698bb}
+\begin{verbatim}
+(use-package elfeed
+     :config
+     ;; It is recommended that you make a global binding for elfeed.
+     (global-set-key (kbd "C-x w") 'elfeed)
+     (global-set-key (kbd "C-x y") 'elfeed-update)
 
-** org latex output engine to tectonic
-#+begin_src emacs-lisp
-  (setq org-latex-pdf-process 
-      '("tectonic %f"))
-#+end_src
+     (setq elfeed-feeds
+           '("http://nullprogram.com/feed/"
+             "https://blume.vc/funds/feed.xml"
+             "https://blume.vc/news/feed.xml"
+             "https://blume.vc/newsletters/feed.xml"
+             "https://blume.vc/offers/feed.xml"
+             "https://high-capacity.substack.com/feed"
+             "https://blume.vc/reports/feed.xml"
+             "Collab Fund — https://feeds.feedburner.com/collabfund"
+             "https://finshots.in/archive/rss/"
+             "https://moz.com/posts/rss/blog"
+          "http://feeds.feedburner.com/BusinessAnalystTimes-BusinessAnalysisHome"
+          "https://www.bridging-the-gap.com/feed/"
+          "https://businessanalyst.techcanvass.com/feed"
+          "https://adrianreed.co.uk/page/7/feed"
+          "https://mechanicalbooster.com/feed"
+          "https://blogmech.com/feed"
+          "https://fractory.com/feed"
+          "https://mechanicaljungle.com/feed"
+          "https://www.theengineerspost.com/feed"
+          "https://www.datasciencecentral.com/feed/format"
+          "https://dataaspirant.com/feed/"
+          "https://rweekly.org/rss"
+          "https://www.sqlservercentral.com/blogs/feed"
+          "https://www.mmsonline.com/rss/all"
+          "https://www.practicalmachinist.com/feed/"
+          "https://webengage.com/blog/feed/"
+          "https://www.practicalecommerce.com/feed"
+          "https://rhodus.substack.com/feed"
+          "https://indiadatahub.substack.com/feed"
+       "https://shantanugoel.com/index.xml"))
 
-* elfeed
-#+begin_src emacs-lisp
-  (use-package elfeed
-       :config
-       ;; It is recommended that you make a global binding for elfeed.
-       (global-set-key (kbd "C-x w") 'elfeed)
-       (global-set-key (kbd "C-x y") 'elfeed-update)
-       
-       (setq elfeed-feeds
-             '("http://nullprogram.com/feed/"
-               "https://blume.vc/funds/feed.xml"
-               "https://blume.vc/news/feed.xml"
-               "https://blume.vc/newsletters/feed.xml"
-               "https://blume.vc/offers/feed.xml"
-               "https://high-capacity.substack.com/feed"
-               "https://blume.vc/reports/feed.xml"
-               "Collab Fund — https://feeds.feedburner.com/collabfund"
-               "https://finshots.in/archive/rss/"
-     	     "https://moz.com/posts/rss/blog"
-     	  "http://feeds.feedburner.com/BusinessAnalystTimes-BusinessAnalysisHome"
-     	  "https://www.bridging-the-gap.com/feed/"
-     	  "https://businessanalyst.techcanvass.com/feed"
-     	  "https://adrianreed.co.uk/page/7/feed"
-     	  "https://mechanicalbooster.com/feed"
-     	  "https://blogmech.com/feed"
-     	  "https://fractory.com/feed"
-     	  "https://mechanicaljungle.com/feed"
-     	  "https://www.theengineerspost.com/feed"
-     	  "https://www.datasciencecentral.com/feed/format"
-     	  "https://dataaspirant.com/feed/"
-     	  "https://rweekly.org/rss"
-     	  "https://www.sqlservercentral.com/blogs/feed"
-     	  "https://www.mmsonline.com/rss/all"
-     	  "https://www.practicalmachinist.com/feed/"
-     	  "https://webengage.com/blog/feed/"
-     	  "https://www.practicalecommerce.com/feed"
-     	  "https://rhodus.substack.com/feed"
-  	  "https://indiadatahub.substack.com/feed"
-         "https://shantanugoel.com/index.xml"))
-       
-       (setq elfeed-show-mode-hook
-             (lambda ()
-               (set-face-attribute 'variable-pitch (selected-frame) :font (font-spec :family "Victor Mono Oblique" :size 14))
-               (setq fill-column 120)
-   	     ))
-       (defun my-show-elfeed (buffer)
-         (with-current-buffer buffer
-  	 (setq buffer-read-only nil)
-  	 (goto-char (point-min))
-  	 (re-search-forward "\n\n")
-  	 (fill-individual-paragraphs (point) (point-max))
-  	 (setq buffer-read-only t))
-         (switch-to-buffer buffer))
-       
-       (defun my-elfeed-show-hook ()
-         ;; "Enable visual line mode in elfeed show mode."
-         (visual-line-mode 1)) 
-       
-   )
-   ;; (add-hook 'elfeed-show-mode-hook 'my-elfeed-show-hook))
-#+end_src
+     (setq elfeed-show-mode-hook
+           (lambda ()
+             (set-face-attribute 'variable-pitch (selected-frame) :font (font-spec :family "Victor Mono Oblique" :size 14))
+             (setq fill-column 120)
+             ))
+     (defun my-show-elfeed (buffer)
+       (with-current-buffer buffer
+         (setq buffer-read-only nil)
+         (goto-char (point-min))
+         (re-search-forward "\n\n")
+         (fill-individual-paragraphs (point) (point-max))
+         (setq buffer-read-only t))
+       (switch-to-buffer buffer))
 
-* display line number
-#+begin_src emacs-lisp
+     (defun my-elfeed-show-hook ()
+       ;; "Enable visual line mode in elfeed show mode."
+       (visual-line-mode 1)) 
+
+ )
+ ;; (add-hook 'elfeed-show-mode-hook 'my-elfeed-show-hook))
+\end{verbatim}
+\section{display line number}
+\label{sec:orgaadebc1}
+\begin{verbatim}
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
-#+end_src
-
-* golden ratio
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{golden ratio}
+\label{sec:org5e5c42d}
+\begin{verbatim}
 (use-package golden-ratio)
 (golden-ratio-mode 1)
-#+end_src
-
-* check later
-;; 1. *Update Compat and Marginalia*: Use the commands below to update both packages:
+\end{verbatim}
+\section{check later}
+\label{sec:org72e921b}
+;; 1. \textbf{Update Compat and Marginalia}: Use the commands below to update both packages:
 ;;    emacs-lisp
    ;; (straight-pull-package 'compat)
    ;; (straight-pull-package 'marginalia)
-   
 
-;; 2. *Configure use-package*: Ensure you have the correct configuration in your init.el:
+
+;; 2. \textbf{Configure use-package}: Ensure you have the correct configuration in your init.el:
 ;;    emacs-lisp
 (use-package compat)
-
-* Enable rich annotations using the Marginalia package
-#+begin_src emacs-lisp
+\section{Enable rich annotations using the Marginalia package}
+\label{sec:orgf4a6d5e}
+\begin{verbatim}
 (use-package marginalia
   ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
   ;; available in the *Completions* buffer, add it to the
@@ -575,20 +569,20 @@ skipped
   ;; the mode gets enabled right away. Note that this forces loading the
   ;; package.
   (marginalia-mode))
-#+end_src
+\end{verbatim}
 
 ;; (use-package marginalia)
-
-* org modern 
-#+begin_src emacs-lisp
-  (use-package org-modern)
-  ;; Option 2: Globally
-  (with-eval-after-load 'org (global-org-modern-mode))
-  ;; (setq org-modern-star 'replace)
-#+end_src
-
-* check
-#+begin_src emacs-lisp
+\section{org modern}
+\label{sec:orgc7fa9bc}
+\begin{verbatim}
+(use-package org-modern)
+;; Option 2: Globally
+(with-eval-after-load 'org (global-org-modern-mode))
+;; (setq org-modern-star 'replace)
+\end{verbatim}
+\section{check}
+\label{sec:orge9a59f7}
+\begin{verbatim}
 (use-package ox-pandoc)
 (electric-pair-mode 1)
 
@@ -603,10 +597,10 @@ skipped
 (use-package dashboard
   :config
   (dashboard-setup-startup-hook))
-#+end_src
-
-* For AUCTeX + SumatraPDF
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{For AUCTeX + SumatraPDF}
+\label{sec:orged66193}
+\begin{verbatim}
 (setq TeX-view-program-list
       '(("Sumatra PDF" "\"C:/Program Files/SumatraPDF/SumatraPDF.exe\" -reuse-instance %o")))
 (setq TeX-view-program-selection '((output-pdf "Sumatra PDF")))
@@ -614,24 +608,24 @@ skipped
 (setq TeX-source-correlate-mode t)
 (setq TeX-source-correlate-method 'synctex)
 (setq TeX-PDF-mode t)
-#+end_src
-
-* check
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{check}
+\label{sec:orgeb9c094}
+\begin{verbatim}
 (use-package with-editor)
 ;; (use-package transient)
 (use-package magit)
 (setq org-return-follows-link t)
-#+end_src
-
-* consult
-#+begin_src emacs-lisp
+\end{verbatim}
+\section{consult}
+\label{sec:orgb2a88fa}
+\begin{verbatim}
 (use-package consult
   :bind (("C-x b" . consult-buffer)	;seaarch across all open buffers
          ("C-c M-x" . consult-mode-command) ;
-	 ("C-c o" . consult-outline)
-	 ("C-c r" . consult-ripgrep)
-	 ("M-y" . consult-yank-pop)
+         ("C-c o" . consult-outline)
+         ("C-c r" . consult-ripgrep)
+         ("M-y" . consult-yank-pop)
          ("C-c k" . consult-kmacro)
          ("C-c h" . consult-history)
          ("C-c m" . consult-mark)
@@ -688,17 +682,17 @@ skipped
 ;;   :config
 ;;   (add-hook 'after-init-hook #'org-link-beautify-mode)
 
-;;   (org-link-beautify-mode 1) ; (ref:toggle org-link-beautify-mode)
+;;   (org-link-beautify-mode 1) ;                                                                (toggle org-link-beautify-mode)
 ;;   ;; You can toggle this option carefully to improve Org org-activate-links performance:
 ;;   (setq org-element-use-cache t)
 ;;   :hook (org-mode . org-link-beautify-mode))
 
-#+end_src
-
-* listen\
-#+begin_src emacs-lisp
-      (use-package listen
-        :init
-        (setq listen-directory "/Users/Lenovo/Vipul/music"))
-#+end_src
- 
+\end{verbatim}
+\section{listen$\backslash$}
+\label{sec:orgb16e6ca}
+\begin{verbatim}
+(use-package listen
+  :init
+  (setq listen-directory "/Users/Lenovo/Vipul/music"))
+\end{verbatim}
+\end{document}

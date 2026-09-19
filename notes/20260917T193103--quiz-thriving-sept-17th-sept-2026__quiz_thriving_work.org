@@ -1,0 +1,310 @@
+#+title:      quiz thriving sept 17th sept 2026.
+#+date:       [2026-09-17 Thu 19:31]
+#+filetags:   :quiz:thriving:work:
+#+identifier: 20260917T193103
+#+SUBTITLE: Training Assessment
+#+AUTHOR: Vipul
+#+DATE: <2026-09-18 Fri>
+#+OPTIONS: toc:nil num:nil
+#+STARTUP: showall
+
+
+* Candidate Information
+Name: ______________________________    Date: ______________    Score: ______ / 40
+
+* Section A: Decision Making Fundamentals (Q1–10)
+
+** Q1. (MCQ)
+According to the session, which of the following best describes a "hedged" decision?
+- [ ] a) A decision that cannot be undone
+- [ ] b) A decision with no major downside
+- [ ] c) A decision taken under panic
+- [ ] d) A decision taken by a group
+
+** Q2. (True/False)
+All decisions you take in life are equally risky, so they should all be treated the same way.
+- [ ] True
+- [ ] False
+
+** Q3. (Fill in the blank)
+Before taking a decision, you should know the basics of probability, statistics, percentage, permutations, combinations, and ____________ distribution, and apply them in the back of your mind.
+
+** Q4. (MCQ)
+When the risk of a "suicidal" (catastrophic) decision is high, what does the training recommend?
+- [ ] a) Take it quickly before overthinking
+- [ ] b) Trust your gut only
+- [ ] c) Take a second opinion or ask for help
+- [ ] d) Avoid the decision forever
+
+** Q5. (MCQ)
+"Tails I win — heads I don't lose much" describes which kind of decision?
+- [ ] a) A suicidal decision
+- [ ] b) An asymmetric / bet-hedged decision
+- [ ] c) A reversible decision
+- [ ] d) An irreversible decision
+
+** Q6. (True/False)
+If your fundamentals are not clear, your questions will be wrong — which leads to irrelevant answers and cloudy decisions.
+- [ ] True
+- [ ] False
+
+** Q7. (Short answer)
+In one or two sentences, why is it said that "curiosity without continuous learning becomes a nuisance"?
+
+________________________________________________________________
+
+________________________________________________________________
+
+** Q8. (MCQ)
+What is the correct sequence for gathering details to make the best decision?
+- [ ] a) Ask random questions to anyone available
+- [ ] b) Ask the right questions to the right people to gather the right details
+- [ ] c) Gather all details first, then figure out the questions
+- [ ] d) Make the decision first, then gather details to justify it
+
+** Q9. (True/False)
+Listening more than you talk helps in making better decisions.
+- [ ] True
+- [ ] False
+
+** Q10. (Fill in the blank)
+In tough situations, you should be aware of all the ____________ available at your disposal and be able to select the best one as the situation arises.
+
+* Section B: Handling Tough Situations & Mindset (Q11–18)
+
+** Q11. (MCQ)
+What happens to your body and mind when you panic?
+- [ ] a) They come into "fight mode," improving decisions
+- [ ] b) They come into "flight mode," leading to the worst decisions
+- [ ] c) They shut down completely
+- [ ] d) Nothing changes
+
+** Q12. (True/False)
+Most daily "tough" situations are actually life-threatening.
+- [ ] True
+- [ ] False
+
+** Q13. (MCQ)
+How do you increase your threshold to handle tough situations head-on?
+- [ ] a) By avoiding them completely
+- [ ] b) By continuously encountering and going through such situations
+- [ ] c) By taking long vacations
+- [ ] d) By delegating them always
+
+** Q14. (Fill in the blank)
+Your behaviour in tough situations is derived from your ____________.
+
+** Q15. (Short answer)
+What does being "niralamb" (detached) in a tough situation help you do, according to the session?
+
+________________________________________________________________
+
+________________________________________________________________
+
+** Q16. (True/False)
+If you identify too strongly with a problem ("this is happening to ME"), it can distort your decision-making.
+- [ ] True
+- [ ] False
+
+** Q17. (MCQ)
+The mountain climbing example was used to explain which concept?
+- [ ] a) Risk compensation
+- [ ] b) IF you'd start believing you are superior and all knowing instead staying grounded.
+- [ ] c) Planning fallacy
+- [ ] d) Anchoring bias
+
+** Q18. (True/False)
+You should always be optimistic but also realistic at the same time.
+- [ ] True
+- [ ] False
+
+* Section C: Communication, Psychology & Learning (Q19–26)
+
+** Q19. (Fill in the blank)
+In order to ask the right question, you should have command over language and ____________.
+
+** Q20. (MCQ)
+Which two psychological principles were mentioned for gauging a person's thought process?
+- [ ] a) Reciprocity and commitment
+- [ ] b) Anchoring and framing
+- [ ] c) Authority and automation bias
+- [ ] d) Optimism and pessimism bias
+
+** Q21. (True/False)
+"The richest person in the room is the one with the highest failures" means failure is a currency of learning.
+- [ ] True
+- [ ] False
+
+** Q22. (MCQ)
+Which of these was NOT listed as a form of long-form content to engage with?
+- [ ] a) Books
+- [ ] b) Podcasts
+- [ ] c) Articles
+- [ ] d) 15-second reels
+
+** Q23. (Fill in the blank)
+"To ask the right question is harder than to ____________ it." (Georg Cantor)
+
+** Q24. (MCQ)
+Why does fluency and the speed of manifesting words in the digital world matter?
+- [ ] a) It makes you type faster
+- [ ] b) It improves the accuracy and effectiveness of communication
+- [ ] c) It is only for marketing jobs
+- [ ] d) It doesn't matter
+
+** Q25. (Short answer)
+Name any FOUR fields or topics (outside your own job domain) that the session said you should read and learn concepts from. (Examples: machines, taxation, human psychology, geopolitics, brain chemistry...)
+
+________________________________________________________________
+
+________________________________________________________________
+
+** Q26. (True/False)
+Reading about concepts from various unrelated fields is a waste of time for decision-making.
+- [ ] True
+- [ ] False
+
+* Section D: Task Management & Simplicity (Q27–32)
+
+** Q27. (MCQ)
+What is the FIRST step in how to do tasks, per the session?
+- [ ] a) Delegate everything
+- [ ] b) Make a list of all tasks to make sure none get left out
+- [ ] c) Start with the easiest task
+- [ ] d) Sort tasks by deadline only
+
+** Q28. (MCQ)
+Which task should you pick FIRST from your list?
+- [ ] a) The easiest and most familiar
+- [ ] b) The hardest and unknown one
+- [ ] c) The one assigned by your boss
+- [ ] d) The quickest to tick off
+
+** Q29. (True/False)
+You should tick off all tasks together at once at the end of the day.
+- [ ] True
+- [ ] False
+
+** Q30. (Fill in the blank)
+____________ whatever can be delegated.
+
+** Q31. (MCQ)
+What does KISS stand for?
+- [ ] a) Keep It Strictly Simple
+- [ ] b) Keep It Simple, Stupid
+- [ ] c) Keep Ideas Short & Sweet
+- [ ] d) Keep It Systematic & Structured
+
+** Q32. (Short answer)
+"An easy thing can be simple, but a simple thing is not always easy." Explain this in your own words with an example.
+
+________________________________________________________________
+
+________________________________________________________________
+
+* Section E: Resources, Tools & Cognitive Biases (Q33–40)
+
+** Q33. (Fill in the blank)
+"When you have a hammer, everything looks like a ____________."
+
+** Q34. (MCQ)
+Functional fixedness is:
+- [ ] a) The ability to use objects in new ways
+- [ ] b) A mental block against using an object in a new way, beyond its traditional purpose
+- [ ] c) A bias where we overestimate others' attention to us
+- [ ] d) Excessive dependence on automated systems
+
+** Q35. (True/False)
+To use resources efficiently, you should read the manuals and know every feature of your tools — and even think of unorthodox ways to use them.
+- [ ] True
+- [ ] False
+
+** Q36. (MCQ)
+Name the bias: You chose fruit for next week's meals but chocolate for today's meal.
+- [ ] a) Authority bias
+- [ ] b) Hyperbolic discounting (present bias)
+- [ ] c) Spotlight effect
+- [ ] d) Gambler's fallacy
+
+** Q37. (MCQ)
+Name the bias: You drive faster because your car has better safety features.
+- [ ] a) Risk compensation / Peltzman effect
+- [ ] b) Conservatism bias
+- [ ] c) Planning fallacy
+- [ ] d) Dunning-Kruger effect
+
+** Q38. (Match the following)
+| Bias                | Description                                                                  |
+|---------------------+------------------------------------------------------------------------------|
+| 1. Dunning-Kruger   | a) Tendency to overestimate how much others notice your appearance/behaviour |
+| 2. Spotlight effect | b) Overestimating your ability when you know little                          |
+| 3. Authority bias   | c) Believing a hot streak will continue                                      |
+| 4. Hot hand fallacy | d) Giving greater accuracy to an authority figure's opinion                  |
+
+** Q39. (Short answer)
+The session asked to read later the uncovered biases including confirmation bias, anchoring bias, framing effect, prospect theory, insensitivity to sample size, optimism bias, pessimism bias, and automation bias. Pick any TWO and explain each in one sentence with a real-life example.
+
+________________________________________________________________
+
+________________________________________________________________
+
+** Q40. (Scenario)
+Your colleague panics during a server outage and starts making random changes. Using at least THREE concepts from today's session, explain how you would handle the situation and the decision-making.
+
+________________________________________________________________
+
+________________________________________________________________
+
+* COMMENT Answer Key (For Evaluator Only — remove before distributing)
+:PROPERTIES:
+:EXPORT_OPTIONS: toc:nil
+:END:
+
+#+begin_comment
+,** Answers
+1. b
+2. False
+3. normal
+4. c
+5. b
+6. True
+7. Curiosity without learning produces shallow / irrelevant questions rather than insight — it annoys instead of helping.
+8. b
+9. True
+10. tools
+11. b
+12. False (they are barely ever fatal)
+13. b
+14. life
+15. It helps you think critically and logically instead of emotionally, because you are not personally entangled in the problem.
+16. True
+17. b
+18. True
+19. psychology
+20. a
+21. True
+22. d
+23. answer
+24. b
+25. Any four of: machines, business, taxation, e-way bill, maths / mental calculation, cash counting, human psychology, technology, finance, money concepts, geopolitics, human biology, brain chemistry, vehicle repair, life skills, genetics, human history, negotiation.
+26. False
+27. b
+28. b
+29. False (tick one by one)
+30. Delegate
+31. b
+32. Any reasonable explanation, e.g. an easy task may still be complicated in process, while simplifying a complex task is genuinely hard work.
+33. nail
+34. b
+35. True
+36. b
+37. a
+38. 1-b, 2-a, 3-d, 4-c
+39. Any two correctly explained with examples.
+40. Look for: calming down flight mode / not deciding in panic; checking if the decision is reversible vs suicidal; using available tools properly; asking the right questions to the right people / second opinion; niralamb detachment. Award up to 3 points.
+
+,** Suggested scoring
+1 point per question (Q38 and Q39–40 can carry partial marks as noted).
+- 28+ (70%) = good understanding
+- Below 21 = recommend refresher on Sections B and E
+#+end_comment
