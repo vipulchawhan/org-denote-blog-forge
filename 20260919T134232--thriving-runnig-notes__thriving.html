@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2026-09-19 Sat 08:20 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>thriving runnig notes</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<header>
+<h1 class="title">thriving runnig notes</h1>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc48feb6">thriving</a>
+<ul>
+<li><a href="#org0d9dde4">how to be prepared for the worst and expect the best.</a>
+<ul>
+<li><a href="#org964c935">The basic fundamentals should be clear.</a></li>
+<li><a href="#org2c15b6f">Be aware of all the tools available at your disposal, and to be able to select the best as the situation arises.</a>
+<ul>
+<li><a href="#orgb1fc352">mobile</a></li>
+<li><a href="#orgd4cc5bb">internet</a></li>
+<li><a href="#org05da350">pc</a></li>
+<li><a href="#orgb48b86c">ai</a></li>
+<li><a href="#orgd5e5329">when to take the buddies help.</a></li>
+<li><a href="#org101c276">spatial knowldge</a></li>
+</ul>
+</li>
+<li><a href="#org9a99eed">Art of taking unbiased decisions in tough situations.</a>
+<ul>
+<li><a href="#org23d2933">knowing the basics of probability, statistics, percentage, permutations, combination, normal distribution,  and applying their principles in the real world scenarios in the back of your mind.</a></li>
+<li><a href="#orge817f3f">understanding that some decision are reversible and some are irreversible.</a></li>
+<li><a href="#org6bd3297">some decision are suicidal and some are hedged with no major downside.</a></li>
+<li><a href="#orga6a8a00">know when to take to take the decision on your own and when the risk of suicide is high so take second opinion or help.</a></li>
+<li><a href="#org5c7ffd9">be curious -</a></li>
+<li><a href="#org4770a14">always be ready to believe that what more i can know here before taking my decision?</a></li>
+<li><a href="#orgbcf8d80">ask the right questions to the right people to gather the right detail in order to take the best decision.</a></li>
+<li><a href="#org98a4ea5">tails i win - heads i dont lose much.</a></li>
+<li><a href="#org09d5353">if you are not continously learning by being curious then your curiosity will be a nuisance.</a></li>
+<li><a href="#org4f30334">if your fundamentals are not clear then your questions will be wrong, which in turn will give you irrelevant answers resulting in making cloudy decisions.</a></li>
+<li><a href="#orgc2a2973">listen more than you talk.</a></li>
+<li><a href="#org46eeae2">in tough situation you can panic or stay calm.</a></li>
+</ul>
+</li>
+<li><a href="#org512091b">In order to ask the right question you should have command over language and psychology.</a>
+<ul>
+<li><a href="#org2ed9761">command over the language used for communication.</a></li>
+<li><a href="#org67450df">knowledge of psychology to gauge the persons thought process and use the right way to gather the right detail.</a></li>
+</ul>
+</li>
+<li><a href="#org2af14fc">Richest person in the room is the one with the highest failures.</a></li>
+<li><a href="#orga4fb6aa">Taking interest in long form content.</a>
+<ul>
+<li><a href="#org7db9736">reading books,</a></li>
+<li><a href="#org6e76139">podcasts</a></li>
+<li><a href="#orga3c1821">articles.</a></li>
+</ul>
+</li>
+<li><a href="#org99a4e64">Reading absorbing and learning about concepts from various fields.</a>
+<ul>
+<li><a href="#orgb460acf">machines</a></li>
+<li><a href="#orgf560be5">business</a></li>
+<li><a href="#orgda8596b">taxation</a></li>
+<li><a href="#orgdcf9943">eway bill</a></li>
+<li><a href="#org41a513e">maths - fast calculation in the mind</a></li>
+<li><a href="#orgec936a4">hard cash counting money in a fast way</a></li>
+<li><a href="#org328e019">human psychology</a></li>
+<li><a href="#org0de8512">technology</a></li>
+<li><a href="#org1eaceab">finance concepts</a></li>
+<li><a href="#orgd3ef19f">money concepts</a></li>
+<li><a href="#orgceda7fe">geopolitics</a></li>
+<li><a href="#org58c705b">human biology</a></li>
+<li><a href="#org2a58828">brain chemistry</a></li>
+<li><a href="#org87cb031">vehicle knowledge and repair knowledge.</a></li>
+<li><a href="#orga3b28ed">life skills</a></li>
+<li><a href="#orgf03e604">genetics</a></li>
+<li><a href="#org7fcd403">human history.</a></li>
+<li><a href="#org016d45f">negotiation concepts</a></li>
+<li><a href="#org3facce6">and many more than i cant recall.</a></li>
+</ul>
+</li>
+<li><a href="#org8ee6e58">Being spiritual</a>
+<ul>
+<li><a href="#orgc9dfee3">in tough situation if you identify as yourself and are directly affected by it then becomes your problem and distorts your decision making.</a></li>
+<li><a href="#orgf5bd4f3">if you find yourself being niralamp in such situations then it helps to think critically logically in such siutaions.</a></li>
+<li><a href="#org003804d">karma - believing in good karma and doing good unto others always comes back to you in your life in all forms and manner.</a></li>
+<li><a href="#orgd9abf4f">best example is of climbing a mountain and climbing down.</a></li>
+</ul>
+</li>
+<li><a href="#org895a218">How do i do taks?</a>
+<ul>
+<li><a href="#orgdb91695">make list of all tasks to make sure none get left out.</a></li>
+<li><a href="#orgc158f0b">sort them in their priority terms.</a></li>
+<li><a href="#org737b411">tick each task one by one and not all together at once.</a></li>
+<li><a href="#org7113fea">pick the hardest and unknown first.</a></li>
+<li><a href="#orgf1c811b">delegate whatever can be delegated.</a></li>
+</ul>
+</li>
+<li><a href="#org5609b25">KISS</a>
+<ul>
+<li><a href="#org61beefe">Keep It Simple Stupid</a></li>
+<li><a href="#org22ff1a3">any process made complicated unnecessarily gets killed eventually.</a></li>
+<li><a href="#orga346f48">whatever you try to do find the simplest way.</a></li>
+<li><a href="#orge5d7a26">an easy thing can be simple, but a simple thing is not always easy.</a></li>
+<li><a href="#org5fd8f33">strive to keep things simple.</a></li>
+</ul>
+</li>
+<li><a href="#org2cc16b9">always being optimistic but also realistic at the same time.</a></li>
+<li><a href="#orgd472066">efficient use of resources.</a>
+<ul>
+<li><a href="#org32ab787">read the manuals.</a></li>
+<li><a href="#org6077d39">know every feature of your tools.</a></li>
+<li><a href="#org27cf5b9">think of unorthodox ways to use the tools.</a></li>
+<li><a href="#orgefd4c6e">when you have a hammer, everything looks like a nail.</a></li>
+</ul>
+</li>
+<li><a href="#orga92ec95">key concepts</a>
+<ul>
+<li><a href="#orgdef0a81">maslows hierarchies</a></li>
+<li><a href="#org5c235ff">ppp</a></li>
+<li><a href="#org3fce2bf">4p or marketing</a></li>
+<li><a href="#org3fb2eb2">marketing</a></li>
+<li><a href="#org63c444a">consumer behaviour</a></li>
+<li><a href="#orgf29831b">risk taking and when to avoid.</a></li>
+<li><a href="#org4598eed">confirmation bias</a></li>
+<li><a href="#org5cf44e4">anchoring bias</a></li>
+<li><a href="#orgf0e88e1">framing effect</a></li>
+<li><a href="#orgefadb57">prospect theory loss vs gain perception</a></li>
+<li><a href="#org48392e7">dunning kruger effect</a></li>
+<li><a href="#org4113a8d">gamblers fallacy</a></li>
+<li><a href="#orgc330418">hot hand fallacy</a></li>
+<li><a href="#orge3d38e0">insensitivity to sample size</a></li>
+<li><a href="#org42659b4">Conservatism bias, the tendency to insufficiently revise one's belief when presented with new evidence.[3][40][41]</a></li>
+<li><a href="#org6fd48ed">planning fallacy</a></li>
+<li><a href="#orgaf9dbce">Optimism bias: The tendency to be over-optimistic, underestimating greatly the probability of undesirable outcomes and overestimating favorable and pleasing outcomes (see also wishful thinking, valence effect, positive outcome bias, and compare pessimism bias).[53][54]</a></li>
+<li><a href="#orgd944a9b">Pessimism bias: The tendency to overestimate the likelihood that bad things will happen. (compare optimism bias).[56]</a></li>
+<li><a href="#orgc4294ea">Spotlight effect: The tendency to overestimate the amount that other people notice one's appearance or behavior.[57]</a></li>
+<li><a href="#orga5fb731">Authority bias, the tendency to attribute greater accuracy to the opinion of an authority figure (unrelated to its content) and be more influenced by that opinion.[60]</a></li>
+<li><a href="#org81fddfe">Automation bias, the tendency to depend excessively on automated systems which can lead to erroneous automated information overriding correct decisions.[61]</a></li>
+<li><a href="#orga75119c">Hyperbolic discounting, where discounting is the tendency for people to have a stronger preference for more immediate payoffs relative to later payoffs. Hyperbolic discounting leads to choices that are inconsistent over time—people make choices today that their future selves would prefer not to have made, despite using the same reasoning.[66] Also known as current moment bias or present bias, and related to Dynamic inconsistency. A good example of this is a study showed that when making food choices for the coming week, 74% of participants chose fruit, whereas when the food choice was for the current day, 70% chose chocolate.[67][68]</a></li>
+<li><a href="#orgae1690e">Risk compensation or Peltzman effect: The tendency to take greater risks when perceived safety increases.[75]</a></li>
+<li><a href="#org421f46e">https://en.wikipedia.org/wiki/List_of_cognitive_biases</a></li>
+<li><a href="#orgbd85c01">https://en.wikipedia.org/wiki/Rigidity_(psychology)</a></li>
+<li><a href="#orgea240fa">https://blog.mikeriversdale.co.nz/2026/02/dunning-kruger-effect-memes-and-cartoons.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgc61eac9">how to be effective</a></li>
+<li><a href="#org1516868">how do i do tasks</a></li>
+<li><a href="#org9b3251c">how to make yourself useful</a></li>
+<li><a href="#org85a7113">case study</a></li>
+<li><a href="#org68f0e89">how to be effective at using the resources at your disposal.</a></li>
+<li><a href="#orgbd06e3e">time management</a></li>
+<li><a href="#org67bc097">prioritization</a></li>
+<li><a href="#orgb287996">deal with critical situations and how communicate effectively in critical high pressure situations.</a></li>
+<li><a href="#org1e8640c">points</a>
+<ul>
+<li><a href="#org0dd0949">growth mindset</a></li>
+<li><a href="#orgb9a7fa9">narrow mindset</a></li>
+<li><a href="#org8b11e41">learning mindset</a></li>
+<li><a href="#org7ab621a">first principle thinking</a></li>
+<li><a href="#org51a4320">what you can do better in your career.</a></li>
+<li><a href="#orgfc14062">both you and company can grow.</a></li>
+<li><a href="#org8d58819">managin people</a></li>
+<li><a href="#orgc0b1a56">technology</a></li>
+<li><a href="#org4bca384">machine</a></li>
+<li><a href="#org4e6e566">rule knowledge</a></li>
+<li><a href="#org0688225">mahiravani chya tithe pachya alikade udya sana mhanje message takto</a></li>
+<li><a href="#orgd5c0bff">notes</a>
+<ul>
+<li><a href="#orgbd7d3ef">In these masterclass transcripts, entrepreneur Varun Mayya outlines a management philosophy centered on <b><b>reducing coordination costs</b></b> and leveraging <b><b>artificial intelligence</b></b> for clarity. He argues that leadership’s primary role is to generate "current" through <b><b>compelling storytelling</b></b> and <b><b>strong incentives</b></b>, ensuring that team members remain aligned even as an organization scales. Mayya emphasizes that <b><b>precise writing</b></b> is a form of active thinking that prevents the "genie problem," where vague instructions lead to undesirable outcomes. He demonstrates how <b><b>AI tools</b></b> can be used to research business models, design KPIs, and generate creative references, allowing humans to focus on <b><b>high-level strategy and soft skills</b></b>. Ultimately, the sources suggest that a <b><b>highly coordinated, AI-integrated team</b></b> will consistently outperform a fractured group of individual superstars. Managed correctly, this "meshed" approach enables companies to achieve years of progress in a fraction of the usual time.</a></li>
+<li><a href="#org90a4c8c">Key Takeaways &amp; Core Frameworks</a></li>
+<li><a href="#orgf07e5be">Here is a slide-by-slide study guide and presentation outline to help you build your presentation on the key principles from the sources:</a></li>
+<li><a href="#org696be1a">Here is a detailed, source-by-source study guide covering every video in your notebook. Each breakdown highlights the core philosophy, operational frameworks, and key principles to give you a complete reference for your studies.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgbc06d8b">quiz thriving sept 17th sept 2026.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-orgc48feb6" class="outline-2">
+<h2 id="orgc48feb6">thriving</h2>
+<div class="outline-text-2" id="text-orgc48feb6">
+</div>
+<div id="outline-container-org0d9dde4" class="outline-3">
+<h3 id="org0d9dde4">how to be prepared for the worst and expect the best.</h3>
+<div class="outline-text-3" id="text-org0d9dde4">
+</div>
+<div id="outline-container-org964c935" class="outline-4">
+<h4 id="org964c935">The basic fundamentals should be clear.</h4>
+</div>
+<div id="outline-container-org2c15b6f" class="outline-4">
+<h4 id="org2c15b6f">Be aware of all the tools available at your disposal, and to be able to select the best as the situation arises.</h4>
+<div class="outline-text-4" id="text-org2c15b6f">
+</div>
+<div id="outline-container-orgb1fc352" class="outline-5">
+<h5 id="orgb1fc352">mobile</h5>
+</div>
+<div id="outline-container-orgd4cc5bb" class="outline-5">
+<h5 id="orgd4cc5bb">internet</h5>
+</div>
+<div id="outline-container-org05da350" class="outline-5">
+<h5 id="org05da350">pc</h5>
+</div>
+<div id="outline-container-orgb48b86c" class="outline-5">
+<h5 id="orgb48b86c">ai</h5>
+</div>
+<div id="outline-container-orgd5e5329" class="outline-5">
+<h5 id="orgd5e5329">when to take the buddies help.</h5>
+</div>
+<div id="outline-container-org101c276" class="outline-5">
+<h5 id="org101c276">spatial knowldge</h5>
+</div>
+</div>
+<div id="outline-container-org9a99eed" class="outline-4">
+<h4 id="org9a99eed">Art of taking unbiased decisions in tough situations.</h4>
+<div class="outline-text-4" id="text-org9a99eed">
+</div>
+<div id="outline-container-org23d2933" class="outline-5">
+<h5 id="org23d2933">knowing the basics of probability, statistics, percentage, permutations, combination, normal distribution,  and applying their principles in the real world scenarios in the back of your mind.</h5>
+</div>
+<div id="outline-container-orge817f3f" class="outline-5">
+<h5 id="orge817f3f">understanding that some decision are reversible and some are irreversible.</h5>
+</div>
+<div id="outline-container-org6bd3297" class="outline-5">
+<h5 id="org6bd3297">some decision are suicidal and some are hedged with no major downside.</h5>
+</div>
+<div id="outline-container-orga6a8a00" class="outline-5">
+<h5 id="orga6a8a00">know when to take to take the decision on your own and when the risk of suicide is high so take second opinion or help.</h5>
+</div>
+<div id="outline-container-org5c7ffd9" class="outline-5">
+<h5 id="org5c7ffd9">be curious -</h5>
+</div>
+<div id="outline-container-org4770a14" class="outline-5">
+<h5 id="org4770a14">always be ready to believe that what more i can know here before taking my decision?</h5>
+</div>
+<div id="outline-container-orgbcf8d80" class="outline-5">
+<h5 id="orgbcf8d80">ask the right questions to the right people to gather the right detail in order to take the best decision.</h5>
+</div>
+<div id="outline-container-org98a4ea5" class="outline-5">
+<h5 id="org98a4ea5">tails i win - heads i dont lose much.</h5>
+</div>
+<div id="outline-container-org09d5353" class="outline-5">
+<h5 id="org09d5353">if you are not continously learning by being curious then your curiosity will be a nuisance.</h5>
+</div>
+<div id="outline-container-org4f30334" class="outline-5">
+<h5 id="org4f30334">if your fundamentals are not clear then your questions will be wrong, which in turn will give you irrelevant answers resulting in making cloudy decisions.</h5>
+</div>
+<div id="outline-container-orgc2a2973" class="outline-5">
+<h5 id="orgc2a2973">listen more than you talk.</h5>
+</div>
+<div id="outline-container-org46eeae2" class="outline-5">
+<h5 id="org46eeae2">in tough situation you can panic or stay calm.</h5>
+<div class="outline-text-5" id="text-org46eeae2">
+</div>
+<ul class="org-ul">
+<li><a id="org8f8cb58"></a>your behaviour in tough situations is derived from your life.<br></li>
+<li><a id="orgcc91cef"></a>if you are continously encountering such situations then you increase your threshold to take them head on.<br></li>
+<li><a id="org58630d5"></a>if you are not exposed to such failures/tough situations then you become overwhelmed with one.<br></li>
+<li><a id="org726081f"></a>when you panic you body and mind come into flight mode.<br></li>
+<li><a id="orge166ac4"></a>in such mode the decisions made are the worst decisions.<br></li>
+<li><a id="orge6a866c"></a>because this is basic instinct to flight away as we perceive the situation as life threastening.<br></li>
+<li><a id="org6c42160"></a>however our daily situation of such kind are barely even fatal. so the act of<br></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org512091b" class="outline-4">
+<h4 id="org512091b">In order to ask the right question you should have command over language and psychology.</h4>
+<div class="outline-text-4" id="text-org512091b">
+</div>
+<div id="outline-container-org2ed9761" class="outline-5">
+<h5 id="org2ed9761">command over the language used for communication.</h5>
+<div class="outline-text-5" id="text-org2ed9761">
+</div>
+<ul class="org-ul">
+<li><a id="org03b67bd"></a>fluent and best use of words matter.<br></li>
+<li><a id="orgd1417e3"></a>the speed and accuracy of manifesting those words in the digital world.<br></li>
+</ul>
+</div>
+<div id="outline-container-org67450df" class="outline-5">
+<h5 id="org67450df">knowledge of psychology to gauge the persons thought process and use the right way to gather the right detail.</h5>
+<div class="outline-text-5" id="text-org67450df">
+</div>
+<ul class="org-ul">
+<li><a id="orgc0ae592"></a>reciprocity<br></li>
+<li><a id="org11e7f7d"></a>commitment<br></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2af14fc" class="outline-4">
+<h4 id="org2af14fc">Richest person in the room is the one with the highest failures.</h4>
+</div>
+<div id="outline-container-orga4fb6aa" class="outline-4">
+<h4 id="orga4fb6aa">Taking interest in long form content.</h4>
+<div class="outline-text-4" id="text-orga4fb6aa">
+</div>
+<div id="outline-container-org7db9736" class="outline-5">
+<h5 id="org7db9736">reading books,</h5>
+</div>
+<div id="outline-container-org6e76139" class="outline-5">
+<h5 id="org6e76139">podcasts</h5>
+</div>
+<div id="outline-container-orga3c1821" class="outline-5">
+<h5 id="orga3c1821">articles.</h5>
+</div>
+</div>
+<div id="outline-container-org99a4e64" class="outline-4">
+<h4 id="org99a4e64">Reading absorbing and learning about concepts from various fields.</h4>
+<div class="outline-text-4" id="text-org99a4e64">
+</div>
+<div id="outline-container-orgb460acf" class="outline-5">
+<h5 id="orgb460acf">machines</h5>
+</div>
+<div id="outline-container-orgf560be5" class="outline-5">
+<h5 id="orgf560be5">business</h5>
+</div>
+<div id="outline-container-orgda8596b" class="outline-5">
+<h5 id="orgda8596b">taxation</h5>
+</div>
+<div id="outline-container-orgdcf9943" class="outline-5">
+<h5 id="orgdcf9943">eway bill</h5>
+</div>
+<div id="outline-container-org41a513e" class="outline-5">
+<h5 id="org41a513e">maths - fast calculation in the mind</h5>
+</div>
+<div id="outline-container-orgec936a4" class="outline-5">
+<h5 id="orgec936a4">hard cash counting money in a fast way</h5>
+</div>
+<div id="outline-container-org328e019" class="outline-5">
+<h5 id="org328e019">human psychology</h5>
+</div>
+<div id="outline-container-org0de8512" class="outline-5">
+<h5 id="org0de8512">technology</h5>
+</div>
+<div id="outline-container-org1eaceab" class="outline-5">
+<h5 id="org1eaceab">finance concepts</h5>
+</div>
+<div id="outline-container-orgd3ef19f" class="outline-5">
+<h5 id="orgd3ef19f">money concepts</h5>
+</div>
+<div id="outline-container-orgceda7fe" class="outline-5">
+<h5 id="orgceda7fe">geopolitics</h5>
+</div>
+<div id="outline-container-org58c705b" class="outline-5">
+<h5 id="org58c705b">human biology</h5>
+</div>
+<div id="outline-container-org2a58828" class="outline-5">
+<h5 id="org2a58828">brain chemistry</h5>
+</div>
+<div id="outline-container-org87cb031" class="outline-5">
+<h5 id="org87cb031">vehicle knowledge and repair knowledge.</h5>
+</div>
+<div id="outline-container-orga3b28ed" class="outline-5">
+<h5 id="orga3b28ed">life skills</h5>
+</div>
+<div id="outline-container-orgf03e604" class="outline-5">
+<h5 id="orgf03e604">genetics</h5>
+</div>
+<div id="outline-container-org7fcd403" class="outline-5">
+<h5 id="org7fcd403">human history.</h5>
+</div>
+<div id="outline-container-org016d45f" class="outline-5">
+<h5 id="org016d45f">negotiation concepts</h5>
+</div>
+<div id="outline-container-org3facce6" class="outline-5">
+<h5 id="org3facce6">and many more than i cant recall.</h5>
+</div>
+</div>
+<div id="outline-container-org8ee6e58" class="outline-4">
+<h4 id="org8ee6e58">Being spiritual</h4>
+<div class="outline-text-4" id="text-org8ee6e58">
+</div>
+<div id="outline-container-orgc9dfee3" class="outline-5">
+<h5 id="orgc9dfee3">in tough situation if you identify as yourself and are directly affected by it then becomes your problem and distorts your decision making.</h5>
+</div>
+<div id="outline-container-orgf5bd4f3" class="outline-5">
+<h5 id="orgf5bd4f3">if you find yourself being niralamp in such situations then it helps to think critically logically in such siutaions.</h5>
+</div>
+<div id="outline-container-org003804d" class="outline-5">
+<h5 id="org003804d">karma - believing in good karma and doing good unto others always comes back to you in your life in all forms and manner.</h5>
+</div>
+<div id="outline-container-orgd9abf4f" class="outline-5">
+<h5 id="orgd9abf4f">best example is of climbing a mountain and climbing down.</h5>
+</div>
+</div>
+
+<div id="outline-container-org895a218" class="outline-4">
+<h4 id="org895a218">How do i do taks?</h4>
+<div class="outline-text-4" id="text-org895a218">
+</div>
+<div id="outline-container-orgdb91695" class="outline-5">
+<h5 id="orgdb91695">make list of all tasks to make sure none get left out.</h5>
+</div>
+<div id="outline-container-orgc158f0b" class="outline-5">
+<h5 id="orgc158f0b">sort them in their priority terms.</h5>
+</div>
+<div id="outline-container-org737b411" class="outline-5">
+<h5 id="org737b411">tick each task one by one and not all together at once.</h5>
+</div>
+<div id="outline-container-org7113fea" class="outline-5">
+<h5 id="org7113fea">pick the hardest and unknown first.</h5>
+</div>
+<div id="outline-container-orgf1c811b" class="outline-5">
+<h5 id="orgf1c811b">delegate whatever can be delegated.</h5>
+</div>
+</div>
+<div id="outline-container-org5609b25" class="outline-4">
+<h4 id="org5609b25">KISS</h4>
+<div class="outline-text-4" id="text-org5609b25">
+</div>
+<div id="outline-container-org61beefe" class="outline-5">
+<h5 id="org61beefe">Keep It Simple Stupid</h5>
+</div>
+<div id="outline-container-org22ff1a3" class="outline-5">
+<h5 id="org22ff1a3">any process made complicated unnecessarily gets killed eventually.</h5>
+</div>
+<div id="outline-container-orga346f48" class="outline-5">
+<h5 id="orga346f48">whatever you try to do find the simplest way.</h5>
+</div>
+<div id="outline-container-orge5d7a26" class="outline-5">
+<h5 id="orge5d7a26">an easy thing can be simple, but a simple thing is not always easy.</h5>
+</div>
+<div id="outline-container-org5fd8f33" class="outline-5">
+<h5 id="org5fd8f33">strive to keep things simple.</h5>
+</div>
+</div>
+<div id="outline-container-org2cc16b9" class="outline-4">
+<h4 id="org2cc16b9">always being optimistic but also realistic at the same time.</h4>
+</div>
+<div id="outline-container-orgd472066" class="outline-4">
+<h4 id="orgd472066">efficient use of resources.</h4>
+<div class="outline-text-4" id="text-orgd472066">
+</div>
+<div id="outline-container-org32ab787" class="outline-5">
+<h5 id="org32ab787">read the manuals.</h5>
+</div>
+<div id="outline-container-org6077d39" class="outline-5">
+<h5 id="org6077d39">know every feature of your tools.</h5>
+</div>
+<div id="outline-container-org27cf5b9" class="outline-5">
+<h5 id="org27cf5b9">think of unorthodox ways to use the tools.</h5>
+</div>
+<div id="outline-container-orgefd4c6e" class="outline-5">
+<h5 id="orgefd4c6e">when you have a hammer, everything looks like a nail.</h5>
+<div class="outline-text-5" id="text-orgefd4c6e">
+<p>
+Functional fixedness is a cognitive bias that limits a person to use an object only in the way it is traditionally used. The concept of functional fixedness originated in Gestalt psychology, a movement in psychology that emphasizes holistic processing. Karl Duncker defined functional fixedness as being a mental block against using an object in a new way that is required to solve a problem.[1] This "block" limits the ability of an individual to use components given to them to complete a task, as they cannot move past the original purpose of those components. For example, if someone needs a paperweight, but they only have a hammer, they may not see how the hammer can be used as a paperweightf. Functional fixedness is this inability to see a hammer's use as anything other than for pounding nails; the person fails to think to use the hammer in a way other than in its conventional function.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga92ec95" class="outline-4">
+<h4 id="orga92ec95">key concepts</h4>
+<div class="outline-text-4" id="text-orga92ec95">
+</div>
+<div id="outline-container-orgdef0a81" class="outline-5">
+<h5 id="orgdef0a81">maslows hierarchies</h5>
+</div>
+<div id="outline-container-org5c235ff" class="outline-5">
+<h5 id="org5c235ff">ppp</h5>
+</div>
+<div id="outline-container-org3fce2bf" class="outline-5">
+<h5 id="org3fce2bf">4p or marketing</h5>
+</div>
+<div id="outline-container-org3fb2eb2" class="outline-5">
+<h5 id="org3fb2eb2">marketing</h5>
+</div>
+<div id="outline-container-org63c444a" class="outline-5">
+<h5 id="org63c444a">consumer behaviour</h5>
+</div>
+<div id="outline-container-orgf29831b" class="outline-5">
+<h5 id="orgf29831b">risk taking and when to avoid.</h5>
+</div>
+<div id="outline-container-org4598eed" class="outline-5">
+<h5 id="org4598eed">confirmation bias</h5>
+</div>
+<div id="outline-container-org5cf44e4" class="outline-5">
+<h5 id="org5cf44e4">anchoring bias</h5>
+</div>
+<div id="outline-container-orgf0e88e1" class="outline-5">
+<h5 id="orgf0e88e1">framing effect</h5>
+</div>
+<div id="outline-container-orgefadb57" class="outline-5">
+<h5 id="orgefadb57">prospect theory loss vs gain perception</h5>
+</div>
+<div id="outline-container-org48392e7" class="outline-5">
+<h5 id="org48392e7">dunning kruger effect</h5>
+</div>
+<div id="outline-container-org4113a8d" class="outline-5">
+<h5 id="org4113a8d">gamblers fallacy</h5>
+</div>
+<div id="outline-container-orgc330418" class="outline-5">
+<h5 id="orgc330418">hot hand fallacy</h5>
+</div>
+<div id="outline-container-orge3d38e0" class="outline-5">
+<h5 id="orge3d38e0">insensitivity to sample size</h5>
+</div>
+<div id="outline-container-org42659b4" class="outline-5">
+<h5 id="org42659b4">Conservatism bias, the tendency to insufficiently revise one's belief when presented with new evidence.[3][40][41]</h5>
+</div>
+<div id="outline-container-org6fd48ed" class="outline-5">
+<h5 id="org6fd48ed">planning fallacy</h5>
+</div>
+<div id="outline-container-orgaf9dbce" class="outline-5">
+<h5 id="orgaf9dbce">Optimism bias: The tendency to be over-optimistic, underestimating greatly the probability of undesirable outcomes and overestimating favorable and pleasing outcomes (see also wishful thinking, valence effect, positive outcome bias, and compare pessimism bias).[53][54]</h5>
+</div>
+<div id="outline-container-orgd944a9b" class="outline-5">
+<h5 id="orgd944a9b">Pessimism bias: The tendency to overestimate the likelihood that bad things will happen. (compare optimism bias).[56]</h5>
+</div>
+<div id="outline-container-orgc4294ea" class="outline-5">
+<h5 id="orgc4294ea">Spotlight effect: The tendency to overestimate the amount that other people notice one's appearance or behavior.[57]</h5>
+</div>
+<div id="outline-container-orga5fb731" class="outline-5">
+<h5 id="orga5fb731">Authority bias, the tendency to attribute greater accuracy to the opinion of an authority figure (unrelated to its content) and be more influenced by that opinion.[60]</h5>
+</div>
+<div id="outline-container-org81fddfe" class="outline-5">
+<h5 id="org81fddfe">Automation bias, the tendency to depend excessively on automated systems which can lead to erroneous automated information overriding correct decisions.[61]</h5>
+</div>
+<div id="outline-container-orga75119c" class="outline-5">
+<h5 id="orga75119c">Hyperbolic discounting, where discounting is the tendency for people to have a stronger preference for more immediate payoffs relative to later payoffs. Hyperbolic discounting leads to choices that are inconsistent over time—people make choices today that their future selves would prefer not to have made, despite using the same reasoning.[66] Also known as current moment bias or present bias, and related to Dynamic inconsistency. A good example of this is a study showed that when making food choices for the coming week, 74% of participants chose fruit, whereas when the food choice was for the current day, 70% chose chocolate.[67][68]</h5>
+</div>
+<div id="outline-container-orgae1690e" class="outline-5">
+<h5 id="orgae1690e">Risk compensation or Peltzman effect: The tendency to take greater risks when perceived safety increases.[75]</h5>
+</div>
+<div id="outline-container-org421f46e" class="outline-5">
+<h5 id="org421f46e"><a href="https://en.wikipedia.org/wiki/List_of_cognitive_biases">https://en.wikipedia.org/wiki/List_of_cognitive_biases</a></h5>
+</div>
+<div id="outline-container-orgbd85c01" class="outline-5">
+<h5 id="orgbd85c01"><a href="https://en.wikipedia.org/wiki/Rigidity_(psychology)">https://en.wikipedia.org/wiki/Rigidity_(psychology)</a></h5>
+</div>
+<div id="outline-container-orgea240fa" class="outline-5">
+<h5 id="orgea240fa"><a href="https://blog.mikeriversdale.co.nz/2026/02/dunning-kruger-effect-memes-and-cartoons.html">https://blog.mikeriversdale.co.nz/2026/02/dunning-kruger-effect-memes-and-cartoons.html</a></h5>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc61eac9" class="outline-3">
+<h3 id="orgc61eac9">how to be effective</h3>
+</div>
+<div id="outline-container-org1516868" class="outline-3">
+<h3 id="org1516868">how do i do tasks</h3>
+</div>
+<div id="outline-container-org9b3251c" class="outline-3">
+<h3 id="org9b3251c">how to make yourself useful</h3>
+</div>
+<div id="outline-container-org85a7113" class="outline-3">
+<h3 id="org85a7113">case study</h3>
+</div>
+<div id="outline-container-org68f0e89" class="outline-3">
+<h3 id="org68f0e89">how to be effective at using the resources at your disposal.</h3>
+</div>
+<div id="outline-container-orgbd06e3e" class="outline-3">
+<h3 id="orgbd06e3e">time management</h3>
+</div>
+<div id="outline-container-org67bc097" class="outline-3">
+<h3 id="org67bc097">prioritization</h3>
+</div>
+<div id="outline-container-orgb287996" class="outline-3">
+<h3 id="orgb287996">deal with critical situations and how communicate effectively in critical high pressure situations.</h3>
+</div>
+<div id="outline-container-org1e8640c" class="outline-3">
+<h3 id="org1e8640c">points</h3>
+<div class="outline-text-3" id="text-org1e8640c">
+</div>
+<div id="outline-container-org0dd0949" class="outline-4">
+<h4 id="org0dd0949">growth mindset</h4>
+</div>
+<div id="outline-container-orgb9a7fa9" class="outline-4">
+<h4 id="orgb9a7fa9">narrow mindset</h4>
+</div>
+<div id="outline-container-org8b11e41" class="outline-4">
+<h4 id="org8b11e41">learning mindset</h4>
+</div>
+<div id="outline-container-org7ab621a" class="outline-4">
+<h4 id="org7ab621a">first principle thinking</h4>
+</div>
+<div id="outline-container-org51a4320" class="outline-4">
+<h4 id="org51a4320">what you can do better in your career.</h4>
+</div>
+<div id="outline-container-orgfc14062" class="outline-4">
+<h4 id="orgfc14062">both you and company can grow.</h4>
+</div>
+<div id="outline-container-org8d58819" class="outline-4">
+<h4 id="org8d58819">managin people</h4>
+</div>
+<div id="outline-container-orgc0b1a56" class="outline-4">
+<h4 id="orgc0b1a56">technology</h4>
+</div>
+<div id="outline-container-org4bca384" class="outline-4">
+<h4 id="org4bca384">machine</h4>
+</div>
+<div id="outline-container-org4e6e566" class="outline-4">
+<h4 id="org4e6e566">rule knowledge</h4>
+</div>
+<div id="outline-container-org0688225" class="outline-4">
+<h4 id="org0688225">mahiravani chya tithe pachya alikade udya sana mhanje message takto</h4>
+</div>
+<div id="outline-container-orgd5c0bff" class="outline-4">
+<h4 id="orgd5c0bff">notes</h4>
+<div class="outline-text-4" id="text-orgd5c0bff">
+</div>
+<div id="outline-container-orgbd7d3ef" class="outline-5">
+<h5 id="orgbd7d3ef">In these masterclass transcripts, entrepreneur Varun Mayya outlines a management philosophy centered on <b><b>reducing coordination costs</b></b> and leveraging <b><b>artificial intelligence</b></b> for clarity. He argues that leadership’s primary role is to generate "current" through <b><b>compelling storytelling</b></b> and <b><b>strong incentives</b></b>, ensuring that team members remain aligned even as an organization scales. Mayya emphasizes that <b><b>precise writing</b></b> is a form of active thinking that prevents the "genie problem," where vague instructions lead to undesirable outcomes. He demonstrates how <b><b>AI tools</b></b> can be used to research business models, design KPIs, and generate creative references, allowing humans to focus on <b><b>high-level strategy and soft skills</b></b>. Ultimately, the sources suggest that a <b><b>highly coordinated, AI-integrated team</b></b> will consistently outperform a fractured group of individual superstars. Managed correctly, this "meshed" approach enables companies to achieve years of progress in a fraction of the usual time.</h5>
+</div>
+<div id="outline-container-org90a4c8c" class="outline-5">
+<h5 id="org90a4c8c">Key Takeaways &amp; Core Frameworks</h5>
+<div class="outline-text-5" id="text-org90a4c8c">
+<p>
+#### 1. Clarity, Focus &amp; Overcoming Confusion
+ The Clarity Advantage: Confusion is the defining hallmark of early careers, often perpetuated by social media choices and corporate environments where confusion is intentionally baked in to avoid accountability. Deciding on one clear direction immediately places you ahead of 99% of people.
+ The "Hell Yes" Rule &amp; The One Thing: Based on Greg McKeown’s Essentialism, if an opportunity or task isn't a 9/10 "hell yes," it is a "no". Gary Keller’s The One Thing asks: "What is the single thing I can do right now that makes everything else easier or unnecessary?".
+ Reversible vs. Irreversible Decisions: Jeff Bezos divides decisions into two-way doors (reversible; decide in minutes) and one-way doors (irreversible; take weeks or months to carefully evaluate).
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+#### 2. Distribution &amp; "Engineering Luck"
+ Distribution &gt; Product: Distribution is 10x more valuable than product alone. Strong distribution allows companies and creators to attract top talent, capital, and customers, which in turn fuels superior product development.
+ Engineering Positive Luck: Success has a heavy component of luck, but you can engineer positive luck by building a "lightning catcher"—expanding your surface area through consistent content creation so opportunities can find you.
+ The 7-11-4 Rule: Based on marketing research, converting a customer or client into high-trust requires 7 hours of total content, 11 touchpoints/interactions, across 4 different platforms.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+#### 3. Management, Scaling &amp; Execution
+ Cost of Coordination: A leader's primary job is dropping the cost of coordination across teams. A highly coordinated, aligned team will easily outperform an uncoordinated team of superstars.
+ Sure Shots vs. R&amp;D: Divide project operations into Sure Shots (proven methods where unit investment yields predictable output) and R&amp;D (unproven methods requiring low-cost experimentation). Only innovate in 1–2 departments at a time.
+ Two-Pizza Teams: Following Jeff Bezos's principle, keep teams small (6–10 people) to eliminate communication bottlenecks and bureaucratic bloat.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+#### 4. Wealth &amp; Risk-Taking
+ How Wealthy Minds Operate: High-net-worth individuals treat money as a form of energy to buy speed, focus, and time rather than luxury. They view reputation and brand as a second bank account that is often more valuable than liquid cash.
+ Staging Risk: Avoid suicidal, unhedged risks. Structure pursuits by keeping 80–90% in safe, predictable foundations and allocating 10% to high-upside moonshots or cheap parallel experiments.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+#### 5. Neuroscience of Performance &amp; Focus
+ Multitasking is a Biological Myth: The brain cannot execute two cognitive tasks simultaneously; it executes rapid "task switching," which doubles execution time and drains mental energy.
+ Circadian Rhythms &amp; Peak Windows: The "5 AM Club" is a myth that does not apply universally—human circadian rhythms vary, with the majority being bifphasic. The priority is securing 7+ hours of quality sleep and protecting your 2–3 peak cognitive hours each day.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### Fascinating Facts
+</p>
+
+<ol class="org-ol">
+<li>The Visual Phone Effect: A UT Austin study showed that simply having a smartphone visible on a desk (even face-down or powered off) significantly decreases fluid intelligence and attention span, as the brain subconsciously spends resources monitoring it.</li>
+<li>The \$25 Billion Nike Lesson: When Nike shifted its strategy away from emotional, brand-building storytelling toward measurable, direct-response performance ads (ROAS tracking), they suffered a \$25 billion drop in market capitalization in a single day.</li>
+<li>Serotonin &amp; Collaboration: Research on primates shows that higher serotonin levels correlate with assertive, collaborative, and coalition-building behavior rather than raw physical aggression.</li>
+<li>Diarrhea vs. Terrorist Attacks: Statistically, more people die per year from diarrhea than from shark attacks and terrorist attacks combined.</li>
+</ol>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### Notable Quotes
+</p>
+
+<p>
+"In big companies, confusion happens on purpose because no one wants to own the call." — Varun Mayya
+"Perfection is rubbish nonsense—we are chasing execution." — Sauvik Banerjjee
+"Somewhere between the janitor and the CEO, excuses stop mattering." — Steve Jobs (cited by Varun Mayya)
+"All success is luck, but the trick is you can engineer luck." — Varun Mayya
+"If a task isn't a 9 out of 10 'hell yes', it's a 'no'." — Greg McKeown / Varun Mayya
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+💡 Would you like me to turn these frameworks into a structured report, slide deck outline, or study guide for your management team?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf07e5be" class="outline-5">
+<h5 id="orgf07e5be">Here is a slide-by-slide study guide and presentation outline to help you build your presentation on the key principles from the sources:</h5>
+<div class="outline-text-5" id="text-orgf07e5be">
+<p>
+&#x2014;
+</p>
+
+<p>
+### Slide 1: The Core Bottleneck — Confusion vs. Clarity
+ Slide Title: Clarity as the Ultimate Competitive Advantage
+ Key Bullet Points:
+   The Early-Career Hallmarking: 99% of professionals are chronically confused, paralyzed by social media choices and endless optionality.
+   Intentional Corporate Confusion: In large organizations, confusion is often baked into processes intentionally so executives can avoid owning decisions and facing personal blame.
+   The Anti-Confusion Playbook:
+     Greg McKeown’s Essentialism: Practice systematic elimination — if an opportunity or task isn't a 9/10 "hell yes," it is a "no".
+     Gary Keller’s One Thing: Identify the single action that makes everything else easier or unnecessary.
+ Speaker Talking Point / Key Quote:
+   "In big companies, confusion happens on purpose because no one wants to own the call."
+   Takeaway: Establishing one clear working core immediately places you ahead of 99% of people.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### Slide 2: High-Velocity Decision-Making
+ Slide Title: Frameworks for Rapid Execution
+ Key Bullet Points:
+   One-Way vs. Two-Way Doors (Jeff Bezos Framework):
+     Two-Way Doors: Reversible decisions. Decide within 5 minutes.
+     One-Way Doors: Irreversible decisions (e.g., firing key talent or permanent exits). Take weeks or months to evaluate thoroughly.
+   Action Produces Information: Never make decisions solely on whiteboards; run cheap experiments to turn low-resolution plans into high-resolution understanding.
+   The Rule of Three: Date 3 partners or ship 3 serious projects before locking in a career path; sampling past 3 yields diminishing returns and raises opportunity cost.
+ Speaker Talking Point:
+   Avoid analysis paralysis by testing working code or real pilots over endless planning documents.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### Slide 3: Distribution as the "Lightning Catcher"
+ Slide Title: Distribution &gt; Product (Engineering Luck)
+ Key Bullet Points:
+   The 10x Value Rule: Distribution is 10x more valuable than product alone because having distribution attracts top talent, capital, and clients, which then fuels product creation.
+   Erecting a "Lightning Catcher": Success has a heavy component of luck, but you can engineer positive luck by expanding your surface area through consistent content.
+   The 7-11-4 Rule (Google): High-trust conversion requires 7 hours of content, 11 touchpoints/interactions, across 4 different platforms.
+   The Nike Cautionary Tale: Shifting strategy away from brand storytelling toward measurable, direct-response performance ads caused Nike to lose \$25 billion in market capitalization in a single day.
+ Speaker Talking Point / Key Quote:
+   "All success is luck, but the trick is you can engineer luck."
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### Slide 4: Management &amp; Lowering Coordination Costs
+ Slide Title: Scaling Teams &amp; High-Density Execution
+ Key Bullet Points:
+   The Primary Job of Leadership: Lowering the cost of coordination across teams. A highly coordinated team will easily outperform a disjointed team of superstars.
+   Two-Pizza Teams: Following Jeff Bezos, keep autonomous units small (6–10 people) to eliminate communication overhead and "bullshit work". One team, one goal.
+   Sure Shots vs. R&amp;D:
+     Sure Shots: Proven operational methods scaled predictably with capital.
+     R&amp;D: High-uncertainty experiments requiring low-cost trials and direct founder attention. Only innovate in 1–2 departments at a time.
+ Speaker Talking Point:
+   Use 3-month alpha cycles and "vertical slicing" (making short, playable/usable slices of a project) to discover the ideal organizational structure before spending heavy capital.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### Slide 5: Staging Risk &amp; Wealth Mindsets
+ Slide Title: Asymmetric Betting &amp; How Wealthy Minds Think
+ Key Bullet Points:
+   Staging Risk: Avoid suicidal, unhedged risks. Run cheap/free parallel experiments with asymmetric high payoffs; only scale capital after risk checkpoints are cleared.
+   How Rich People View Money: High-net-worth individuals treat money as a form of energy to buy speed, focus, and time rather than mere luxury items.
+   Reputation &amp; Proximity: Deep trust and proximity to power are far more valuable long-term assets than raw technical skill.
+   Non-Competitive Markets: Pursue non-competitive, underrated problems to eliminate multi-way variance and build a 2-year moat.
+ Speaker Talking Point / Key Quote:
+   "Risk is what's left over after you think you've thought of everything."
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### Slide 6: Neuroscience of Focus &amp; High Performance
+ Slide Title: Biological Laws of Focus &amp; Attention Management
+ Key Bullet Points:
+   The Smartphone IQ Tax: A UT Austin study showed that simply having a visible smartphone on a desk (even face-down or powered off) significantly decreases fluid intelligence and attention span.
+   The Multitasking Myth: Multitasking is a biological impossibility; "task switching" doubles execution time and drains cognitive energy.
+   Chronotypes over 5 AM Club: Peak performance comes from protecting your 2–3 peak cognitive hours each day based on your genetic chronotype (AM-shifted, Biphasic, or PM-shifted), not forcing a 5 AM routine.
+   Default Mode Network (DMN): Protect "think time" and intentional boredom to trigger creative breakthroughs and rewrite internal narratives.
+ Speaker Talking Point / Key Quote:
+   "Every single time you switch your attention, you pay for it in time and energy."
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+💡 If you'd like, I can turn this outline directly into a polished presentation slide deck or an editable PowerPoint file (.pptx) for you. Which format would you prefer?
+</p>
+</div>
+</div>
+<div id="outline-container-org696be1a" class="outline-5">
+<h5 id="org696be1a">Here is a detailed, source-by-source study guide covering every video in your notebook. Each breakdown highlights the core philosophy, operational frameworks, and key principles to give you a complete reference for your studies.</h5>
+<div class="outline-text-5" id="text-org696be1a">
+<p>
+&#x2014;
+</p>
+
+<p>
+### 1. Career Advice for People Who Feel Lost | Kata 7
+ Core Philosophy: Confusion is the defining hallmark of early careers, but having absolute clarity immediately puts you ahead of 99% of people.
+ Key Frameworks &amp; Principles:
+   Corporate Confusion: In large organizations, confusion is often baked into processes intentionally so executives can avoid owning decisions and facing personal blame.
+   Greg McKeown’s Essentialism: Practice systematic elimination; if an opportunity or task isn't a 9/10 "hell yes," it is a "no".
+   Gary Keller’s The One Thing: Ask, "What is the single thing I can do right now that makes everything else easier or unnecessary?".
+   Reversible vs. Irreversible Decisions: Jeff Bezos framework—Two-Way Door decisions (reversible) should be made in 5 minutes, while One-Way Door decisions (irreversible) require careful evaluation over weeks or months.
+   The Rule of Three: Date 3 partners or sample 3 serious jobs/projects before committing; additional sampling past 3 yields diminishing returns and increases opportunity cost.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 2. Guide to Scaling A Startup with Zero Funding | Kata 1
+ Core Philosophy: Building a defensible business requires first-principles thinking, prioritizing access to talent and distribution over venture funding.
+ Key Frameworks &amp; Principles:
+   Unorthodox Positioning: Operating away from HSR Layout’s "unprofitable startup mentality" in Bangalore allows teams to build sustainable, bootstrapped economics.
+   Distribution as the Moat: Static products commoditize quickly; real moats lie in proprietary distribution channels and talent access.
+   Parallel Bet Execution: Run multiple small, parallel experiments with high failure tolerance rather than betting the entire company on a single feature.
+   Lollapalooza Effects: Bet on opportunities where multiple technological and market forces move in the same direction to achieve compound growth.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 3. How Distribution Can 10x Your Luck, Career &amp; Income | KATA 10
+ Core Philosophy: Distribution is 10x more valuable than product alone because it attracts capital, talent, and customers, which then fuels product creation.
+ Key Frameworks &amp; Principles:
+   Erecting a "Lightning Catcher": All success involves luck, but consistent content creation expands your surface area to engineer positive luck.
+   The 7-11-4 Rule (Google): High-trust customer conversion requires 7 hours of total content, 11 touchpoints/interactions, across 4 different platforms.
+   High-Ticket Conversion: Complex B2B deals or high-consideration purchases often require 20 to 60+ touchpoints before securing client commitment.
+   The Cautionary Tale of Pure Performance Ads: Over-indexing on direct-response ads destroys brand equity; Nike lost \$25 billion in market cap in a single day after pivoting away from storytelling toward tracking metrics.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 4. How I Manage Projects End To End (1 Hour Masterclass)
+ Core Philosophy: Traditional Waterfall and Agile frameworks fail in fast-changing environments because early project understanding is inherently low-resolution.
+ Key Frameworks &amp; Principles:
+   Minimum Viable Teams (MVT): Start projects with a barebones cross-departmental team rather than inheriting bloated middle management.
+   Sure Shots vs. R&amp;D:
+     Sure Shots: Proven operational methods scaled predictably with capital.
+     R&amp;D: Unproven experiments requiring intense founder time, rapid trials, and low per-unit costs.
+   Vertical Slicing &amp; Alphas: Build short, usable slices (e.g., a 5-minute playable demo) to iteratively discover the optimal organization structure and density.
+   Capacity Math: Invest in hardware or automation technology only after proving that tech breaks even by replacing recurring labor costs.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 5. How I Use AI (1 Hour Masterclass) | Kata 3
+ Core Philosophy: Writing is active thinking; we are entering a "meshed world" where AI automates hard skills, placing premium value on context-setting and human leadership.
+ Key Frameworks &amp; Principles:
+   The "Genie Metaphor": AI models and team members act like literal genies—if instructions lack explicit specifications and context, the output will be literally executed but functionally flawed.
+   The Missing Spec Bottleneck: Most execution failures stem from under-baked briefs and missing specifications rather than a lack of underlying talent.
+   Double Incentive Design: Use AI to design balanced incentive structures that reward high performance while penalizing waste.
+   Leadership Clarity: Unclear leadership damages careers; leaders must establish unambiguous expectations, workflows, and feedback loops.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 6. How Simplifying Everything Makes You Rich
+ Core Philosophy: Complexity is often a crutch for a lack of product-market fit or distribution; simplicity drives wealth and operational scale.
+ Key Frameworks &amp; Principles:
+   The Steve Jobs 4-Product Rule: Slash bloated product lines down to a few focused flagship offerings that audiences and teams can easily understand and remember.
+   Two-Pizza Teams (Jeff Bezos): Organize companies into autonomous units of 6–10 people to eliminate communication gaps and "bullshit work".
+   One Team, One Goal: Assign a single primary metric to each small team, and one clear task per individual to eliminate cross-dependency delays.
+   Leveraging Wrappers: Build on top of existing software abstractions and third-party tools rather than building underlying infrastructure from scratch.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 7. How To Take Risk Like Rich People Do (1 Hour Masterclass) | Kata 9
+ Core Philosophy: An entrepreneur's primary job is not taking reckless risks, but systematically reducing risk through cheap experiments.
+ Key Frameworks &amp; Principles:
+   Game Theory Optimal (GTO): Execute low-cost or free parallel experiments that carry asymmetric, high upside payoffs.
+   Staging Risk: Validate team, product, and market fit across structured funding checkpoints (seed, Series A, Series B) before scaling capital.
+   The 80/10/10 Asset Rule: Keep 80–90% of operations/assets in safe, predictable foundations while allocating 10% to high-upside moonshots.
+   Deep Optionality: Build transferable skills, distribution, and financial shock absorbers so no single failure can destroy your trajectory.
+   Non-Competitive Markets: Target underrated problems to eliminate multi-way competition and establish a 2-year operational head start.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 8. How to Get Hired Faster Than Everyone Else | Kata 8
+ Core Philosophy: Traditional word-heavy resumes are obsolete; modern recruitment relies on visual proof-of-work, portfolios, and unique individual superpowers.
+ Key Frameworks &amp; Principles:
+   The Avengers Model: Reject the "fungibility fallacy"; build teams with distinct, complementary superpowers rather than interchangeable generalists.
+   Attitude &amp; Learning Agility &gt; Skill: Specific software tools can be taught quickly, but character, taste, and learning agility cannot.
+   The AI Prompting Filter: Evaluate job candidates by watching them prompt AI models to assess domain knowledge, logic, speed, and taste.
+   The "Champ R" Framework: Evaluate candidates across Cultural fit, Hard skills, Attitude, Motivation, Potential, and Reassurance.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 9. How to Think Like Rich People (1 Hour Masterclass)
+ Core Philosophy: High-net-worth individuals view money as an ethereal force/energy to buy speed, focus, time, and freedom rather than luxury goods.
+ Key Frameworks &amp; Principles:
+   "Blinking": The cognitive technique of short-range mental teleportation to empathize directly with the motivations, constraints, and desires of ultra-wealthy decision-makers.
+   Liquidity Tiers:
+     1 Crore: Security and upper-middle-class comfort; job-linked identity.
+     10 Crores: Financial independence; budget-conscious for ultra-luxury.
+     100 Crores: Opportunity-driven free market participant; buys speed and skips queues.
+     1000 Crores: Systemic influence, generational dynasty planning, and narrative control.
+   Asymmetric Multipliers: Wealthy investors prefer risky bets with extreme moonshot upside over safe 20% incremental gains.
+   Reputation as a Second Bank Account: Proximity to power, deep trust, and brand equity are vastly more valuable than raw technical skill.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 10. Neuroscientist's Guide To 10X Your Focus &amp; Memory | Dr Sahar Yousef
+ Core Philosophy: Elite performance is not about intellect, but mastering biological laws, distraction management, and cognitive neuroplasticity.
+ Key Frameworks &amp; Principles:
+   Default Mode Network (DMN): The brain's internal story-studio; rewriting identity narratives primes attention to spot real-world opportunities.
+   The Smartphone IQ Tax: A UT Austin study showed that simply having a visible smartphone on a desk (even face-down or powered off) significantly decreases fluid intelligence and attention span.
+   The Multitasking Myth: Multitasking is a biological impossibility; rapid "task switching" imposes a heavy biological fee, doubling completion time and draining mental energy.
+   Circadian Chronotypes: The "5 AM Club" dogma is scientifically flawed; 2017 Nobel research proves humans split into genetic chronotypes (AM-shifted, Biphasic, PM-shifted), requiring individuals to protect their specific 2–3 peak cognitive hours.
+   The 3M Framework: Implement Micro, Messo, and Macro breaks, replacing short-form media ("candy") with intentional boredom to trigger creative breakthroughs.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 11. Secret Kata #1 Harsh Truths About India’s Social Pressure and Depression
+ Core Philosophy: Serotonin acts as a "social safety" molecule rather than a simple happiness chemical; toxic workplaces fail because they trigger evolutionary threat responses.
+ Key Frameworks &amp; Principles:
+   Social Defeat Stress: High-pressure rank environments induce "social defeat," shrinking the prefrontal cortex (emotional regulation) and hyper-activating the threat-sensing amygdala.
+   Rejection Sensitivity Dysphoria (RSD): Chronic rank pressure makes routine feedback feel like personal humiliation.
+   Serotonin &amp; Collaboration: Primate research shows higher serotonin levels correlate with assertive, collaborative behavior rather than raw physical aggression.
+   The Serotonergic Manager: Effective leaders cultivate psychological safety by praising in public, correcting in private, critiquing work instead of identity, and de-catastrophizing risk.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 12. The Most Valuable Skill After AI
+ Core Philosophy: In an era where AI automates technical creation, "World Building" (brand storytelling) becomes the ultimate defensive moat.
+ Key Frameworks &amp; Principles:
+   The Premise Contradiction: Every strong brand is built around an underlying tension or contradiction (e.g. Rolex as a basic timepiece vs. a global symbol of achievement).
+   Pillars of World Building: Establish distinct characters, specialized internal lingo, hierarchies, rituals, mechanical laws, and elements of chance.
+   Consistency &amp; Retconning: Consistency creates credibility; successful organizations practice "retconning"—retrospectively shaping past chaotic iterations into a coherent linear narrative.
+   External Credibility: Leverage influencer and celebrity endorsements to inject external credibility and establish cultural belonging.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 13. Top CTO's Advice: The Real Reason You Are Not Growing | Sauvik Banerjjee
+ Core Philosophy: Rapid career growth is driven by fearlessness, rapid execution, and a high "Say-Do Ratio"—delivering exactly what was committed on time.
+ Key Frameworks &amp; Principles:
+   Chaos Engineering: Reject overthinking and perfectionism ("ppt.com"); build, test, fail, and pivot in real time.
+   The REI Framework: Structure projects by clearly defining who is Responsible, Executing/Accountable, and Informed.
+   Overcoming Management Overhead: Indian middle management often creates operational bottlenecks; growth requires combining deep subject-matter expertise with cross-functional execution.
+   Agentic AI &amp; Voice: Future commerce and tech systems will move toward autonomous digital agents and voice-driven interfaces that bypass traditional search-and-click UI.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 14. Why 90% of Companies Break After 50 People | Kata 2
+ Core Philosophy: Startup failure is fundamentally a coordination problem where team members move in conflicting directions.
+ Key Frameworks &amp; Principles:
+   Lowering Coordination Costs: A leader's primary role is identifying friction points and aggressively unblocking teams.
+   Coordination &gt; Superstars: A highly coordinated team will easily outperform a disjointed team of individual superstars.
+   Autonomy, Purpose, Mastery: Beyond basic baseline compensation, high talent density is maintained through autonomy, purpose, and mastery.
+   Clear Writing: Clear written documentation is the ultimate tool to lower coordination costs and establish a shared reality across teams.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 15. Why Indian Startups Are Unprofitable | KATA 6
+ Core Philosophy: Poor attribution—the inability to correctly identify what actually drives success—is the root cause of business failure and unprofitability.
+ Key Frameworks &amp; Principles:
+   The Performance Marketing Trap: Over-indexing on direct-response ads inflates Customer Acquisition Costs (CAC) and forces unsustainable price increases.
+   The Nike Cautionary Tale: Replacing qualitative brand storytelling with pure performance tracking led to a \$25 billion drop in market capitalization in a single day.
+   Zero-CAC Models: Sustainable profit stems from organic distribution, educational content, and community (e.g., Zerodha, PhysicsWallah).
+   Repeatable Business Growth: Focus on three core pillars: finding an untapped market, hiring good talent to execute well, and staying alive long enough to let compounding take effect.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### 16. Why Indians Don't Attempt (And Stay Average Forever) | KATA 4
+ Core Philosophy: India suffers from an "anti-attempt culture" driven by a fear of public failure, ridicule, and overvaluing passive "good boy/girl" behavior over real execution.
+ Key Frameworks &amp; Principles:
+   Scouters: The ability to accurately evaluate competence, personal risk, and power levels in oneself and others.
+   Skin in the Game: True power levels and competence increase only when individuals take high-stakes risks with personal skin in the game.
+   Action Produces Information: Attempting hard problems reveals answers and insights that whiteboards and planning documents cannot predict.
+   Embracing Discomfort: Growth requires embracing conflict, taking visible personal bets, shipping in public, and collecting constructive feedback.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+💡 Would you like me to compile these detailed breakdowns into a formal PDF report or create flashcards to help you test your recall on these frameworks?
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbc06d8b" class="outline-3">
+<h3 id="orgbc06d8b"><a href="20260917T193103--quiz-thriving-sept-17th-sept-2026__quiz_thriving_work.html">quiz thriving sept 17th sept 2026.</a></h3>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2026-09-19 Sat 08:20 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>quiz thriving sept 17th sept 2026.</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<header>
+<h1 class="title">quiz thriving sept 17th sept 2026.</h1>
+<p class="subtitle" role="doc-subtitle">Training Assessment</p>
+</header>
+
+<div id="outline-container-org50cb52d" class="outline-2">
+<h2 id="org50cb52d">Candidate Information</h2>
+<div class="outline-text-2" id="text-org50cb52d">
+<p>
+Name: <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span>    Date: <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span>    Score: <span class="underline"><span class="underline">__</span></span> / 40
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07b6875" class="outline-2">
+<h2 id="org07b6875">Section A: Decision Making Fundamentals (Q1–10)</h2>
+<div class="outline-text-2" id="text-org07b6875">
+</div>
+<div id="outline-container-org0958b48" class="outline-3">
+<h3 id="org0958b48">Q1. (MCQ)</h3>
+<div class="outline-text-3" id="text-org0958b48">
+<p>
+According to the session, which of the following best describes a "hedged" decision?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) A decision that cannot be undone</li>
+<li class="off"><code>[&#xa0;]</code> b) A decision with no major downside</li>
+<li class="off"><code>[&#xa0;]</code> c) A decision taken under panic</li>
+<li class="off"><code>[&#xa0;]</code> d) A decision taken by a group</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc9d91dd" class="outline-3">
+<h3 id="orgc9d91dd">Q2. (True/False)</h3>
+<div class="outline-text-3" id="text-orgc9d91dd">
+<p>
+All decisions you take in life are equally risky, so they should all be treated the same way.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf0fd037" class="outline-3">
+<h3 id="orgf0fd037">Q3. (Fill in the blank)</h3>
+<div class="outline-text-3" id="text-orgf0fd037">
+<p>
+Before taking a decision, you should know the basics of probability, statistics, percentage, permutations, combinations, and <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span> distribution, and apply them in the back of your mind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36699a8" class="outline-3">
+<h3 id="org36699a8">Q4. (MCQ)</h3>
+<div class="outline-text-3" id="text-org36699a8">
+<p>
+When the risk of a "suicidal" (catastrophic) decision is high, what does the training recommend?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Take it quickly before overthinking</li>
+<li class="off"><code>[&#xa0;]</code> b) Trust your gut only</li>
+<li class="off"><code>[&#xa0;]</code> c) Take a second opinion or ask for help</li>
+<li class="off"><code>[&#xa0;]</code> d) Avoid the decision forever</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org56bf123" class="outline-3">
+<h3 id="org56bf123">Q5. (MCQ)</h3>
+<div class="outline-text-3" id="text-org56bf123">
+<p>
+"Tails I win — heads I don't lose much" describes which kind of decision?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) A suicidal decision</li>
+<li class="off"><code>[&#xa0;]</code> b) An asymmetric / bet-hedged decision</li>
+<li class="off"><code>[&#xa0;]</code> c) A reversible decision</li>
+<li class="off"><code>[&#xa0;]</code> d) An irreversible decision</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org787466c" class="outline-3">
+<h3 id="org787466c">Q6. (True/False)</h3>
+<div class="outline-text-3" id="text-org787466c">
+<p>
+If your fundamentals are not clear, your questions will be wrong — which leads to irrelevant answers and cloudy decisions.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0ad59b6" class="outline-3">
+<h3 id="org0ad59b6">Q7. (Short answer)</h3>
+<div class="outline-text-3" id="text-org0ad59b6">
+<p>
+In one or two sentences, why is it said that "curiosity without continuous learning becomes a nuisance"?
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaae26f1" class="outline-3">
+<h3 id="orgaae26f1">Q8. (MCQ)</h3>
+<div class="outline-text-3" id="text-orgaae26f1">
+<p>
+What is the correct sequence for gathering details to make the best decision?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Ask random questions to anyone available</li>
+<li class="off"><code>[&#xa0;]</code> b) Ask the right questions to the right people to gather the right details</li>
+<li class="off"><code>[&#xa0;]</code> c) Gather all details first, then figure out the questions</li>
+<li class="off"><code>[&#xa0;]</code> d) Make the decision first, then gather details to justify it</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org81d2421" class="outline-3">
+<h3 id="org81d2421">Q9. (True/False)</h3>
+<div class="outline-text-3" id="text-org81d2421">
+<p>
+Listening more than you talk helps in making better decisions.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgec1c14f" class="outline-3">
+<h3 id="orgec1c14f">Q10. (Fill in the blank)</h3>
+<div class="outline-text-3" id="text-orgec1c14f">
+<p>
+In tough situations, you should be aware of all the <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span> available at your disposal and be able to select the best one as the situation arises.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7734b15" class="outline-2">
+<h2 id="org7734b15">Section B: Handling Tough Situations &amp; Mindset (Q11–18)</h2>
+<div class="outline-text-2" id="text-org7734b15">
+</div>
+<div id="outline-container-orgb42b6ed" class="outline-3">
+<h3 id="orgb42b6ed">Q11. (MCQ)</h3>
+<div class="outline-text-3" id="text-orgb42b6ed">
+<p>
+What happens to your body and mind when you panic?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) They come into "fight mode," improving decisions</li>
+<li class="off"><code>[&#xa0;]</code> b) They come into "flight mode," leading to the worst decisions</li>
+<li class="off"><code>[&#xa0;]</code> c) They shut down completely</li>
+<li class="off"><code>[&#xa0;]</code> d) Nothing changes</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8b0034c" class="outline-3">
+<h3 id="org8b0034c">Q12. (True/False)</h3>
+<div class="outline-text-3" id="text-org8b0034c">
+<p>
+Most daily "tough" situations are actually life-threatening.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7b2e875" class="outline-3">
+<h3 id="org7b2e875">Q13. (MCQ)</h3>
+<div class="outline-text-3" id="text-org7b2e875">
+<p>
+How do you increase your threshold to handle tough situations head-on?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) By avoiding them completely</li>
+<li class="off"><code>[&#xa0;]</code> b) By continuously encountering and going through such situations</li>
+<li class="off"><code>[&#xa0;]</code> c) By taking long vacations</li>
+<li class="off"><code>[&#xa0;]</code> d) By delegating them always</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgaa06c8a" class="outline-3">
+<h3 id="orgaa06c8a">Q14. (Fill in the blank)</h3>
+<div class="outline-text-3" id="text-orgaa06c8a">
+<p>
+Your behaviour in tough situations is derived from your <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3c431c" class="outline-3">
+<h3 id="orgc3c431c">Q15. (Short answer)</h3>
+<div class="outline-text-3" id="text-orgc3c431c">
+<p>
+What does being "niralamb" (detached) in a tough situation help you do, according to the session?
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org564debc" class="outline-3">
+<h3 id="org564debc">Q16. (True/False)</h3>
+<div class="outline-text-3" id="text-org564debc">
+<p>
+If you identify too strongly with a problem ("this is happening to ME"), it can distort your decision-making.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org09448b2" class="outline-3">
+<h3 id="org09448b2">Q17. (MCQ)</h3>
+<div class="outline-text-3" id="text-org09448b2">
+<p>
+The mountain climbing example was used to explain which concept?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Risk compensation</li>
+<li class="off"><code>[&#xa0;]</code> b) IF you'd start believing you are superior and all knowing instead staying grounded.</li>
+<li class="off"><code>[&#xa0;]</code> c) Planning fallacy</li>
+<li class="off"><code>[&#xa0;]</code> d) Anchoring bias</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org68fb11a" class="outline-3">
+<h3 id="org68fb11a">Q18. (True/False)</h3>
+<div class="outline-text-3" id="text-org68fb11a">
+<p>
+You should always be optimistic but also realistic at the same time.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d14862" class="outline-2">
+<h2 id="org4d14862">Section C: Communication, Psychology &amp; Learning (Q19–26)</h2>
+<div class="outline-text-2" id="text-org4d14862">
+</div>
+<div id="outline-container-orgfc99e19" class="outline-3">
+<h3 id="orgfc99e19">Q19. (Fill in the blank)</h3>
+<div class="outline-text-3" id="text-orgfc99e19">
+<p>
+In order to ask the right question, you should have command over language and <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7084088" class="outline-3">
+<h3 id="org7084088">Q20. (MCQ)</h3>
+<div class="outline-text-3" id="text-org7084088">
+<p>
+Which two psychological principles were mentioned for gauging a person's thought process?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Reciprocity and commitment</li>
+<li class="off"><code>[&#xa0;]</code> b) Anchoring and framing</li>
+<li class="off"><code>[&#xa0;]</code> c) Authority and automation bias</li>
+<li class="off"><code>[&#xa0;]</code> d) Optimism and pessimism bias</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf2aa955" class="outline-3">
+<h3 id="orgf2aa955">Q21. (True/False)</h3>
+<div class="outline-text-3" id="text-orgf2aa955">
+<p>
+"The richest person in the room is the one with the highest failures" means failure is a currency of learning.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org109e068" class="outline-3">
+<h3 id="org109e068">Q22. (MCQ)</h3>
+<div class="outline-text-3" id="text-org109e068">
+<p>
+Which of these was NOT listed as a form of long-form content to engage with?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Books</li>
+<li class="off"><code>[&#xa0;]</code> b) Podcasts</li>
+<li class="off"><code>[&#xa0;]</code> c) Articles</li>
+<li class="off"><code>[&#xa0;]</code> d) 15-second reels</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5cf9617" class="outline-3">
+<h3 id="org5cf9617">Q23. (Fill in the blank)</h3>
+<div class="outline-text-3" id="text-org5cf9617">
+<p>
+"To ask the right question is harder than to <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span> it." (Georg Cantor)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcdbda18" class="outline-3">
+<h3 id="orgcdbda18">Q24. (MCQ)</h3>
+<div class="outline-text-3" id="text-orgcdbda18">
+<p>
+Why does fluency and the speed of manifesting words in the digital world matter?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) It makes you type faster</li>
+<li class="off"><code>[&#xa0;]</code> b) It improves the accuracy and effectiveness of communication</li>
+<li class="off"><code>[&#xa0;]</code> c) It is only for marketing jobs</li>
+<li class="off"><code>[&#xa0;]</code> d) It doesn't matter</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0bc96ee" class="outline-3">
+<h3 id="org0bc96ee">Q25. (Short answer)</h3>
+<div class="outline-text-3" id="text-org0bc96ee">
+<p>
+Name any FOUR fields or topics (outside your own job domain) that the session said you should read and learn concepts from. (Examples: machines, taxation, human psychology, geopolitics, brain chemistry&#x2026;)
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2cd68b6" class="outline-3">
+<h3 id="org2cd68b6">Q26. (True/False)</h3>
+<div class="outline-text-3" id="text-org2cd68b6">
+<p>
+Reading about concepts from various unrelated fields is a waste of time for decision-making.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org916bd63" class="outline-2">
+<h2 id="org916bd63">Section D: Task Management &amp; Simplicity (Q27–32)</h2>
+<div class="outline-text-2" id="text-org916bd63">
+</div>
+<div id="outline-container-org37f9737" class="outline-3">
+<h3 id="org37f9737">Q27. (MCQ)</h3>
+<div class="outline-text-3" id="text-org37f9737">
+<p>
+What is the FIRST step in how to do tasks, per the session?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Delegate everything</li>
+<li class="off"><code>[&#xa0;]</code> b) Make a list of all tasks to make sure none get left out</li>
+<li class="off"><code>[&#xa0;]</code> c) Start with the easiest task</li>
+<li class="off"><code>[&#xa0;]</code> d) Sort tasks by deadline only</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org18c0e58" class="outline-3">
+<h3 id="org18c0e58">Q28. (MCQ)</h3>
+<div class="outline-text-3" id="text-org18c0e58">
+<p>
+Which task should you pick FIRST from your list?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) The easiest and most familiar</li>
+<li class="off"><code>[&#xa0;]</code> b) The hardest and unknown one</li>
+<li class="off"><code>[&#xa0;]</code> c) The one assigned by your boss</li>
+<li class="off"><code>[&#xa0;]</code> d) The quickest to tick off</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1a48625" class="outline-3">
+<h3 id="org1a48625">Q29. (True/False)</h3>
+<div class="outline-text-3" id="text-org1a48625">
+<p>
+You should tick off all tasks together at once at the end of the day.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0d0a8d8" class="outline-3">
+<h3 id="org0d0a8d8">Q30. (Fill in the blank)</h3>
+<div class="outline-text-3" id="text-org0d0a8d8">
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span> whatever can be delegated.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34df786" class="outline-3">
+<h3 id="org34df786">Q31. (MCQ)</h3>
+<div class="outline-text-3" id="text-org34df786">
+<p>
+What does KISS stand for?
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Keep It Strictly Simple</li>
+<li class="off"><code>[&#xa0;]</code> b) Keep It Simple, Stupid</li>
+<li class="off"><code>[&#xa0;]</code> c) Keep Ideas Short &amp; Sweet</li>
+<li class="off"><code>[&#xa0;]</code> d) Keep It Systematic &amp; Structured</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3f7ddf3" class="outline-3">
+<h3 id="org3f7ddf3">Q32. (Short answer)</h3>
+<div class="outline-text-3" id="text-org3f7ddf3">
+<p>
+"An easy thing can be simple, but a simple thing is not always easy." Explain this in your own words with an example.
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd070c87" class="outline-2">
+<h2 id="orgd070c87">Section E: Resources, Tools &amp; Cognitive Biases (Q33–40)</h2>
+<div class="outline-text-2" id="text-orgd070c87">
+</div>
+<div id="outline-container-orga3faa40" class="outline-3">
+<h3 id="orga3faa40">Q33. (Fill in the blank)</h3>
+<div class="outline-text-3" id="text-orga3faa40">
+<p>
+"When you have a hammer, everything looks like a <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span>."
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3cbff7" class="outline-3">
+<h3 id="orga3cbff7">Q34. (MCQ)</h3>
+<div class="outline-text-3" id="text-orga3cbff7">
+<p>
+Functional fixedness is:
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) The ability to use objects in new ways</li>
+<li class="off"><code>[&#xa0;]</code> b) A mental block against using an object in a new way, beyond its traditional purpose</li>
+<li class="off"><code>[&#xa0;]</code> c) A bias where we overestimate others' attention to us</li>
+<li class="off"><code>[&#xa0;]</code> d) Excessive dependence on automated systems</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4841a61" class="outline-3">
+<h3 id="org4841a61">Q35. (True/False)</h3>
+<div class="outline-text-3" id="text-org4841a61">
+<p>
+To use resources efficiently, you should read the manuals and know every feature of your tools — and even think of unorthodox ways to use them.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> True</li>
+<li class="off"><code>[&#xa0;]</code> False</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8384899" class="outline-3">
+<h3 id="org8384899">Q36. (MCQ)</h3>
+<div class="outline-text-3" id="text-org8384899">
+<p>
+Name the bias: You chose fruit for next week's meals but chocolate for today's meal.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Authority bias</li>
+<li class="off"><code>[&#xa0;]</code> b) Hyperbolic discounting (present bias)</li>
+<li class="off"><code>[&#xa0;]</code> c) Spotlight effect</li>
+<li class="off"><code>[&#xa0;]</code> d) Gambler's fallacy</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf4eea8b" class="outline-3">
+<h3 id="orgf4eea8b">Q37. (MCQ)</h3>
+<div class="outline-text-3" id="text-orgf4eea8b">
+<p>
+Name the bias: You drive faster because your car has better safety features.
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Risk compensation / Peltzman effect</li>
+<li class="off"><code>[&#xa0;]</code> b) Conservatism bias</li>
+<li class="off"><code>[&#xa0;]</code> c) Planning fallacy</li>
+<li class="off"><code>[&#xa0;]</code> d) Dunning-Kruger effect</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org43e06d0" class="outline-3">
+<h3 id="org43e06d0">Q38. (Match the following)</h3>
+<div class="outline-text-3" id="text-org43e06d0">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Bias</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">1. Dunning-Kruger</td>
+<td class="org-left">a) Tendency to overestimate how much others notice your appearance/behaviour</td>
+</tr>
+
+<tr>
+<td class="org-left">2. Spotlight effect</td>
+<td class="org-left">b) Overestimating your ability when you know little</td>
+</tr>
+
+<tr>
+<td class="org-left">3. Authority bias</td>
+<td class="org-left">c) Believing a hot streak will continue</td>
+</tr>
+
+<tr>
+<td class="org-left">4. Hot hand fallacy</td>
+<td class="org-left">d) Giving greater accuracy to an authority figure's opinion</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orga6d4a52" class="outline-3">
+<h3 id="orga6d4a52">Q39. (Short answer)</h3>
+<div class="outline-text-3" id="text-orga6d4a52">
+<p>
+The session asked to read later the uncovered biases including confirmation bias, anchoring bias, framing effect, prospect theory, insensitivity to sample size, optimism bias, pessimism bias, and automation bias. Pick any TWO and explain each in one sentence with a real-life example.
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2bab289" class="outline-3">
+<h3 id="org2bab289">Q40. (Scenario)</h3>
+<div class="outline-text-3" id="text-org2bab289">
+<p>
+Your colleague panics during a server outage and starts making random changes. Using at least THREE concepts from today's session, explain how you would handle the situation and the decision-making.
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-09-16 Wed 18:45 -->
+<!-- 2026-09-19 Sat 08:20 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>emacs config chemac2</title>
@@ -199,72 +199,76 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc7b8e71">lets try to see if its works.</a>
+<li><a href="#orge8b5168">lets try to see if its works.</a>
 <ul>
-<li><a href="#org686053a">now package is all set in the init.el so no need to load them here again</a></li>
-<li><a href="#orgca084b8">Make sure to download packages if not present</a></li>
+<li><a href="#org64be054">now package is all set in the init.el so no need to load them here again</a></li>
+<li><a href="#org7ab3519">Make sure to download packages if not present</a></li>
 </ul>
 </li>
-<li><a href="#orgd5cde25">to be checked later.</a></li>
-<li><a href="#org3ca83d1">Fonts</a>
+<li><a href="#org8d9fe7d">to be checked later.</a></li>
+<li><a href="#org451335e">Fonts</a>
 <ul>
-<li><a href="#orge1eaf11">test</a>
+<li><a href="#org0532529">test</a>
 <ul>
-<li><a href="#org5020adf"></a></li>
+<li><a href="#org41903bd"></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgd1038a4">themes</a></li>
-<li><a href="#org5d20acc">RECENTF</a></li>
-<li><a href="#org4e40643">WHICH KEY shows next possible keys</a></li>
-<li><a href="#org6954cf4">org todos</a></li>
-<li><a href="#orgfdf2660">vertico and marginmarginalia — how minibuffer completions look</a></li>
-<li><a href="#org51e2a69">yasnippets</a></li>
-<li><a href="#orgd228262">startbuffer and upcase downcase</a></li>
-<li><a href="#org0d2cdfd">all the icons</a></li>
-<li><a href="#org955994b">moody modeline</a></li>
-<li><a href="#org845fde2">Beacon</a></li>
-<li><a href="#org14d238b">company</a></li>
-<li><a href="#org40478bb">denote</a>
+<li><a href="#org3fa5c84">themes</a></li>
+<li><a href="#org0148b61">RECENTF</a></li>
+<li><a href="#org357d8b8">WHICH KEY shows next possible keys</a></li>
+<li><a href="#org17ef6d8">org todos</a></li>
+<li><a href="#orge438c1a">vertico and marginmarginalia — how minibuffer completions look</a></li>
+<li><a href="#org60bd257">yasnippets</a></li>
+<li><a href="#org128b44e">startbuffer and upcase downcase</a></li>
+<li><a href="#orgd53cd4e">all the icons</a></li>
+<li><a href="#orgb302124">moody modeline</a></li>
+<li><a href="#orgefd9389">Beacon</a></li>
+<li><a href="#orgc73543c">company</a></li>
+<li><a href="#orgf190df3">denote</a>
 <ul>
-<li><a href="#org7164e62">denote explore package</a></li>
+<li><a href="#orgb677abd">denote explore package</a></li>
 </ul>
 </li>
-<li><a href="#org27aae73">dired specific keybinds</a></li>
-<li><a href="#orgc37e692">Better Completions</a></li>
-<li><a href="#orgf496005">org</a></li>
-<li><a href="#org9e196b5">elfeed</a></li>
-<li><a href="#org178b4d6">display line number</a></li>
-<li><a href="#org453a272">golden ratio</a></li>
-<li><a href="#orge08b5af">check later</a></li>
-<li><a href="#orgc3a587b">Enable rich annotations using the Marginalia package</a></li>
-<li><a href="#org2468991">org modern</a></li>
-<li><a href="#org1414149">check</a></li>
-<li><a href="#org93ccabc">For AUCTeX + SumatraPDF</a></li>
-<li><a href="#org1b40f50">check</a></li>
-<li><a href="#org359746e">consult</a></li>
-<li><a href="#orgc88b449">listen\</a></li>
+<li><a href="#org07cd465">dired specific keybinds</a></li>
+<li><a href="#org01bf4eb">Better Completions</a></li>
+<li><a href="#orgd2ed483">org</a>
+<ul>
+<li><a href="#org675e1d9">org latex output engine to tectonic</a></li>
+</ul>
+</li>
+<li><a href="#org0c475fa">elfeed</a></li>
+<li><a href="#org6756f5e">display line number</a></li>
+<li><a href="#orge8386b0">golden ratio</a></li>
+<li><a href="#org88ecc09">check later</a></li>
+<li><a href="#orgb7c94dc">Enable rich annotations using the Marginalia package</a></li>
+<li><a href="#org19b914c">org modern</a></li>
+<li><a href="#org89734be">check</a></li>
+<li><a href="#org746ad27">For AUCTeX + SumatraPDF</a></li>
+<li><a href="#org78fe0e3">check</a></li>
+<li><a href="#orgf8f2ec7">consult</a></li>
+<li><a href="#orgcac60d6">listen\</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgc7b8e71" class="outline-2">
-<h2 id="orgc7b8e71">lets try to see if its works.</h2>
-<div class="outline-text-2" id="text-orgc7b8e71">
+<div id="outline-container-orge8b5168" class="outline-2">
+<h2 id="orge8b5168">lets try to see if its works.</h2>
+<div class="outline-text-2" id="text-orge8b5168">
 </div>
-<div id="outline-container-org686053a" class="outline-3">
-<h3 id="org686053a">now package is all set in the init.el so no need to load them here again</h3>
-<div class="outline-text-3" id="text-org686053a">
+<div id="outline-container-org64be054" class="outline-3">
+<h3 id="org64be054">now package is all set in the init.el so no need to load them here again</h3>
+<div class="outline-text-3" id="text-org64be054">
 <p>
 skipped
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgca084b8" class="outline-3">
-<h3 id="orgca084b8">Make sure to download packages if not present</h3>
-<div class="outline-text-3" id="text-orgca084b8">
+<div id="outline-container-org7ab3519" class="outline-3">
+<h3 id="org7ab3519">Make sure to download packages if not present</h3>
+<div class="outline-text-3" id="text-org7ab3519">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(require 'use-package)
 (setq package-native-compile t)
@@ -277,9 +281,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orgd5cde25" class="outline-2">
-<h2 id="orgd5cde25">to be checked later.</h2>
-<div class="outline-text-2" id="text-orgd5cde25">
+<div id="outline-container-org8d9fe7d" class="outline-2">
+<h2 id="org8d9fe7d">to be checked later.</h2>
+<div class="outline-text-2" id="text-org8d9fe7d">
 <p>
 (setq package-enable-at-startup nil)
 </p>
@@ -290,9 +294,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org3ca83d1" class="outline-2">
-<h2 id="org3ca83d1">Fonts</h2>
-<div class="outline-text-2" id="text-org3ca83d1">
+<div id="outline-container-org451335e" class="outline-2">
+<h2 id="org451335e">Fonts</h2>
+<div class="outline-text-2" id="text-org451335e">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (defvar efs/default-font-size 110)
@@ -311,19 +315,19 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orge1eaf11" class="outline-3">
-<h3 id="orge1eaf11">test</h3>
-<div class="outline-text-3" id="text-orge1eaf11">
+<div id="outline-container-org0532529" class="outline-3">
+<h3 id="org0532529">test</h3>
+<div class="outline-text-3" id="text-org0532529">
 </div>
-<div id="outline-container-org5020adf" class="outline-4">
-<h4 id="org5020adf"></h4>
+<div id="outline-container-org41903bd" class="outline-4">
+<h4 id="org41903bd"></h4>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd1038a4" class="outline-2">
-<h2 id="orgd1038a4">themes</h2>
-<div class="outline-text-2" id="text-orgd1038a4">
+<div id="outline-container-org3fa5c84" class="outline-2">
+<h2 id="org3fa5c84">themes</h2>
+<div class="outline-text-2" id="text-org3fa5c84">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package modus-themes
   :config
@@ -363,9 +367,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org5d20acc" class="outline-2">
-<h2 id="org5d20acc">RECENTF</h2>
-<div class="outline-text-2" id="text-org5d20acc">
+<div id="outline-container-org0148b61" class="outline-2">
+<h2 id="org0148b61">RECENTF</h2>
+<div class="outline-text-2" id="text-org0148b61">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(recentf-mode 1)
 (setq recentf-max-menu-items 25)
@@ -377,9 +381,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org4e40643" class="outline-2">
-<h2 id="org4e40643">WHICH KEY shows next possible keys</h2>
-<div class="outline-text-2" id="text-org4e40643">
+<div id="outline-container-org357d8b8" class="outline-2">
+<h2 id="org357d8b8">WHICH KEY shows next possible keys</h2>
+<div class="outline-text-2" id="text-org357d8b8">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package which-key
   :defer 10
@@ -393,9 +397,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org6954cf4" class="outline-2">
-<h2 id="org6954cf4">org todos</h2>
-<div class="outline-text-2" id="text-org6954cf4">
+<div id="outline-container-org17ef6d8" class="outline-2">
+<h2 id="org17ef6d8">org todos</h2>
+<div class="outline-text-2" id="text-org17ef6d8">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(setq org-todo-keywords
 
@@ -405,9 +409,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orgfdf2660" class="outline-2">
-<h2 id="orgfdf2660">vertico and marginmarginalia — how minibuffer completions look</h2>
-<div class="outline-text-2" id="text-orgfdf2660">
+<div id="outline-container-orge438c1a" class="outline-2">
+<h2 id="orge438c1a">vertico and marginmarginalia — how minibuffer completions look</h2>
+<div class="outline-text-2" id="text-orge438c1a">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package vertico
   ;; make extentions work (by some magic)
@@ -428,9 +432,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org51e2a69" class="outline-2">
-<h2 id="org51e2a69">yasnippets</h2>
-<div class="outline-text-2" id="text-org51e2a69">
+<div id="outline-container-org60bd257" class="outline-2">
+<h2 id="org60bd257">yasnippets</h2>
+<div class="outline-text-2" id="text-org60bd257">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package yasnippet
   :init
@@ -462,9 +466,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orgd228262" class="outline-2">
-<h2 id="orgd228262">startbuffer and upcase downcase</h2>
-<div class="outline-text-2" id="text-orgd228262">
+<div id="outline-container-org128b44e" class="outline-2">
+<h2 id="org128b44e">startbuffer and upcase downcase</h2>
+<div class="outline-text-2" id="text-org128b44e">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(setq inhibit-splash-screen t)
 (setq initial-major-mode 'org-mode)
@@ -484,9 +488,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org0d2cdfd" class="outline-2">
-<h2 id="org0d2cdfd">all the icons</h2>
-<div class="outline-text-2" id="text-org0d2cdfd">
+<div id="outline-container-orgd53cd4e" class="outline-2">
+<h2 id="orgd53cd4e">all the icons</h2>
+<div class="outline-text-2" id="text-orgd53cd4e">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package all-the-icons)
 </pre>
@@ -494,9 +498,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org955994b" class="outline-2">
-<h2 id="org955994b">moody modeline</h2>
-<div class="outline-text-2" id="text-org955994b">
+<div id="outline-container-orgb302124" class="outline-2">
+<h2 id="orgb302124">moody modeline</h2>
+<div class="outline-text-2" id="text-orgb302124">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package moody
    :config
@@ -511,9 +515,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org845fde2" class="outline-2">
-<h2 id="org845fde2">Beacon</h2>
-<div class="outline-text-2" id="text-org845fde2">
+<div id="outline-container-orgefd9389" class="outline-2">
+<h2 id="orgefd9389">Beacon</h2>
+<div class="outline-text-2" id="text-orgefd9389">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package beacon)
 (beacon-mode 1)
@@ -522,9 +526,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org14d238b" class="outline-2">
-<h2 id="org14d238b">company</h2>
-<div class="outline-text-2" id="text-org14d238b">
+<div id="outline-container-orgc73543c" class="outline-2">
+<h2 id="orgc73543c">company</h2>
+<div class="outline-text-2" id="text-orgc73543c">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (use-package company)
@@ -534,9 +538,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org40478bb" class="outline-2">
-<h2 id="org40478bb">denote</h2>
-<div class="outline-text-2" id="text-org40478bb">
+<div id="outline-container-orgf190df3" class="outline-2">
+<h2 id="orgf190df3">denote</h2>
+<div class="outline-text-2" id="text-orgf190df3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package denote
   :hook
@@ -616,9 +620,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org7164e62" class="outline-3">
-<h3 id="org7164e62">denote explore package</h3>
-<div class="outline-text-3" id="text-org7164e62">
+<div id="outline-container-orgb677abd" class="outline-3">
+<h3 id="orgb677abd">denote explore package</h3>
+<div class="outline-text-3" id="text-orgb677abd">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package denote-explore
   ;; :custom
@@ -665,9 +669,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org27aae73" class="outline-2">
-<h2 id="org27aae73">dired specific keybinds</h2>
-<div class="outline-text-2" id="text-org27aae73">
+<div id="outline-container-org07cd465" class="outline-2">
+<h2 id="org07cd465">dired specific keybinds</h2>
+<div class="outline-text-2" id="text-org07cd465">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">;; Key bindings specifically for Dired.
 ;; (let ((map dired-mode-map))
@@ -679,9 +683,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orgc37e692" class="outline-2">
-<h2 id="orgc37e692">Better Completions</h2>
-<div class="outline-text-2" id="text-orgc37e692">
+<div id="outline-container-org01bf4eb" class="outline-2">
+<h2 id="org01bf4eb">Better Completions</h2>
+<div class="outline-text-2" id="text-org01bf4eb">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package ivy
   :defer t
@@ -762,9 +766,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orgf496005" class="outline-2">
-<h2 id="orgf496005">org</h2>
-<div class="outline-text-2" id="text-orgf496005">
+<div id="outline-container-orgd2ed483" class="outline-2">
+<h2 id="orgd2ed483">org</h2>
+<div class="outline-text-2" id="text-orgd2ed483">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(add-hook 'org-mode-hook 'org-indent-mode)
 
@@ -794,11 +798,22 @@ skipped
 </pre>
 </div>
 </div>
+
+<div id="outline-container-org675e1d9" class="outline-3">
+<h3 id="org675e1d9">org latex output engine to tectonic</h3>
+<div class="outline-text-3" id="text-org675e1d9">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-latex-pdf-process 
+    '("tectonic %f"))
+</pre>
+</div>
+</div>
+</div>
 </div>
 
-<div id="outline-container-org9e196b5" class="outline-2">
-<h2 id="org9e196b5">elfeed</h2>
-<div class="outline-text-2" id="text-org9e196b5">
+<div id="outline-container-org0c475fa" class="outline-2">
+<h2 id="org0c475fa">elfeed</h2>
+<div class="outline-text-2" id="text-org0c475fa">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package elfeed
      :config
@@ -863,9 +878,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org178b4d6" class="outline-2">
-<h2 id="org178b4d6">display line number</h2>
-<div class="outline-text-2" id="text-org178b4d6">
+<div id="outline-container-org6756f5e" class="outline-2">
+<h2 id="org6756f5e">display line number</h2>
+<div class="outline-text-2" id="text-org6756f5e">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
@@ -874,9 +889,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org453a272" class="outline-2">
-<h2 id="org453a272">golden ratio</h2>
-<div class="outline-text-2" id="text-org453a272">
+<div id="outline-container-orge8386b0" class="outline-2">
+<h2 id="orge8386b0">golden ratio</h2>
+<div class="outline-text-2" id="text-orge8386b0">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package golden-ratio)
 (golden-ratio-mode 1)
@@ -885,9 +900,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orge08b5af" class="outline-2">
-<h2 id="orge08b5af">check later</h2>
-<div class="outline-text-2" id="text-orge08b5af">
+<div id="outline-container-org88ecc09" class="outline-2">
+<h2 id="org88ecc09">check later</h2>
+<div class="outline-text-2" id="text-org88ecc09">
 <p>
 ;; 1. <b>Update Compat and Marginalia</b>: Use the commands below to update both packages:
 ;;    emacs-lisp
@@ -904,9 +919,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orgc3a587b" class="outline-2">
-<h2 id="orgc3a587b">Enable rich annotations using the Marginalia package</h2>
-<div class="outline-text-2" id="text-orgc3a587b">
+<div id="outline-container-orgb7c94dc" class="outline-2">
+<h2 id="orgb7c94dc">Enable rich annotations using the Marginalia package</h2>
+<div class="outline-text-2" id="text-orgb7c94dc">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package marginalia
   ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
@@ -931,9 +946,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org2468991" class="outline-2">
-<h2 id="org2468991">org modern</h2>
-<div class="outline-text-2" id="text-org2468991">
+<div id="outline-container-org19b914c" class="outline-2">
+<h2 id="org19b914c">org modern</h2>
+<div class="outline-text-2" id="text-org19b914c">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package org-modern)
 ;; Option 2: Globally
@@ -944,9 +959,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org1414149" class="outline-2">
-<h2 id="org1414149">check</h2>
-<div class="outline-text-2" id="text-org1414149">
+<div id="outline-container-org89734be" class="outline-2">
+<h2 id="org89734be">check</h2>
+<div class="outline-text-2" id="text-org89734be">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package ox-pandoc)
 (electric-pair-mode 1)
@@ -967,9 +982,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org93ccabc" class="outline-2">
-<h2 id="org93ccabc">For AUCTeX + SumatraPDF</h2>
-<div class="outline-text-2" id="text-org93ccabc">
+<div id="outline-container-org746ad27" class="outline-2">
+<h2 id="org746ad27">For AUCTeX + SumatraPDF</h2>
+<div class="outline-text-2" id="text-org746ad27">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(setq TeX-view-program-list
       '(("Sumatra PDF" "\"C:/Program Files/SumatraPDF/SumatraPDF.exe\" -reuse-instance %o")))
@@ -983,9 +998,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org1b40f50" class="outline-2">
-<h2 id="org1b40f50">check</h2>
-<div class="outline-text-2" id="text-org1b40f50">
+<div id="outline-container-org78fe0e3" class="outline-2">
+<h2 id="org78fe0e3">check</h2>
+<div class="outline-text-2" id="text-org78fe0e3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package with-editor)
 ;; (use-package transient)
@@ -996,9 +1011,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-org359746e" class="outline-2">
-<h2 id="org359746e">consult</h2>
-<div class="outline-text-2" id="text-org359746e">
+<div id="outline-container-orgf8f2ec7" class="outline-2">
+<h2 id="orgf8f2ec7">consult</h2>
+<div class="outline-text-2" id="text-orgf8f2ec7">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package consult
   :bind (("C-x b" . consult-buffer)	;seaarch across all open buffers
@@ -1072,9 +1087,9 @@ skipped
 </div>
 </div>
 
-<div id="outline-container-orgc88b449" class="outline-2">
-<h2 id="orgc88b449">listen\</h2>
-<div class="outline-text-2" id="text-orgc88b449">
+<div id="outline-container-orgcac60d6" class="outline-2">
+<h2 id="orgcac60d6">listen\</h2>
+<div class="outline-text-2" id="text-orgcac60d6">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package listen
   :init
